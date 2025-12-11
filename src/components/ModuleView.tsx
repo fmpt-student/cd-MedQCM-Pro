@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { Module, Question, PdfResource } from '../types';
+import { Module, Question, PdfResource } from '../types';
 import { QcmCard } from './QcmCard';
 import { generateQuestionsForModule } from '../services/geminiService';
 import { 

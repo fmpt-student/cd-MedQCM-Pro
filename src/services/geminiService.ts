@@ -1,5 +1,5 @@
 import { GoogleGenAI, Type } from "@google/genai";
-import type { Question } from "../types";
+import { Question } from "../types";
 
 // Fonction sécurisée pour récupérer la clé API dans un environnement Vite/Browser
 const getApiKey = () => {

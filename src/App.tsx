@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Layout } from './components/Layout';
 import { ModuleView } from './components/ModuleView';
 import { ContactModal } from './components/ContactModal';
 import { INITIAL_DATA } from './constants';
-import type { Year, Semester, Module } from './types';
+import { Year, Semester, Module } from './types';
 import { Folder, FolderOpen, Book, ChevronRight } from 'lucide-react';
 
 export default function App() {
