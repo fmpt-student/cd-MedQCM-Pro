@@ -4,6 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Utiliser './' permet au site de fonctionner peu importe le nom du dossier sur GitHub
-  base: './',
+  base: './', // Assure que les chemins sont relatifs pour GitHub Pages
+  build: {
+    outDir: 'dist',
+  }
 })
