@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/cd-MedQCM-Pro/',
   plugins: [react()],
+  // Utiliser './' permet au site de fonctionner peu importe le nom du dossier sur GitHub
+  base: './',
 })
