@@ -20,27 +20,35 @@ const getApiKey = () => {
   return '';
 };
 
-export const generateQuestionsForModule = async (moduleName: string, count: number = 3): Promise<Question[]> => {
+export const generateQuestionsForModule = async (moduleName: string, moduleDescription: string, count: number = 3): Promise<Question[]> => {
   const apiKey = getApiKey();
   
   if (!apiKey) {
     console.warn("Clé API manquante");
-    // On retourne une erreur explicite ou des questions vides pour ne pas crasher
     throw new Error("Clé API manquante. Veuillez ajouter VITE_API_KEY dans les Secrets GitHub.");
   }
 
-  // Initialisation lazy (uniquement quand on en a besoin) pour éviter les crashs au démarrage
   const ai = new GoogleGenAI({ apiKey });
   
   const model = "gemini-2.5-flash";
   
-  const prompt = `Génère ${count} questions QCM (Choix Multiples) pour un module de médecine intitulé "${moduleName}".
-  Pour chaque question :
-  - Fournis un énoncé clair.
-  - Fournis 4 options de réponse.
-  - Indique l'index de la réponse correcte (0 à 3).
-  - Fournis une explication brève.
-  - Le contenu doit être en français.`;
+  // Construction d'un prompt beaucoup plus précis incluant la description
+  const contextText = moduleDescription 
+    ? `Le contenu spécifique de ce module porte sur : "${moduleDescription}".` 
+    : "Le contenu est général pour ce module de médecine.";
+
+  const prompt = `Agis comme un professeur de faculté de médecine exigeant.
+  Génère ${count} questions QCM (Choix Multiples) de haut niveau pour le module "${moduleName}".
+  
+  CONTEXTE OBLIGATOIRE : ${contextText}
+  
+  Instructions de génération :
+  1. Les questions doivent être STRICTEMENT limitées au contexte fourni ci-dessus. SI LE CONTEXTE EST PRÉCIS (ex: "Thorax"), IL EST INTERDIT DE POSER DES QUESTIONS SUR D'AUTRES SUJETS (ex: "Foie", "Membre inférieur", "Cellule").
+  2. Utilise la terminologie médicale précise.
+  3. Fournis 4 options de réponse.
+  4. Indique les indices de TOUTES les réponses correctes (0 à 3) dans un tableau (il peut y avoir plusieurs bonnes réponses).
+  5. Fournis une explication pédagogique détaillée.
+  6. Le contenu doit être en français.`;
 
   try {
     const response = await ai.models.generateContent({
@@ -58,10 +66,13 @@ export const generateQuestionsForModule = async (moduleName: string, count: numb
                 type: Type.ARRAY,
                 items: { type: Type.STRING }
               },
-              correctIndex: { type: Type.INTEGER },
+              correctIndices: { 
+                type: Type.ARRAY,
+                items: { type: Type.INTEGER } 
+              },
               explanation: { type: Type.STRING }
             },
-            required: ["text", "options", "correctIndex", "explanation"]
+            required: ["text", "options", "correctIndices", "explanation"]
           }
         }
       }
@@ -76,7 +87,7 @@ export const generateQuestionsForModule = async (moduleName: string, count: numb
       id: `ai-${Date.now()}-${index}`,
       text: q.text,
       options: q.options,
-      correctIndex: q.correctIndex,
+      correctIndices: q.correctIndices,
       explanation: q.explanation
     }));
   } catch (error) {

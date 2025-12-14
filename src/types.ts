@@ -2,7 +2,7 @@ export interface Question {
   id: string;
   text: string;
   options: string[];
-  correctIndex: number;
+  correctIndices: number[]; // Tableau pour supporter plusieurs réponses justes
   explanation?: string;
 }
 
@@ -32,6 +32,14 @@ export interface Year {
   semesters: Semester[];
 }
 
+export interface AppNotification {
+  id: string;
+  type: 'info' | 'warning' | 'urgent';
+  message: string;
+  date: string;
+}
+
 export interface DataStore {
   years: Year[];
+  notifications: AppNotification[];
 }

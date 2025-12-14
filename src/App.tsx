@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Layout } from './components/Layout';
 import { ModuleView } from './components/ModuleView';
 import { ContactModal } from './components/ContactModal';
+import { NotificationBanner } from './components/NotificationBanner';
+import { NotificationManagerModal } from './components/NotificationManagerModal';
 import { INITIAL_DATA } from './constants';
-import { Year, Semester, Module } from './types';
+import { Year, Semester, Module, AppNotification } from './types';
 import { Folder, FolderOpen, Book, ChevronRight } from 'lucide-react';
 
 export default function App() {
@@ -11,7 +13,10 @@ export default function App() {
   const [selectedYear, setSelectedYear] = useState<Year | null>(null);
   const [selectedSemester, setSelectedSemester] = useState<Semester | null>(null);
   const [selectedModule, setSelectedModule] = useState<Module | null>(null);
+  
+  // Modals state
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isNotifManagerOpen, setIsNotifManagerOpen] = useState(false);
 
   const handleUpdateModule = (updatedModule: Module) => {
     // Deep update of state structure
@@ -33,6 +38,21 @@ export default function App() {
     setSelectedModule(updatedModule); // Update local view state
   };
 
+  // Notification Management
+  const handleAddNotification = (newNotif: AppNotification) => {
+      setData(prev => ({
+          ...prev,
+          notifications: [newNotif, ...prev.notifications]
+      }));
+  };
+
+  const handleDeleteNotification = (id: string) => {
+      setData(prev => ({
+          ...prev,
+          notifications: prev.notifications.filter(n => n.id !== id)
+      }));
+  };
+
   const resetSelection = () => {
     setSelectedYear(null);
     setSelectedSemester(null);
@@ -45,6 +65,9 @@ export default function App() {
         <h1 className="text-3xl font-bold text-slate-900 mb-2">Bienvenue sur <span className="text-primary-600">MedQCM Pro</span></h1>
         <p className="text-slate-600 max-w-2xl">Sélectionnez votre année d'étude pour accéder aux modules, QCMs et ressources PDF.</p>
       </div>
+
+      {/* Notifications Area */}
+      <NotificationBanner notifications={data.notifications} />
 
       <div className="grid grid-cols-1 gap-6">
         {data.years.map((year) => (
@@ -101,6 +124,7 @@ export default function App() {
     <Layout 
       onNavigateHome={resetSelection}
       onContactClick={() => setIsContactOpen(true)}
+      onManageNotifications={() => setIsNotifManagerOpen(true)}
     >
       {selectedModule ? (
         <ModuleView 
@@ -113,6 +137,14 @@ export default function App() {
       )}
 
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      
+      <NotificationManagerModal 
+          isOpen={isNotifManagerOpen} 
+          onClose={() => setIsNotifManagerOpen(false)}
+          notifications={data.notifications}
+          onAdd={handleAddNotification}
+          onDelete={handleDeleteNotification}
+      />
     </Layout>
   );
 }

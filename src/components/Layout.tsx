@@ -1,13 +1,14 @@
 import React from 'react';
-import { LucideLayoutDashboard, LucideBookOpen, LucideGraduationCap, LucideMail } from 'lucide-react';
+import { LucideLayoutDashboard, LucideGraduationCap, LucideMail, BellPlus } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
   onNavigateHome: () => void;
   onContactClick: () => void;
+  onManageNotifications: () => void;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onContactClick }) => {
+export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onContactClick, onManageNotifications }) => {
   return (
     <div className="flex h-full w-full bg-slate-50">
       {/* Sidebar - Desktop */}
@@ -34,6 +35,14 @@ export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onCont
            <div className="px-3 text-sm text-slate-500 italic">
              Sélectionnez une année dans le tableau de bord pour commencer.
            </div>
+           
+           <div className="pt-4 pb-2">
+             <p className="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Administration</p>
+           </div>
+           <button onClick={onManageNotifications} className="flex items-center gap-3 w-full p-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary-600 transition-colors font-medium text-sm">
+             <BellPlus className="w-5 h-5" />
+             Gestion des Annonces
+           </button>
 
         </nav>
 
@@ -56,9 +65,14 @@ export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onCont
               <LucideGraduationCap className="text-primary-600 w-6 h-6" />
               MedQCM
            </div>
-           <button onClick={onContactClick} className="text-slate-600">
-             <LucideMail className="w-6 h-6" />
-           </button>
+           <div className="flex gap-2">
+             <button onClick={onManageNotifications} className="text-slate-600 p-2">
+               <BellPlus className="w-6 h-6" />
+             </button>
+             <button onClick={onContactClick} className="text-slate-600 p-2">
+               <LucideMail className="w-6 h-6" />
+             </button>
+           </div>
         </header>
 
         <div className="flex-1 overflow-auto p-4 md:p-8 relative">

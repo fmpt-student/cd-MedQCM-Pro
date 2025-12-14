@@ -30,7 +30,7 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
   // New Question Form State
   const [newQuestionText, setNewQuestionText] = useState('');
   const [newQuestionOptions, setNewQuestionOptions] = useState(['', '', '', '']);
-  const [newQuestionCorrect, setNewQuestionCorrect] = useState(0);
+  const [newQuestionCorrectIndices, setNewQuestionCorrectIndices] = useState<number[]>([]);
   const [newQuestionExplanation, setNewQuestionExplanation] = useState('');
   
   // New PDF Form State
@@ -42,12 +42,16 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
   const [testState, setTestState] = useState<'intro' | 'active' | 'result'>('intro');
   const [testQuestions, setTestQuestions] = useState<Question[]>([]);
   const [currentTestIndex, setCurrentTestIndex] = useState(0);
-  const [testAnswers, setTestAnswers] = useState<Record<string, number>>({}); // Map: QuestionID -> OptionIndex
+  const [testAnswers, setTestAnswers] = useState<Record<string, number[]>>({}); // Map: QuestionID -> Array of OptionIndices
+
+  // Filter questions for Test Mode (Exclude AI generated questions)
+  const eligibleTestQuestions = moduleData.questions.filter(q => !q.id.startsWith('ai-'));
 
   const handleGenerateAi = async () => {
     setIsGenerating(true);
     try {
-      const newQuestions = await generateQuestionsForModule(moduleData.name, 3);
+      // Modification ici : On passe moduleData.description en 2ème argument
+      const newQuestions = await generateQuestionsForModule(moduleData.name, moduleData.description || "", 3);
       const updatedModule = {
         ...moduleData,
         questions: [...moduleData.questions, ...newQuestions]
@@ -61,14 +65,25 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
     }
   };
 
+  const toggleNewQuestionCorrectIndex = (index: number) => {
+      if (newQuestionCorrectIndices.includes(index)) {
+          setNewQuestionCorrectIndices(prev => prev.filter(i => i !== index));
+      } else {
+          setNewQuestionCorrectIndices(prev => [...prev, index]);
+      }
+  };
+
   const handleAddManualQuestion = () => {
-    if (!newQuestionText || newQuestionOptions.some(o => !o)) return;
+    if (!newQuestionText || newQuestionOptions.some(o => !o) || newQuestionCorrectIndices.length === 0) {
+        alert("Veuillez remplir tous les champs et sélectionner au moins une réponse correcte.");
+        return;
+    }
 
     const newQ: Question = {
       id: `manual-${Date.now()}`,
       text: newQuestionText,
       options: newQuestionOptions,
-      correctIndex: newQuestionCorrect,
+      correctIndices: newQuestionCorrectIndices.sort((a,b) => a - b),
       explanation: newQuestionExplanation
     };
 
@@ -79,7 +94,7 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
 
     setNewQuestionText('');
     setNewQuestionOptions(['', '', '', '']);
-    setNewQuestionCorrect(0);
+    setNewQuestionCorrectIndices([]);
     setNewQuestionExplanation('');
     setShowAddForm(false);
   };
@@ -105,8 +120,8 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
 
   // --- TEST MODE LOGIC ---
   const startTest = () => {
-      // Shuffle questions and pick max 60
-      const shuffled = [...moduleData.questions]
+      // Shuffle questions and pick max 60 (ONLY NON-AI QUESTIONS)
+      const shuffled = [...eligibleTestQuestions]
           .sort(() => 0.5 - Math.random())
           .slice(0, 60);
       
@@ -116,11 +131,11 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
       setTestState('active');
   };
 
-  const handleTestAnswer = (optionIndex: number) => {
+  const handleTestAnswer = (optionIndices: number[]) => {
       const currentQ = testQuestions[currentTestIndex];
       setTestAnswers(prev => ({
           ...prev,
-          [currentQ.id]: optionIndex
+          [currentQ.id]: optionIndices
       }));
   };
 
@@ -135,7 +150,13 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
   const calculateScore = () => {
       let score = 0;
       testQuestions.forEach(q => {
-          if (testAnswers[q.id] === q.correctIndex) {
+          const userAnswers = testAnswers[q.id] || [];
+          // Exact match validation for multiple choice
+          const isCorrect = 
+            userAnswers.length === q.correctIndices.length && 
+            q.correctIndices.every(i => userAnswers.includes(i));
+
+          if (isCorrect) {
               score++;
           }
       });
@@ -230,24 +251,23 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
                     onChange={(e) => setNewQuestionText(e.target.value)}
                     className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none"
                     rows={2}
-                    placeholder="Ex: Quelle est la fonction principale des mitochondries ?"
+                    placeholder={`Ex: Question sur ${moduleData.name}...`}
                   />
                 </div>
                 
                 <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
                   <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
-                    Options de réponse (Cochez la bonne réponse)
+                    Options de réponse (Cochez les bonnes réponses)
                   </p>
                   <div className="grid grid-cols-1 gap-3">
                     {newQuestionOptions.map((opt, i) => (
-                      <div key={i} className={`flex items-center gap-3 p-2 rounded-md border transition-colors ${newQuestionCorrect === i ? 'bg-green-50 border-green-200 ring-1 ring-green-500/20' : 'bg-white border-slate-200'}`}>
+                      <div key={i} className={`flex items-center gap-3 p-2 rounded-md border transition-colors ${newQuestionCorrectIndices.includes(i) ? 'bg-green-50 border-green-200 ring-1 ring-green-500/20' : 'bg-white border-slate-200'}`}>
                         <div className="relative flex items-center justify-center">
                           <input
-                            type="radio"
-                            name="correctOption"
-                            checked={newQuestionCorrect === i}
-                            onChange={() => setNewQuestionCorrect(i)}
-                            className="w-5 h-5 text-green-600 border-slate-300 focus:ring-green-500 cursor-pointer"
+                            type="checkbox"
+                            checked={newQuestionCorrectIndices.includes(i)}
+                            onChange={() => toggleNewQuestionCorrectIndex(i)}
+                            className="w-5 h-5 text-green-600 border-slate-300 rounded focus:ring-green-500 cursor-pointer"
                             title="Marquer comme réponse correcte"
                           />
                         </div>
@@ -262,7 +282,7 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
                           className="flex-1 bg-transparent border-none p-1 text-sm focus:ring-0 outline-none placeholder:text-slate-400"
                           placeholder={`Option ${i+1}`}
                         />
-                        {newQuestionCorrect === i && <span className="text-xs font-bold text-green-600 px-2">Correcte</span>}
+                        {newQuestionCorrectIndices.includes(i) && <span className="text-xs font-bold text-green-600 px-2">Correcte</span>}
                       </div>
                     ))}
                   </div>
@@ -275,7 +295,7 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
                     onChange={(e) => setNewQuestionExplanation(e.target.value)}
                     className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none"
                     rows={2}
-                    placeholder="Expliquez pourquoi la réponse sélectionnée est la bonne..."
+                    placeholder="Expliquez pourquoi ces réponses sont les bonnes..."
                   />
                 </div>
                 <div className="flex justify-end gap-2 pt-2 border-t border-slate-100 mt-4">
@@ -333,15 +353,14 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
                       </div>
                       <h2 className="text-2xl font-bold text-slate-900 mb-2">Mode Examen</h2>
                       <p className="text-slate-600 mb-8 leading-relaxed">
-                          Ce mode sélectionne aléatoirement jusqu'à 60 questions du module.
-                          Vous répondrez aux questions une par une sans voir la réponse immédiatement.
-                          Le score sera calculé à la fin.
+                          Ce mode sélectionne aléatoirement jusqu'à 60 questions du module (questions IA exclues).
+                          Vous devez sélectionner <strong>toutes</strong> les bonnes réponses pour valider une question.
                       </p>
                       
                       <div className="flex justify-center gap-8 mb-8 text-sm text-slate-500">
                            <div className="flex flex-col items-center gap-1">
                                <span className="font-bold text-slate-900 text-lg">
-                                   {Math.min(60, moduleData.questions.length)}
+                                   {Math.min(60, eligibleTestQuestions.length)}
                                </span>
                                <span>Questions</span>
                            </div>
@@ -357,11 +376,17 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
 
                       <button 
                           onClick={startTest}
-                          disabled={moduleData.questions.length === 0}
+                          disabled={eligibleTestQuestions.length === 0}
                           className="w-full sm:w-auto bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-all font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                          {moduleData.questions.length === 0 ? "Aucune question disponible" : "Commencer l'examen"}
+                          {eligibleTestQuestions.length === 0 ? "Aucune question de cours disponible" : "Commencer l'examen"}
                       </button>
+                      
+                      {eligibleTestQuestions.length === 0 && moduleData.questions.length > 0 && (
+                          <p className="mt-4 text-xs text-orange-500">
+                              Note : Les questions générées par IA ne sont pas incluses dans le mode examen.
+                          </p>
+                      )}
                   </div>
               )}
 
@@ -386,7 +411,7 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
                           question={testQuestions[currentTestIndex]} 
                           index={currentTestIndex}
                           isTestMode={true}
-                          selectedAnswer={testAnswers[testQuestions[currentTestIndex].id] ?? null}
+                          selectedAnswers={testAnswers[testQuestions[currentTestIndex].id] || []}
                           onAnswer={handleTestAnswer}
                           showFeedback={false}
                       />
