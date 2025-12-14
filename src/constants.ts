@@ -8,18 +8,6 @@ export const INITIAL_DATA: DataStore = {
       message: 'Bienvenue sur la nouvelle version de MedQCM Pro ! N\'hésitez pas à utiliser l\'IA pour vos révisions.',
       date: new Date().toLocaleDateString('fr-FR')
     },
-    {
-      id: 'notif-2',
-      type: 'warning',
-      message: 'Maintenance prévue ce dimanche pour ajout des modules de 3ème année.',
-      date: new Date().toLocaleDateString('fr-FR')
-    },
-    {
-      id: 'notif-3',
-      type: 'urgent',
-      message: 'Examen blanc prévu le 15 Novembre. Préparez-vous !',
-      date: new Date().toLocaleDateString('fr-FR')
-    }
   ],
   years: [
     // ============================================================
