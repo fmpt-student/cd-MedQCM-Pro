@@ -2,10 +2,18 @@ import { DataStore } from './types';
 
 export const INITIAL_DATA: DataStore = {
   notifications: [
-    {
+    
+    
+   {
       id: 'notif-1',
       type: 'info',
       message: 'Bienvenue sur la nouvelle version de MedQCM Pro ! N\'hésitez pas à utiliser l\'IA pour vos révisions.',
+      date: new Date().toLocaleDateString('fr-FR')
+    },
+    {
+      id: 'notif-2',
+      type: 'warning',
+      message: 'seulement 10 a 15 personnes peuvent generer des questions a l\'aide l\'ia et au total 10000-15000 donc priere de ne pas l\'utiliser maintes fois et vous pouvez le remplacer par l\'ia gemini et merci pour votre comprehension.',
       date: new Date().toLocaleDateString('fr-FR')
     },
   ],
