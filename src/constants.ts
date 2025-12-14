@@ -16,6 +16,12 @@ export const INITIAL_DATA: DataStore = {
       message: 'seulement 10 a 15 personnes peuvent generer simultanement des questions a l\'aide l\'ia, au total c\'est 10000-15000 fois par jour donc priere de ne pas l\'utiliser maintes fois. Vous pouvez le remplacer par l\'ia gemini puisque c\'est le meme modele et merci pour votre comprehension.',
       date: new Date().toLocaleDateString('fr-FR')
     },
+    {
+      id: 'notif-3',
+      type: 'warning',
+      message: 'on est en cours d\'etablir des modifications pour finir ce site veuillez patienter',
+      date: new Date().toLocaleDateString('fr-FR')
+    },
   ],
   years: [
     // ============================================================
