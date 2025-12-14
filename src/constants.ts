@@ -13,6 +13,12 @@ export const INITIAL_DATA: DataStore = {
       type: 'warning',
       message: 'Maintenance prévue ce dimanche pour ajout des modules de 3ème année.',
       date: new Date().toLocaleDateString('fr-FR')
+    },
+    {
+      id: 'notif-3',
+      type: 'urgent',
+      message: 'Examen blanc prévu le 15 Novembre. Préparez-vous !',
+      date: new Date().toLocaleDateString('fr-FR')
     }
   ],
   years: [
