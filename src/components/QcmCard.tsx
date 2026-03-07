@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import { Question } from '../types';
-import { CheckCircle2, XCircle, HelpCircle, ChevronDown, ChevronUp, Square, CheckSquare } from 'lucide-react';
+import { 
+  CheckCircle2, 
+  XCircle, 
+  HelpCircle, 
+  ChevronDown, 
+  ChevronUp, 
+  Square, 
+  CheckSquare,
+  Edit2,
+  Save,
+  Trash2,
+  X
+} from 'lucide-react';
 
 interface QcmCardProps {
   question: Question;
@@ -10,6 +22,8 @@ interface QcmCardProps {
   selectedAnswers?: number[]; // Tableau d'indices maintenant
   onAnswer?: (indices: number[]) => void;
   showFeedback?: boolean;
+  onUpdate?: (updated: Question) => void;
+  onDelete?: (id: string) => void;
 }
 
 export const QcmCard: React.FC<QcmCardProps> = ({ 
@@ -18,12 +32,18 @@ export const QcmCard: React.FC<QcmCardProps> = ({
   isTestMode = false,
   selectedAnswers = [],
   onAnswer,
-  showFeedback = true
+  showFeedback = true,
+  onUpdate,
+  onDelete
 }) => {
   // État interne pour le mode révision standard (tableau d'indices)
   const [internalSelected, setInternalSelected] = useState<number[]>([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
+  
+  // Edit mode state
+  const [isEditing, setIsEditing] = useState(false);
+  const [editData, setEditData] = useState<Question>(question);
 
   // En mode Test, on utilise les props du parent. Sinon, l'état interne.
   const currentSelection = isTestMode ? (selectedAnswers || []) : internalSelected;
@@ -74,8 +94,107 @@ export const QcmCard: React.FC<QcmCardProps> = ({
 
   const isCorrect = isFullyCorrect();
 
+  const handleSaveEdit = () => {
+    if (onUpdate) {
+      onUpdate(editData);
+    }
+    setIsEditing(false);
+  };
+
+  const toggleEditCorrectIndex = (idx: number) => {
+    setEditData(prev => {
+      const newIndices = prev.correctIndices.includes(idx)
+        ? prev.correctIndices.filter(i => i !== idx)
+        : [...prev.correctIndices, idx].sort((a, b) => a - b);
+      return { ...prev, correctIndices: newIndices };
+    });
+  };
+
+  if (isEditing) {
+    return (
+      <div className="bg-white rounded-xl shadow-md border-2 border-primary-500 overflow-hidden mb-6 animate-in fade-in zoom-in-95 duration-200">
+        <div className="p-5 bg-primary-50 border-b border-primary-100 flex justify-between items-center">
+          <h3 className="font-bold text-primary-900">Modifier la Question {index + 1}</h3>
+          <div className="flex gap-2">
+            <button 
+              onClick={() => setIsEditing(false)}
+              className="p-2 text-slate-500 hover:bg-white rounded-full transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+        
+        <div className="p-5 space-y-4">
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Énoncé</label>
+            <textarea 
+              value={editData.text}
+              onChange={e => setEditData({...editData, text: e.target.value})}
+              className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary-500 outline-none"
+              rows={2}
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Options (Cochez les bonnes)</label>
+            {editData.options.map((opt, i) => (
+              <div key={i} className={`flex items-center gap-3 p-2 rounded-lg border transition-all ${editData.correctIndices.includes(i) ? 'bg-green-50 border-green-200' : 'bg-white border-slate-200'}`}>
+                <input 
+                  type="checkbox"
+                  checked={editData.correctIndices.includes(i)}
+                  onChange={() => toggleEditCorrectIndex(i)}
+                  className="w-5 h-5 text-green-600 border-slate-300 rounded focus:ring-green-500 cursor-pointer"
+                />
+                <input 
+                  type="text"
+                  value={opt}
+                  onChange={e => {
+                    const newOpts = [...editData.options];
+                    newOpts[i] = e.target.value;
+                    setEditData({...editData, options: newOpts});
+                  }}
+                  className="flex-1 bg-transparent border-none p-1 text-sm focus:ring-0 outline-none"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Explication</label>
+            <textarea 
+              value={editData.explanation}
+              onChange={e => setEditData({...editData, explanation: e.target.value})}
+              className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary-500 outline-none"
+              rows={2}
+            />
+          </div>
+        </div>
+
+        <div className="p-5 bg-slate-50 flex justify-between">
+          <button 
+            onClick={() => {
+              if (onDelete && confirm("Supprimer cette question ?")) {
+                onDelete(question.id);
+              }
+            }}
+            className="flex items-center gap-2 text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          >
+            <Trash2 className="w-4 h-4" /> Supprimer
+          </button>
+          <button 
+            onClick={handleSaveEdit}
+            className="flex items-center gap-2 bg-primary-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-primary-700 transition-colors shadow-sm"
+          >
+            <Save className="w-4 h-4" /> Enregistrer
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md mb-6">
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md mb-6 relative group">
       <div className="p-5 border-b border-slate-100 bg-slate-50/50 flex justify-between items-start">
         <div className="flex-1">
           <h3 className="font-semibold text-slate-800 text-lg flex gap-3">
@@ -87,15 +206,29 @@ export const QcmCard: React.FC<QcmCardProps> = ({
                 {question.correctIndices.length > 1 && (
                     <span className="block text-xs font-normal text-slate-500 mt-1">(Plusieurs réponses possibles)</span>
                 )}
+                {question.correctIndices.length === 0 && !isTestMode && (
+                    <span className="block text-xs font-bold text-orange-600 mt-1">⚠️ Aucune réponse correcte définie !</span>
+                )}
             </span>
           </h3>
         </div>
         
-        {shouldShowFeedback && (
-            <div className={`ml-3 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shrink-0 ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-                {isCorrect ? <><CheckCircle2 className="w-4 h-4" /> Correct</> : <><XCircle className="w-4 h-4" /> Incorrect</>}
-            </div>
-        )}
+        <div className="flex items-center gap-2">
+          {!isTestMode && (
+            <button 
+              onClick={() => setIsEditing(true)}
+              className="p-2 text-slate-400 hover:text-primary-600 hover:bg-primary-50 rounded-full transition-all opacity-0 group-hover:opacity-100"
+              title="Modifier la question"
+            >
+              <Edit2 className="w-4 h-4" />
+            </button>
+          )}
+          {shouldShowFeedback && (
+              <div className={`px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shrink-0 ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                  {isCorrect ? <><CheckCircle2 className="w-4 h-4" /> Correct</> : <><XCircle className="w-4 h-4" /> Incorrect</>}
+              </div>
+          )}
+        </div>
       </div>
 
       <div className="p-5 space-y-3">

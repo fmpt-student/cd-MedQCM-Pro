@@ -30,8 +30,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onCont
              <p className="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Navigation</p>
            </div>
            
-           {/* Navigation is largely handled in the main content area for this tree structure, 
-               but we provide a quick link home here. */}
            <div className="px-3 text-sm text-slate-500 italic">
              Sélectionnez une année dans le tableau de bord pour commencer.
            </div>

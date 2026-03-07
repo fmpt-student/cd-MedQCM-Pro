@@ -26,7 +26,12 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
   const [activeTab, setActiveTab] = useState<'qcm' | 'pdf' | 'test'>('qcm');
   const [isGenerating, setIsGenerating] = useState(false);
   const [showAddForm, setShowAddForm] = useState(false);
+  const [selectedLessonId, setSelectedLessonId] = useState<string>(moduleData.lessons[0]?.id || '');
   
+  // New Lesson Form State
+  const [showLessonForm, setShowLessonForm] = useState(false);
+  const [newLessonName, setNewLessonName] = useState('');
+
   // New Question Form State
   const [newQuestionText, setNewQuestionText] = useState('');
   const [newQuestionOptions, setNewQuestionOptions] = useState(['', '', '', '']);
@@ -43,33 +48,60 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
   const [testQuestions, setTestQuestions] = useState<Question[]>([]);
   const [currentTestIndex, setCurrentTestIndex] = useState(0);
   const [testAnswers, setTestAnswers] = useState<Record<string, number[]>>({}); // Map: QuestionID -> Array of OptionIndices
+  const [testConfig, setTestConfig] = useState<Record<string, number>>({}); // LessonID -> QuestionCount
+
+  // Helper to get all questions/pdfs across all lessons
+  const allQuestions = moduleData.lessons.flatMap(l => l.questions);
+  const allPdfs = moduleData.lessons.flatMap(l => l.pdfs);
 
   // Filter questions for Test Mode (Exclude AI generated questions)
-  const eligibleTestQuestions = moduleData.questions.filter(q => !q.id.startsWith('ai-'));
+  const getEligibleQuestions = (lessonId?: string) => {
+    if (lessonId) {
+      const lesson = moduleData.lessons.find(l => l.id === lessonId);
+      return lesson ? lesson.questions.filter(q => !q.id.startsWith('ai-')) : [];
+    }
+    return allQuestions.filter(q => !q.id.startsWith('ai-'));
+  };
+
+  const handleAddLesson = () => {
+    if (!newLessonName) return;
+    const newLesson = {
+      id: `lesson-${Date.now()}`,
+      name: newLessonName,
+      questions: [],
+      pdfs: []
+    };
+    onUpdateModule({
+      ...moduleData,
+      lessons: [...moduleData.lessons, newLesson]
+    });
+    setNewLessonName('');
+    setShowLessonForm(false);
+    if (!selectedLessonId) setSelectedLessonId(newLesson.id);
+  };
 
   const handleGenerateAi = async () => {
+    if (!selectedLessonId) {
+      alert("Veuillez d'abord créer ou sélectionner un cours.");
+      return;
+    }
     setIsGenerating(true);
     try {
-      // Modification ici : On passe moduleData.description en 2ème argument
-      const newQuestions = await generateQuestionsForModule(moduleData.name, moduleData.description || "", 3);
-      const updatedModule = {
-        ...moduleData,
-        questions: [...moduleData.questions, ...newQuestions]
-      };
-      onUpdateModule(updatedModule);
-    } catch (e: any) {
-      console.error(e);
-      // Gestion intelligente des messages d'erreur
-      let message = "Une erreur est survenue lors de la génération.";
+      const lesson = moduleData.lessons.find(l => l.id === selectedLessonId);
+      const newQuestions = await generateQuestionsForModule(lesson?.name || moduleData.name, moduleData.description || "", 3);
       
-      // Détection de l'erreur de quota (429) ou de surcharge (503)
-      const errorString = e.toString();
-      if (errorString.includes('429') || errorString.includes('Quota') || errorString.includes('Resource has been exhausted')) {
-        message = "⚠️ Le serveur est très sollicité (Limite de quota atteinte). Veuillez attendre une minute avant de réessayer.";
-      } else if (errorString.includes('API_KEY')) {
-         message = "Erreur de configuration : Clé API manquante ou invalide.";
-      }
+      const updatedLessons = moduleData.lessons.map(l => 
+        l.id === selectedLessonId ? { ...l, questions: [...l.questions, ...newQuestions] } : l
+      );
 
+      onUpdateModule({ ...moduleData, lessons: updatedLessons });
+    } catch (e: unknown) {
+      console.error(e);
+      let message = "Une erreur est survenue lors de la génération.";
+      const errorString = String(e);
+      if (errorString.includes('429') || errorString.includes('Quota')) {
+        message = "⚠️ Limite de quota atteinte. Veuillez attendre une minute.";
+      }
       alert(message);
     } finally {
       setIsGenerating(false);
@@ -85,8 +117,12 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
   };
 
   const handleAddManualQuestion = () => {
+    if (!selectedLessonId) {
+      alert("Veuillez sélectionner un cours.");
+      return;
+    }
     if (!newQuestionText || newQuestionOptions.some(o => !o) || newQuestionCorrectIndices.length === 0) {
-        alert("Veuillez remplir tous les champs et sélectionner au moins une réponse correcte.");
+        alert("Veuillez remplir tous les champs.");
         return;
     }
 
@@ -98,10 +134,11 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
       explanation: newQuestionExplanation
     };
 
-    onUpdateModule({
-      ...moduleData,
-      questions: [...moduleData.questions, newQ]
-    });
+    const updatedLessons = moduleData.lessons.map(l => 
+      l.id === selectedLessonId ? { ...l, questions: [...l.questions, newQ] } : l
+    );
+
+    onUpdateModule({ ...moduleData, lessons: updatedLessons });
 
     setNewQuestionText('');
     setNewQuestionOptions(['', '', '', '']);
@@ -111,7 +148,7 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
   };
 
   const handleAddPdf = () => {
-      if(!newPdfName || !newPdfUrl) return;
+      if(!selectedLessonId || !newPdfName || !newPdfUrl) return;
       
       const newPdf: PdfResource = {
           id: `pdf-${Date.now()}`,
@@ -119,10 +156,11 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
           url: newPdfUrl
       };
 
-      onUpdateModule({
-          ...moduleData,
-          pdfs: [...moduleData.pdfs, newPdf]
-      });
+      const updatedLessons = moduleData.lessons.map(l => 
+        l.id === selectedLessonId ? { ...l, pdfs: [...l.pdfs, newPdf] } : l
+      );
+
+      onUpdateModule({ ...moduleData, lessons: updatedLessons });
 
       setNewPdfName('');
       setNewPdfUrl('');
@@ -131,12 +169,24 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
 
   // --- TEST MODE LOGIC ---
   const startTest = () => {
-      // Shuffle questions and pick max 60 (ONLY NON-AI QUESTIONS)
-      const shuffled = [...eligibleTestQuestions]
-          .sort(() => 0.5 - Math.random())
-          .slice(0, 60);
+      let finalQuestions: Question[] = [];
       
-      setTestQuestions(shuffled);
+      moduleData.lessons.forEach(lesson => {
+        const count = testConfig[lesson.id] || 0;
+        if (count > 0) {
+          const eligible = lesson.questions.filter(q => !q.id.startsWith('ai-'));
+          const shuffled = [...eligible].sort(() => 0.5 - Math.random()).slice(0, count);
+          finalQuestions = [...finalQuestions, ...shuffled];
+        }
+      });
+
+      if (finalQuestions.length === 0) {
+        alert("Veuillez sélectionner au moins une question.");
+        return;
+      }
+      
+      // Final shuffle of the combined pool
+      setTestQuestions(finalQuestions.sort(() => 0.5 - Math.random()));
       setTestAnswers({});
       setCurrentTestIndex(0);
       setTestState('active');
@@ -174,6 +224,22 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
       return score;
   };
 
+  const handleUpdateQuestion = (updatedQ: Question) => {
+    const updatedLessons = moduleData.lessons.map(l => ({
+      ...l,
+      questions: l.questions.map(q => q.id === updatedQ.id ? updatedQ : q)
+    }));
+    onUpdateModule({ ...moduleData, lessons: updatedLessons });
+  };
+
+  const handleDeleteQuestion = (id: string) => {
+    const updatedLessons = moduleData.lessons.map(l => ({
+      ...l,
+      questions: l.questions.filter(q => q.id !== id)
+    }));
+    onUpdateModule({ ...moduleData, lessons: updatedLessons });
+  };
+
   return (
     <div className="max-w-4xl mx-auto pb-12">
       {/* Header */}
@@ -199,7 +265,7 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
           }`}
         >
           <HelpCircle className="w-4 h-4" />
-          Révision QCMs ({moduleData.questions.length})
+          Révision QCMs ({allQuestions.length})
         </button>
         <button
           onClick={() => setActiveTab('test')}
@@ -221,9 +287,56 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
           }`}
         >
           <FileText className="w-4 h-4" />
-          Documents PDF ({moduleData.pdfs.length})
+          Documents PDF ({allPdfs.length})
         </button>
       </div>
+
+      {/* Lesson Selector Bar */}
+      {(activeTab === 'qcm' || activeTab === 'pdf') && (
+        <div className="flex items-center gap-3 mb-6 overflow-x-auto pb-2">
+          {moduleData.lessons.map(lesson => (
+            <button
+              key={lesson.id}
+              onClick={() => setSelectedLessonId(lesson.id)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
+                selectedLessonId === lesson.id
+                  ? 'bg-primary-600 text-white shadow-md'
+                  : 'bg-white border border-slate-200 text-slate-600 hover:border-primary-300'
+              }`}
+            >
+              {lesson.name}
+            </button>
+          ))}
+          <button
+            onClick={() => setShowLessonForm(true)}
+            className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all border border-dashed border-slate-300"
+          >
+            <Plus className="w-4 h-4" /> Nouveau cours
+          </button>
+        </div>
+      )}
+
+      {/* New Lesson Modal/Form */}
+      {showLessonForm && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white rounded-xl w-full max-w-sm p-6 shadow-xl">
+            <h3 className="text-lg font-bold text-slate-900 mb-4">Ajouter un nouveau cours</h3>
+            <input
+              autoFocus
+              type="text"
+              value={newLessonName}
+              onChange={e => setNewLessonName(e.target.value)}
+              className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary-500 outline-none mb-4"
+              placeholder="Nom du cours (ex: Introduction)"
+              onKeyDown={e => e.key === 'Enter' && handleAddLesson()}
+            />
+            <div className="flex justify-end gap-2">
+              <button onClick={() => setShowLessonForm(false)} className="px-4 py-2 text-slate-500 hover:bg-slate-100 rounded-lg text-sm">Annuler</button>
+              <button onClick={handleAddLesson} className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm font-medium">Créer</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* --- CONTENT: QCM REVISION --- */}
       {activeTab === 'qcm' && (
@@ -232,15 +345,16 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
           <div className="flex flex-wrap gap-3 mb-6">
             <button 
               onClick={handleGenerateAi}
-              disabled={isGenerating}
+              disabled={isGenerating || !selectedLessonId}
               className="flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg hover:from-violet-700 hover:to-indigo-700 transition-all text-sm font-medium disabled:opacity-70"
             >
               {isGenerating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
-              {isGenerating ? "Génération en cours..." : "Générer avec IA"}
+              {isGenerating ? "Génération..." : "Générer avec IA"}
             </button>
             <button 
               onClick={() => setShowAddForm(!showAddForm)}
-              className="flex items-center gap-2 bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium"
+              disabled={!selectedLessonId}
+              className="flex items-center gap-2 bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium disabled:opacity-50"
             >
               <Plus className="w-4 h-4" />
               Ajouter une question
@@ -328,24 +442,30 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
           )}
 
           {/* Questions List */}
-          {moduleData.questions.length === 0 ? (
+          {!selectedLessonId ? (
+            <div className="text-center py-12 bg-white rounded-xl border border-dashed border-slate-300">
+               <BookOpen className="text-slate-400 w-12 h-12 mx-auto mb-3" />
+               <h3 className="text-slate-900 font-medium mb-1">Aucun cours sélectionné</h3>
+               <p className="text-slate-500 text-sm max-w-xs mx-auto">Veuillez sélectionner un cours ou en créer un nouveau pour voir les questions.</p>
+            </div>
+          ) : moduleData.lessons.find(l => l.id === selectedLessonId)?.questions.length === 0 ? (
             <div className="text-center py-12 bg-white rounded-xl border border-dashed border-slate-300">
                <div className="bg-slate-50 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                  <HelpCircle className="text-slate-400 w-6 h-6" />
                </div>
-               <h3 className="text-slate-900 font-medium mb-1">Aucune question pour le moment</h3>
+               <h3 className="text-slate-900 font-medium mb-1">Aucune question dans ce cours</h3>
                <p className="text-slate-500 text-sm max-w-xs mx-auto mb-4">Utilisez l'IA pour générer des questions ou ajoutez-les manuellement.</p>
-               <button 
-                  onClick={handleGenerateAi}
-                  className="text-primary-600 font-medium text-sm hover:underline"
-               >
-                 Essayer la génération IA &rarr;
-               </button>
             </div>
           ) : (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              {moduleData.questions.map((q, idx) => (
-                <QcmCard key={q.id} question={q} index={idx} />
+              {moduleData.lessons.find(l => l.id === selectedLessonId)?.questions.map((q, idx) => (
+                <QcmCard 
+                  key={q.id} 
+                  question={q} 
+                  index={idx} 
+                  onUpdate={handleUpdateQuestion}
+                  onDelete={handleDeleteQuestion}
+                />
               ))}
             </div>
           )}
@@ -358,46 +478,65 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
               
               {/* STATE: INTRO */}
               {testState === 'intro' && (
-                  <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 text-center max-w-2xl mx-auto">
-                      <div className="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                          <Timer className="text-primary-600 w-8 h-8" />
+                  <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 max-w-2xl mx-auto">
+                      <div className="text-center mb-8">
+                        <div className="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <Timer className="text-primary-600 w-8 h-8" />
+                        </div>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-2">Configuration de l'Examen</h2>
+                        <p className="text-slate-600 leading-relaxed">
+                            Sélectionnez le nombre de questions par cours pour votre test personnalisé.
+                        </p>
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-900 mb-2">Mode Examen</h2>
-                      <p className="text-slate-600 mb-8 leading-relaxed">
-                          Ce mode sélectionne aléatoirement jusqu'à 60 questions du module (questions IA exclues).
-                          Vous devez sélectionner <strong>toutes</strong> les bonnes réponses pour valider une question.
-                      </p>
                       
-                      <div className="flex justify-center gap-8 mb-8 text-sm text-slate-500">
-                           <div className="flex flex-col items-center gap-1">
-                               <span className="font-bold text-slate-900 text-lg">
-                                   {Math.min(60, eligibleTestQuestions.length)}
-                               </span>
-                               <span>Questions</span>
-                           </div>
-                           <div className="flex flex-col items-center gap-1">
-                               <span className="font-bold text-slate-900 text-lg">Mix</span>
-                               <span>Aléatoire</span>
-                           </div>
-                           <div className="flex flex-col items-center gap-1">
-                               <span className="font-bold text-slate-900 text-lg">Score</span>
-                               <span>Final</span>
-                           </div>
+                      <div className="space-y-4 mb-8">
+                        {moduleData.lessons.map(lesson => {
+                          const eligible = getEligibleQuestions(lesson.id);
+                          if (eligible.length === 0) return null;
+                          return (
+                            <div key={lesson.id} className="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-100">
+                              <div className="flex-1">
+                                <h4 className="font-semibold text-slate-800">{lesson.name}</h4>
+                                <p className="text-xs text-slate-500">{eligible.length} questions disponibles</p>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <input 
+                                  type="number"
+                                  min="0"
+                                  max={eligible.length}
+                                  value={testConfig[lesson.id] || 0}
+                                  onChange={e => setTestConfig({...testConfig, [lesson.id]: Math.min(eligible.length, parseInt(e.target.value) || 0)})}
+                                  className="w-16 border border-slate-300 rounded-lg p-2 text-center text-sm font-bold focus:ring-2 focus:ring-primary-500 outline-none"
+                                />
+                                <button 
+                                  onClick={() => setTestConfig({...testConfig, [lesson.id]: eligible.length})}
+                                  className="text-[10px] font-bold text-primary-600 hover:underline uppercase"
+                                >
+                                  Max
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })}
+                        {moduleData.lessons.every(l => getEligibleQuestions(l.id).length === 0) && (
+                          <div className="text-center py-6 text-slate-400 italic text-sm">
+                            Aucune question de cours disponible pour le test.
+                          </div>
+                        )}
                       </div>
 
-                      <button 
-                          onClick={startTest}
-                          disabled={eligibleTestQuestions.length === 0}
-                          className="w-full sm:w-auto bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-all font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                          {eligibleTestQuestions.length === 0 ? "Aucune question de cours disponible" : "Commencer l'examen"}
-                      </button>
-                      
-                      {eligibleTestQuestions.length === 0 && moduleData.questions.length > 0 && (
-                          <p className="mt-4 text-xs text-orange-500">
-                              Note : Les questions générées par IA ne sont pas incluses dans le mode examen.
-                          </p>
-                      )}
+                      <div className="flex flex-col items-center gap-4">
+                        <div className="bg-slate-900 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+                          Total : {Object.values(testConfig).reduce((a, b) => a + b, 0)} questions
+                        </div>
+                        <button 
+                            onClick={startTest}
+                            disabled={Object.values(testConfig).reduce((a, b) => a + b, 0) === 0}
+                            className="w-full bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-all font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            Commencer l'examen
+                        </button>
+                      </div>
                   </div>
               )}
 
@@ -523,7 +662,8 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
                 <h3 className="text-lg font-semibold text-slate-800">Ressources Documentaires</h3>
                 <button 
                     onClick={() => setShowPdfForm(!showPdfForm)}
-                    className="flex items-center gap-2 bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium"
+                    disabled={!selectedLessonId}
+                    className="flex items-center gap-2 bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium disabled:opacity-50"
                 >
                     <Plus className="w-4 h-4" />
                     Ajouter un PDF
@@ -563,12 +703,16 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
             )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {moduleData.pdfs.length === 0 ? (
+                {!selectedLessonId ? (
                     <div className="col-span-full text-center py-12 text-slate-500 text-sm bg-slate-50 rounded-lg border border-dashed border-slate-200">
-                        Aucun document disponible pour ce module.
+                        Veuillez sélectionner un cours pour voir les documents.
+                    </div>
+                ) : moduleData.lessons.find(l => l.id === selectedLessonId)?.pdfs.length === 0 ? (
+                    <div className="col-span-full text-center py-12 text-slate-500 text-sm bg-slate-50 rounded-lg border border-dashed border-slate-200">
+                        Aucun document disponible pour ce cours.
                     </div>
                 ) : (
-                    moduleData.pdfs.map((pdf) => (
+                    moduleData.lessons.find(l => l.id === selectedLessonId)?.pdfs.map((pdf) => (
                         <div key={pdf.id} className="group bg-white p-4 rounded-xl border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all flex items-start gap-4">
                             <div className="bg-red-50 p-3 rounded-lg group-hover:bg-red-100 transition-colors">
                                 <FileText className="w-6 h-6 text-red-500" />

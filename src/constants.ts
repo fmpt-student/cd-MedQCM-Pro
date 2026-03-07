@@ -1,152 +1,332 @@
-import { DataStore } from './types';
+import React, { useState } from 'react';
+import { Question } from '../types';
+import { 
+  CheckCircle2, 
+  XCircle, 
+  HelpCircle, 
+  ChevronDown, 
+  ChevronUp, 
+  Square, 
+  CheckSquare,
+  Edit2,
+  Save,
+  Trash2,
+  X
+} from 'lucide-react';
 
-export const INITIAL_DATA: DataStore = {
-  notifications: [
-    
-    
-   {
-      id: 'notif-1',
-      type: 'info',
-      message: 'Bienvenue sur la nouvelle version de MedQCM Pro ! N\'hésitez pas à utiliser l\'IA pour vos révisions.',
-      date: new Date().toLocaleDateString('fr-FR')
-    },
-    {
-      id: 'notif-2',
-      type: 'warning',
-      message: 'seulement 10 a 15 personnes peuvent generer simultanement des questions a l\'aide l\'ia, au total c\'est 10000-15000 fois par jour donc priere de ne pas l\'utiliser maintes fois. Vous pouvez le remplacer par l\'ia gemini puisque c\'est le meme modele et merci pour votre comprehension.',
-      date: new Date().toLocaleDateString('fr-FR')
-    },
-    {
-      id: 'notif-3',
-      type: 'warning',
-      message: 'on est en cours d\'etablir des modifications pour finir ce site veuillez patienter',
-      date: new Date().toLocaleDateString('fr-FR')
-    },
-  ],
-  years: [
-    // ============================================================
-    // 1ÈRE ANNÉE
-    // ============================================================
-    {
-      id: 'annee-1',
-      name: '1ère Année Médecine',
-      semesters: [
-        // --- SEMESTRE 1 ---
-        {
-          id: 's1',
-          name: 'Semestre 1',
-          modules: [
-            {
-              id: 'mod-anat-1',
-              name: 'Anatomie I',
-              // C'EST ICI QUE VOUS DÉFINISSEZ LE CONTEXTE POUR L'IA
-              description: 'Anatomie du thorax (cage thoracique, cœur, poumons, médiastin) et anatomie des membres supérieurs et inférieurs (ostéologie, arthrologie, myologie, vascularisation et innervation).',
-              // LISTE DES PDFS DU MODULE
-              pdfs: [
-                { id: 'pdf1', name: 'Cours Thorax.pdf', url: '#' },
-                { id: 'pdf2', name: 'Cours Membre Supérieur.pdf', url: '#' }
-              ],
-              // LISTE DES QUESTIONS QCM DU MODULE
-              questions: [
-                {
-                  id: 'q1',
-                  text: 'Quel est l\'os le plus long du corps humain ?',
-                  options: ['Humérus', 'Fémur', 'Tibia', 'Fibula'],
-                  correctIndices: [1], // Le Fémur
-                  explanation: 'Le fémur est l\'os de la cuisse et c\'est le plus long du corps.'
-                },
-                {
-                  id: 'q2',
-                  text: 'Concernant la cage thoracique :',
-                  options: ['Elle contient 12 paires de côtes', 'Le sternum est un os plat', 'Toutes les côtes s\'articulent directement avec le sternum', 'Elle protège le cœur et les poumons'],
-                  correctIndices: [0, 1, 3], 
-                  explanation: 'Il y a 12 paires de côtes. Les côtes flottantes (11 et 12) ne s\'articulent pas avec le sternum.'
-                },
-                {
-                  id: 'q3',
-                  text: 'Quels os font partie du membre inférieur ?',
-                  options: ['Fémur', 'Humérus', 'Tibia', 'Radius'],
-                  correctIndices: [0, 2], // Fémur et Tibia
-                  explanation: 'Le fémur et le tibia sont des os de la jambe. L\'humérus et le radius sont dans le bras.'
-                }
-              ]
-            },
-            {
-              id: 'mod-cyto-1',
-              name: 'Cytologie',
-              description: 'Étude de la cellule : Membrane plasmique, système endomembranaire, mitochondries, cytosquelette et noyau.',
-              pdfs: [],
-              questions: [] 
-            }
-          ]
-        },
-        // --- SEMESTRE 2 ---
-        {
-          id: 's2',
-          name: 'Semestre 2',
-          modules: [
-            {
-              id: 'mod-phy-1',
-              name: 'Physiologie',
-              description: 'Physiologie générale, homéostasie et physiologie nerveuse.',
-              pdfs: [],
-              questions: []
-            }
-          ]
-        }
-      ]
-    },
+interface QcmCardProps {
+  question: Question;
+  index: number;
+  // Props optionnelles pour le mode Test (Contrôlé)
+  isTestMode?: boolean;
+  selectedAnswers?: number[]; // Tableau d'indices maintenant
+  onAnswer?: (indices: number[]) => void;
+  showFeedback?: boolean;
+  onUpdate?: (updated: Question) => void;
+  onDelete?: (id: string) => void;
+}
 
-    // ============================================================
-    // 2ÈME ANNÉE
-    // ============================================================
-    {
-      id: 'annee-2',
-      name: '2ème Année Médecine',
-      semesters: [
-        {
-          id: 's3',
-          name: 'Semestre 3',
-          modules: [
-             {
-               id: 'mod-s3-1',
-               name: 'Cardiologie',
-               description: 'Pathologies cardiaques, ECG, insuffisance cardiaque et hypertension.',
-               pdfs: [],
-               questions: []
-             }
-          ]
-        },
-        {
-          id: 's4',
-          name: 'Semestre 4',
-          modules: []
-        }
-      ]
-    },
+export const QcmCard: React.FC<QcmCardProps> = ({ 
+  question, 
+  index, 
+  isTestMode = false,
+  selectedAnswers = [],
+  onAnswer,
+  showFeedback = true,
+  onUpdate,
+  onDelete
+}) => {
+  // État interne pour le mode révision standard (tableau d'indices)
+  const [internalSelected, setInternalSelected] = useState<number[]>([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showExplanation, setShowExplanation] = useState(false);
+  
+  // Edit mode state
+  const [isEditing, setIsEditing] = useState(false);
+  const [editData, setEditData] = useState<Question>(question);
 
-    // ============================================================
-    // 3ÈME ANNÉE
-    // ============================================================
-    {
-      id: 'annee-3',
-      name: '3ème Année Médecine',
-      semesters: [
-        { id: 's5', name: 'Semestre 5', modules: [] },
-        { id: 's6', name: 'Semestre 6', modules: [] }
-      ]
-    },
-    
-    // ============================================================
-    // 4ÈME ANNÉE
-    // ============================================================
-    {
-        id: 'annee-4',
-        name: '4ème Année Médecine',
-        semesters: [
-          { id: 's7', name: 'Semestre 7', modules: [] },
-          { id: 's8', name: 'Semestre 8', modules: [] }
-        ]
+  // En mode Test, on utilise les props du parent. Sinon, l'état interne.
+  const currentSelection = isTestMode ? (selectedAnswers || []) : internalSelected;
+  
+  // Le feedback est affiché si :
+  // 1. Mode Révision : L'utilisateur a cliqué sur "Valider" (isSubmitted)
+  // 2. Mode Test : Le parent indique showFeedback (fin du test)
+  const shouldShowFeedback = isTestMode ? showFeedback : isSubmitted;
+
+  const toggleSelect = (optionIndex: number) => {
+    if (shouldShowFeedback && !isTestMode) return; // Bloqué si déjà validé en mode révision
+
+    let newSelection: number[];
+    if (currentSelection.includes(optionIndex)) {
+      newSelection = currentSelection.filter(i => i !== optionIndex);
+    } else {
+      newSelection = [...currentSelection, optionIndex];
     }
-  ]
+
+    if (isTestMode) {
+       if (!showFeedback && onAnswer) {
+         onAnswer(newSelection);
+       }
+    } else {
+       setInternalSelected(newSelection);
+    }
+  };
+
+  const handleValidate = () => {
+    setIsSubmitted(true);
+    // Vérifier si c'est incorrect pour ouvrir l'explication auto (optionnel)
+    if (!isFullyCorrect()) {
+      setShowExplanation(true);
+    }
+  };
+
+  const handleReset = () => {
+    setInternalSelected([]);
+    setIsSubmitted(false);
+    setShowExplanation(false);
+  };
+
+  // Logique de validation : Doit avoir la même longueur ET contenir les mêmes indices
+  const isFullyCorrect = () => {
+    if (currentSelection.length !== question.correctIndices.length) return false;
+    return question.correctIndices.every(i => currentSelection.includes(i));
+  };
+
+  const isCorrect = isFullyCorrect();
+
+  const handleSaveEdit = () => {
+    if (onUpdate) {
+      onUpdate(editData);
+    }
+    setIsEditing(false);
+  };
+
+  const toggleEditCorrectIndex = (idx: number) => {
+    setEditData(prev => {
+      const newIndices = prev.correctIndices.includes(idx)
+        ? prev.correctIndices.filter(i => i !== idx)
+        : [...prev.correctIndices, idx].sort((a, b) => a - b);
+      return { ...prev, correctIndices: newIndices };
+    });
+  };
+
+  if (isEditing) {
+    return (
+      <div className="bg-white rounded-xl shadow-md border-2 border-primary-500 overflow-hidden mb-6 animate-in fade-in zoom-in-95 duration-200">
+        <div className="p-5 bg-primary-50 border-b border-primary-100 flex justify-between items-center">
+          <h3 className="font-bold text-primary-900">Modifier la Question {index + 1}</h3>
+          <div className="flex gap-2">
+            <button 
+              onClick={() => setIsEditing(false)}
+              className="p-2 text-slate-500 hover:bg-white rounded-full transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+        
+        <div className="p-5 space-y-4">
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Énoncé</label>
+            <textarea 
+              value={editData.text}
+              onChange={e => setEditData({...editData, text: e.target.value})}
+              className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary-500 outline-none"
+              rows={2}
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Options (Cochez les bonnes)</label>
+            {editData.options.map((opt, i) => (
+              <div key={i} className={`flex items-center gap-3 p-2 rounded-lg border transition-all ${editData.correctIndices.includes(i) ? 'bg-green-50 border-green-200' : 'bg-white border-slate-200'}`}>
+                <input 
+                  type="checkbox"
+                  checked={editData.correctIndices.includes(i)}
+                  onChange={() => toggleEditCorrectIndex(i)}
+                  className="w-5 h-5 text-green-600 border-slate-300 rounded focus:ring-green-500 cursor-pointer"
+                />
+                <input 
+                  type="text"
+                  value={opt}
+                  onChange={e => {
+                    const newOpts = [...editData.options];
+                    newOpts[i] = e.target.value;
+                    setEditData({...editData, options: newOpts});
+                  }}
+                  className="flex-1 bg-transparent border-none p-1 text-sm focus:ring-0 outline-none"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Explication</label>
+            <textarea 
+              value={editData.explanation}
+              onChange={e => setEditData({...editData, explanation: e.target.value})}
+              className="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary-500 outline-none"
+              rows={2}
+            />
+          </div>
+        </div>
+
+        <div className="p-5 bg-slate-50 flex justify-between">
+          <button 
+            onClick={() => {
+              if (onDelete && confirm("Supprimer cette question ?")) {
+                onDelete(question.id);
+              }
+            }}
+            className="flex items-center gap-2 text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          >
+            <Trash2 className="w-4 h-4" /> Supprimer
+          </button>
+          <button 
+            onClick={handleSaveEdit}
+            className="flex items-center gap-2 bg-primary-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-primary-700 transition-colors shadow-sm"
+          >
+            <Save className="w-4 h-4" /> Enregistrer
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md mb-6 relative group">
+      <div className="p-5 border-b border-slate-100 bg-slate-50/50 flex justify-between items-start">
+        <div className="flex-1">
+          <h3 className="font-semibold text-slate-800 text-lg flex gap-3">
+            <span className="flex items-center justify-center bg-slate-200 text-slate-600 text-xs font-bold rounded w-6 h-6 min-w-[1.5rem] mt-1">
+              {index + 1}
+            </span>
+            <span>
+                {question.text}
+                {question.correctIndices.length > 1 && (
+                    <span className="block text-xs font-normal text-slate-500 mt-1">(Plusieurs réponses possibles)</span>
+                )}
+                {question.correctIndices.length === 0 && !isTestMode && (
+                    <span className="block text-xs font-bold text-orange-600 mt-1">⚠️ Aucune réponse correcte définie !</span>
+                )}
+            </span>
+          </h3>
+        </div>
+        
+        <div className="flex items-center gap-2">
+          {!isTestMode && (
+            <button 
+              onClick={() => setIsEditing(true)}
+              className="p-2 text-slate-400 hover:text-primary-600 hover:bg-primary-50 rounded-full transition-all opacity-0 group-hover:opacity-100"
+              title="Modifier la question"
+            >
+              <Edit2 className="w-4 h-4" />
+            </button>
+          )}
+          {shouldShowFeedback && (
+              <div className={`px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shrink-0 ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                  {isCorrect ? <><CheckCircle2 className="w-4 h-4" /> Correct</> : <><XCircle className="w-4 h-4" /> Incorrect</>}
+              </div>
+          )}
+        </div>
+      </div>
+
+      <div className="p-5 space-y-3">
+        {question.options.map((option, idx) => {
+          const isSelected = currentSelection.includes(idx);
+          const isRealCorrect = question.correctIndices.includes(idx);
+          
+          let buttonStyle = "border-slate-200 hover:bg-slate-50 hover:border-slate-300";
+          let icon = isSelected 
+             ? <CheckSquare className="w-5 h-5 text-primary-600" /> 
+             : <Square className="w-5 h-5 text-slate-300" />;
+
+          if (shouldShowFeedback) {
+            // Mode Résultat
+            if (isRealCorrect) {
+               // C'était une bonne réponse
+               if (isSelected) {
+                   // Et on l'a trouvée -> Vert
+                   buttonStyle = "bg-green-50 border-green-200 text-green-800 ring-1 ring-green-500/20"; 
+                   icon = <CheckCircle2 className="w-5 h-5 text-green-600" />;
+               } else {
+                   // On l'a manquée -> Jaune/Vert indicatif
+                   buttonStyle = "bg-green-50/50 border-green-200/50 text-green-800/70 border-dashed"; 
+                   icon = <CheckCircle2 className="w-5 h-5 text-green-600/50" />;
+               }
+            } else if (isSelected) {
+               // On a coché mais c'est faux -> Rouge
+               buttonStyle = "bg-red-50 border-red-200 text-red-800 ring-1 ring-red-500/20";
+               icon = <XCircle className="w-5 h-5 text-red-600" />;
+            } else {
+               // Pas coché et pas correct -> Grisé
+               buttonStyle = "opacity-50 border-transparent bg-slate-50 grayscale";
+               icon = <Square className="w-5 h-5 text-slate-200" />;
+            }
+          } else {
+            // Mode interactif
+            if (isSelected) {
+               buttonStyle = "bg-primary-50 border-primary-200 text-primary-800 ring-1 ring-primary-500/20";
+            }
+          }
+
+          return (
+            <button
+              key={idx}
+              onClick={() => toggleSelect(idx)}
+              disabled={shouldShowFeedback && !isTestMode} 
+              className={`w-full text-left p-4 rounded-lg border flex items-center justify-between transition-all duration-200 group ${buttonStyle}`}
+            >
+              <span className="font-medium pr-4">{option}</span>
+              {icon}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Footer avec boutons de validation (seulement en mode révision standard) */}
+      {!isTestMode && (
+         <div className="px-5 pb-5 flex gap-3">
+             {!isSubmitted ? (
+                 <button 
+                    onClick={handleValidate}
+                    disabled={currentSelection.length === 0}
+                    className="bg-primary-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors ml-auto"
+                 >
+                    Valider
+                 </button>
+             ) : (
+                 <button 
+                    onClick={handleReset}
+                    className="text-slate-500 hover:text-primary-600 text-sm font-medium px-4 py-2 ml-auto transition-colors"
+                 >
+                    Réessayer
+                 </button>
+             )}
+         </div>
+      )}
+
+      {shouldShowFeedback && (
+        <div className="bg-slate-50 border-t border-slate-100">
+           <button 
+             onClick={() => setShowExplanation(!showExplanation)}
+             className="w-full flex items-center justify-between p-4 text-sm text-slate-500 hover:text-primary-600 font-medium transition-colors"
+           >
+             <span className="flex items-center gap-2">
+               <HelpCircle className="w-4 h-4" />
+               {showExplanation ? "Masquer l'explication" : "Voir l'explication"}
+             </span>
+             {showExplanation ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+           </button>
+           
+           {showExplanation && (
+             <div className="p-4 pt-0 text-slate-600 text-sm leading-relaxed border-t border-dashed border-slate-200 bg-blue-50/30">
+               <strong className="text-slate-800 block mb-1">Explication :</strong>
+               {question.explanation || "Aucune explication disponible pour cette question."}
+             </div>
+           )}
+        </div>
+      )}
+    </div>
+  );
 };
