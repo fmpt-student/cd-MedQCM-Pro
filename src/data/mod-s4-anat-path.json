@@ -1,0 +1,477 @@
+[
+  {
+    "id": "lesson-anatpath-techniques",
+    "name": "Techniques",
+    "questions": [
+      {
+        "id": "q-ap-tech-1",
+        "text": "Choisir la bonne réponse : Les étapes de la technique standard comprennent dans l’ordre :",
+        "options": [
+          "Enrobage et inclusion, fixation, coloration, déshydratation, montage, microtomie.",
+          "Fixation, microtomie, déshydratation coloration, montage, enrobage et inclusion.",
+          "Fixation, déshydratation, enrobage et inclusion, microtomie, coloration, montage",
+          "Déshydratation microtomie, enrobage et inclusion, fixation, coloration, montage,"
+        ],
+        "correctIndices": [2],
+        "explanation": "apres le prelevement du tissu, on procede immediatement a la fixation par formol tamponné neutre à 10%, puis on chemine le prelevement au laboratoire. Apres recetion du prelevement, le pathologiste l’etudie macroscopiquement. Ensuite, il y aura inclusion du prelevement pour le deshydrater et il va etre enrobé. Finalement, les morceaux macroscopiques vont etre coupés en morceaux microscopiques et colorés prets au visonnage."
+      },
+      {
+        "id": "q-ap-tech-2",
+        "text": "Choisir la ou les bonnes réponses : Pour un examen histologique extemporané, le prélèvement doit être adressé au laboratoire :",
+        "options": [
+          "À l'état frais",
+          "Fixé au formol tamponné à 10%",
+          "Dans de l'acide nitrique",
+          "Dans le toluène"
+        ],
+        "correctIndices": [0],
+        "explanation": "diapos 71"
+      },
+      {
+        "id": "q-ap-tech-3",
+        "text": "Choisir la ou les bonnes réponses : Pour effectuer un examen histologique standard d’une biopsie, le prélèvement doit être adressé au laboratoire d'anatomie et cytologie pathologique :",
+        "options": [
+          "Dans du sérum physiologique",
+          "Dans de la paraffine",
+          "Dans du formol tamponné à 10%",
+          "Dans de l'azote liquide"
+        ],
+        "correctIndices": [2]
+      },
+      {
+        "id": "q-ap-tech-4",
+        "text": "Choisir la ou les bonnes réponses: L'examen histologique extemporané présente des avantages précis parmi lesquels on reconnait:",
+        "options": [
+          "Orientation diagnostique rapide",
+          "Vérification des limites d’exérèse",
+          "Adaptation de l'intervention à la nature de la lésion identifiée",
+          "Très grande fiabilité de l'examen microscopique"
+        ],
+        "correctIndices": [0, 1, 2],
+        "explanation": "diapos 71-73"
+      },
+      {
+        "id": "q-ap-tech-5",
+        "text": "choisir la ou les bonnes réponses: Un examen histologique extemporané se fait:",
+        "options": [
+          "Dans un délai inférieur à 30 min",
+          "Dans un délai de quelques jours",
+          "Sur des coupes de tissu fixé et inclus en paraffine",
+          "Sur une coupe de tissu congelé"
+        ],
+        "correctIndices": [0, 3],
+        "explanation": "diapos 71-73"
+      },
+      {
+        "id": "q-ap-tech-6",
+        "text": "Choisir la ou les bonnes réponses : Après avoir effectué Un prélèvement destiné pour étude histologique anatomopathologique :",
+        "options": [
+          "Le prélèvement doit être mis au fixateur et acheminé immédiatement au laboratoire d'Anatomie pathologique",
+          "Il est possible de conserver le prélèvement dans un milieu froid pendant 24 heures avant de l'envoyer au laboratoire le jour suivant.",
+          "La biopsie peut être conservée dans un fixateur pendant plusieurs jours avant de procéder à son envoi au laboratoire d'anatomie pathologique"
+        ],
+        "correctIndices": [0],
+        "explanation": "pas sure"
+      },
+      {
+        "id": "q-ap-tech-7",
+        "text": "Choisir la bonne réponse: tout prélèvement tissulaire doit etre adressé pour examen histologique",
+        "options": [
+          "oui",
+          "Non"
+        ],
+        "correctIndices": [0],
+        "explanation": "gemini"
+      },
+      {
+        "id": "q-ap-tech-8",
+        "text": "Choisir la ou les bonnes réponses: Pour fixer un prélèvement destiné à une étude anatomo pathologique, la quantité de fixateur doit être :",
+        "options": [
+          "Du volume de la pièce à fixer",
+          "50 fois son volume",
+          "10 fois son volume",
+          "2 fois son volume"
+        ],
+        "correctIndices": [2],
+        "explanation": "diapos 64"
+      },
+      {
+        "id": "q-ap-tech-9",
+        "text": "Choisir la ou les bonnes réponses: Lorsque des biopsies ou des exérèses multiples de siège différents:",
+        "options": [
+          "Il faut numéroter les flacons et mentionner le contenu de chaque flacon dans la fiche de demande d'examen anatomopathologique",
+          "Il faut mettre tous les prélèvements dans le même flacon"
+        ],
+        "correctIndices": [0]
+      },
+      {
+        "id": "q-ap-tech-10",
+        "text": "Choisir les étapes importantes pour la bonne mise en condition d’une pièce opératoire avant de l'envoyer au laboratoire d'anatomie pathologique:",
+        "options": [
+          "Fixateur formol 10% dans un Flacon ayant un volume de 10 fois la taille de la pièce",
+          "orienter la pièce opératoire",
+          "Eviter l’ouverture des pièces opératoires",
+          "Fixer rapidement dans les 30 minutes et transmission immédiate",
+          "Préciser les renseignements cliniques, biologiques et radiologiques"
+        ],
+        "correctIndices": [0, 1, 2, 3, 4],
+        "explanation": "dans diapos 39 : « recipient etanche dont le contenu est clairement identifié » de plus les renseignement cliniques sont essentiels pour orienter le diagnostic."
+      },
+      {
+        "id": "q-ap-tech-11",
+        "text": "Les informations nécessaires que le clinicien doit préciser sur la fiche de demande d’examen anatomopathologique :",
+        "options": [
+          "Nom, prénom et age du patient",
+          "Type de prélèvement",
+          "Date et heure du prélèvement",
+          "Orientation du prélèvement si pièce opératoire",
+          "Préciser les renseignements cliniques, radiologiques et biologiques"
+        ],
+        "correctIndices": [0, 1, 2, 3, 4],
+        "explanation": "diapos 40"
+      },
+      {
+        "id": "q-ap-tech-12",
+        "text": "Choisir la ou les bonnes réponses: La coloration standard est la coloration :",
+        "options": [
+          "Perls",
+          "Rouge Congo",
+          "HES (hémalin éosine safran)",
+          "Bleu Alcian"
+        ],
+        "correctIndices": [2]
+      },
+      {
+        "id": "q-ap-tech-13",
+        "text": "Choisir la ou les bonnes réponses: Quand on remplie la fiche de demande d'examen anatomopathologique",
+        "options": [
+          "Il faut écrire tous les renseignements cliniques, biologiques, et radiologiques",
+          "Il faut écrire le minimum pour ne pas dérouter ou influencer le pathologiste",
+          "Par manque de temps, on peut se limiter à mentionner uniquement l'identité du patient et le siège du prélèvement."
+        ],
+        "correctIndices": [0],
+        "explanation": "diapos 40"
+      },
+      {
+        "id": "q-ap-tech-14",
+        "text": "Le fixateur utilisé pour la fixation des prélèvements :",
+        "options": [
+          "le bouin",
+          "Formol a 20%",
+          "Formol a 10%",
+          "l'alcool à 90 %",
+          "doit présenter 10 fois le volume du prélèvement"
+        ],
+        "correctIndices": [2, 4],
+        "explanation": "diapos 58"
+      },
+      {
+        "id": "q-ap-tech-15",
+        "text": "le volume du fixateur :",
+        "options": [
+          "2x volume de la pièce",
+          "le même que celui de la pièce",
+          "10xvolume de la pièce",
+          "5xvolume de la pièce"
+        ],
+        "correctIndices": [2]
+      },
+      {
+        "id": "q-ap-tech-16",
+        "text": "le fixateur utilisé est :",
+        "options": [
+          "Bouin",
+          "formol à 10%",
+          "formol à 4%",
+          "Alcool"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-ap-tech-17",
+        "text": "Le fixateur le plus utilisé :",
+        "options": [
+          "Le formol à 50 %",
+          "Le formol à 10 %",
+          "Le formol à 40 %",
+          "Le formol à 5 %",
+          "Le formol à 25 %"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-ap-tech-18",
+        "text": "La fixation des biopsies nécessite :",
+        "options": [
+          "4-6 Heures",
+          "24-48 H",
+          "Moins de 2H",
+          "12H",
+          "aucune"
+        ],
+        "correctIndices": [4],
+        "explanation": "diapos 69 : 2-5h"
+      },
+      {
+        "id": "q-ap-tech-19",
+        "text": "La fixation des pieces operatoires nécessite :",
+        "options": [
+          "4-6 Heures",
+          "24-48 H",
+          "Moins de 2H",
+          "12 H",
+          "72 H"
+        ],
+        "correctIndices": [1],
+        "explanation": "diapos 69"
+      },
+      {
+        "id": "q-ap-tech-20",
+        "text": "La fixation des tissus est influencée par :",
+        "options": [
+          "Le volume du fixateur",
+          "La taille du prélèvement",
+          "Le PH du fixateur",
+          "La température",
+          "L’ischémie froide"
+        ],
+        "correctIndices": [0, 1, 2, 3, 4],
+        "explanation": "diapos 60-65"
+      },
+      {
+        "id": "q-ap-tech-21",
+        "text": "Le volume du flacon adapté pour un prélèvement est :",
+        "options": [
+          "2 x la taille du prélèvement",
+          "20 x la taille du prélèvement",
+          "5x la taille du prélèvement",
+          "10x la taille du prélèvement",
+          "20x la taille du prélèvement"
+        ],
+        "correctIndices": [3],
+        "explanation": "pas sure car normalement la regle de 10 fois est pour le fixateur alors le flacon doit etre encore plus grand"
+      },
+      {
+        "id": "q-ap-tech-22",
+        "text": "la coloration de routine est",
+        "options": [
+          "HES",
+          "Rouge Congo",
+          "Perls",
+          "Trichrome Masson",
+          "Giemsa"
+        ],
+        "correctIndices": [0]
+      },
+      {
+        "id": "q-ap-tech-23",
+        "text": "la coloration pour mettre en évidence l'amylose est :",
+        "options": [
+          "Perls",
+          "Rouge congo",
+          "Trichrome de Masson",
+          "PAS"
+        ],
+        "correctIndices": [1],
+        "explanation": "diapos 76"
+      },
+      {
+        "id": "q-ap-tech-24",
+        "text": "La coloration utile pour mettre en évidence le BK est :",
+        "options": [
+          "La coloration de Ziehl-nelsen",
+          "La coloration du rouge sirius",
+          "La coloration de MGG",
+          "La coloration de Papanicolaou",
+          "La coloration de trichrome de Masson"
+        ],
+        "correctIndices": [0]
+      },
+      {
+        "id": "q-ap-tech-25",
+        "text": "Quelle est la coloration standard utilisée en anatomie pathologique",
+        "options": [
+          "Giemsa",
+          "HES : hematoxylline éosine safran",
+          "Trichrome de Masson",
+          "Perls"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-ap-tech-26",
+        "text": "Les colorations utilisées en cytologie :",
+        "options": [
+          "Papanicolaou",
+          "MGG",
+          "Rouge Congo",
+          "HES"
+        ],
+        "correctIndices": [0, 1],
+        "explanation": "rouge congo et HES sont employés pour les tissus"
+      },
+      {
+        "id": "q-ap-tech-27",
+        "text": "la coloration de Perls met en évidence :",
+        "options": [
+          "L’amylose",
+          "La surcharge en cuivre",
+          "La surcharge en fer",
+          "La steatose"
+        ],
+        "correctIndices": [2],
+        "explanation": "diapos 76"
+      },
+      {
+        "id": "q-ap-tech-28",
+        "text": "La coloration utilisée pour évaluer le dépôt amyloïde :",
+        "options": [
+          "HES",
+          "Perls",
+          "Trichrome de Masson",
+          "Rouge Congo",
+          "PAS"
+        ],
+        "correctIndices": [3],
+        "explanation": "diapos 76"
+      },
+      {
+        "id": "q-ap-tech-29",
+        "text": "La coloration utilisée pour mettre en évidence la surcharge en fer :",
+        "options": [
+          "HES",
+          "Perls",
+          "Trichrome de Masson",
+          "Rouge Congo",
+          "PAS"
+        ],
+        "correctIndices": [1],
+        "explanation": "diapos 76"
+      },
+      {
+        "id": "q-ap-tech-30",
+        "text": "la coloration de Rouge Congo est spécifique ;",
+        "options": [
+          "L’accumulation de fer",
+          "l'amylose",
+          "les mucines",
+          "les germes",
+          "les fibres élastiques"
+        ],
+        "correctIndices": [1],
+        "explanation": "diapos 76"
+      },
+      {
+        "id": "q-ap-tech-31",
+        "text": "La coloration HES :",
+        "options": [
+          "n’est pas une coloration speciale",
+          "l'éosine : colorie le cyoplasme",
+          "l’hématoxylline : colorie le collagène",
+          "le safran : colorie le noyau",
+          "précède la coupe des prélèvements tissulaires"
+        ],
+        "correctIndices": [0, 1]
+      },
+      {
+        "id": "q-ap-tech-32",
+        "text": "la coloration utilisée pour les frottis cervico-vaginaux :",
+        "options": [
+          "MGG",
+          "HES",
+          "Rouge congo",
+          "Papanicolaou"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-ap-tech-33",
+        "text": "L'étude cytologique des prélèvements",
+        "options": [
+          "est une technique facile",
+          "est peu coûteuse",
+          "Renouvelable",
+          "le résultat se fait dans la journée",
+          "Peut nécessiter certains examens complémentaires"
+        ],
+        "correctIndices": [1, 2, 4],
+        "explanation": "diapos 23 et je ne suis pas sure de la reponse e"
+      },
+      {
+        "id": "q-ap-tech-34",
+        "text": "Le frottis cervico-vaginal :",
+        "options": [
+          "une coloration de Papanicolaou",
+          "un prélèvement tissulaire",
+          "exige une fixation au formoI",
+          "est un examen extemporané",
+          "est interprété selon le système Bethesda"
+        ],
+        "correctIndices": [0, 2, 4],
+        "explanation": "c’est un prelevement cytologique qui necessite une fixation"
+      },
+      {
+        "id": "q-ap-tech-35",
+        "text": "L'examen extemporané :",
+        "options": [
+          "nécessite une fixation du prélevement",
+          "se fait sur un tissu frais",
+          "le résultat se fait dans les minutes qui suivent",
+          "n'a pas d'impact sur la prise en charge thérapeutique",
+          "exige une étude immunohistochimique"
+        ],
+        "correctIndices": [1, 2]
+      },
+      {
+        "id": "q-ap-tech-36",
+        "text": "Pour l'examen extemporané, le prélèvement doit être adressee :",
+        "options": [
+          "Fixee au formol tamponné a 10%",
+          "Mis dans de l'acide nitrique",
+          "Mis dans le toluène",
+          "A l'état frais",
+          "Fixé au formol tamponné à 404"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-ap-tech-37",
+        "text": "I' immunohistochimie :",
+        "options": [
+          "met en évidence des antigènes uniquement cellulaires",
+          "peut révéler des antigènes uniquement extracellulaires",
+          "peut se faire par technique manuelle",
+          "a un rôle important pour continuer certains diagnostics",
+          "ne peut être réalisée que par Automate"
+        ],
+        "correctIndices": [2, 3],
+        "explanation": "diapos 79-82"
+      },
+      {
+        "id": "q-ap-tech-38",
+        "text": "La technique d'immunohistochimie implique des anticorps :",
+        "options": [
+          "Nucléaires",
+          "Membranaires",
+          "Cytoplasmiques",
+          "Interstitiels"
+        ],
+        "correctIndices": [0, 1, 2, 3]
+      },
+      {
+        "id": "q-ap-tech-39",
+        "text": "L'immunofluorescence nécessite :",
+        "options": [
+          "Un prélevèrent frais",
+          "Un prélèvement Congelé",
+          "Un microscope à polarisation",
+          "Un microscope électronique",
+          "Une étude cytogénétique"
+        ],
+        "correctIndices": [0, 1],
+        "explanation": "d apres le cours necessite un microscope à fluorscence mais le type de prelevement n’est pas cité"
+      }
+    ],
+    "pdfs": []
+  }
+]

@@ -1,0 +1,1260 @@
+[
+  {
+    "id": "lesson-pharmaco-intro",
+    "name": "Introduction à la Pharmacologie",
+    "pdfs": [],
+    "questions": [
+      {
+        "id": "q-pharm-1",
+        "text": "La pharmacologie est la science qui étudie :",
+        "options": [
+          "Le devenir du médicament dans l'organisme",
+          "Les effets des médicaments sur l'organisme",
+          "Les effets du médicament chez l'animal uniquement",
+          "Les effets du médicament chez l'homme"
+        ],
+        "correctIndices": [0, 1, 3],
+        "explanation": "diapos 16"
+      },
+      {
+        "id": "q-pharm-2",
+        "text": "Lesquelles de ces définitions sont justes:",
+        "options": [
+          "La pharmacocinétique est le sort que subit le médicament dans l'organisme",
+          "La pharmacodynamie est le mécanisme d'action des médicaments",
+          "La Pharmacologie préclinique est l'étude des effets du médicament chez l'homme",
+          "La pharmacologie clinique est l'étude des effets du médicament chez l'animal"
+        ],
+        "correctIndices": [0, 1],
+        "explanation": "diapos 17"
+      },
+      {
+        "id": "q-pharm-3",
+        "text": "Un médicament a :",
+        "options": [
+          "Un ou plusieurs noms chimiques",
+          "Une dénomination commune internationale",
+          "Un ou plusieurs noms commerciaux",
+          "Un ou plusieurs noms scientifiques"
+        ],
+        "correctIndices": [1, 2],
+        "explanation": "diapos 21 et 22"
+      },
+      {
+        "id": "q-pharm-4",
+        "text": "Un médicament est une substance :",
+        "options": [
+          "Présentant des propriétés curatives et préventives",
+          "Présentant des propriétés curatives ou préventives",
+          "Qui permet d’établir un diagnostic médical",
+          "Qui peut modifier une fonction organique",
+          "Administrée à l’homme ou à l’animal"
+        ],
+        "correctIndices": [0, 1, 2, 3, 4],
+        "explanation": "diapos 18"
+      },
+      {
+        "id": "q-pharm-5",
+        "text": "Les règles pour une utilisation sécuritaire du médicament sont:",
+        "options": [
+          "La bonne dose",
+          "Le bon moment",
+          "Le bon patient",
+          "La voie orale",
+          "la bonne voie"
+        ],
+        "correctIndices": [0, 1, 2, 4]
+      },
+      {
+        "id": "q-pharm-6",
+        "text": "Un générique est un médicament qui possède par rapport au princeps:",
+        "options": [
+          "Une Bio-équivalence démontrée par des études pharmacodynamiqucs",
+          "Les mêmes garanties de fabrication, contrôle, efficacité et sécurité",
+          "La même composition qualitative et quantitative en principe actif",
+          "Ia même forme pharmaceutique mais les excipients penvent différe"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "c’est un medicament comme une imitation de l’original qui avait un brevet et qui a depassé sa phase de remboursement c’est-à-dire 10ans après la commercialisation, il a la meme formule active est il doit avoir la meme efficacite, alors on dit qu’il doit etre caracterise par une bioequivalence."
+      },
+      {
+        "id": "q-pharm-7",
+        "text": "Parmi les étapes de la prescription rationnelle des médicaments, on trouve :",
+        "options": [
+          "Faire un diagnostic spécifique",
+          "Sélectionner un médicament de choix",
+          "Surveiller les effets indésirables du médicament",
+          "Organiser un programme d'éducation du patient"
+        ],
+        "correctIndices": [0, 1, 2, 3]
+      },
+      {
+        "id": "q-pharm-8",
+        "text": "Les phases de développement d'un médicament sont",
+        "options": [
+          "Phase de recherche documentaire",
+          "Phase de développement analytique",
+          "Phase expérimentale",
+          "Phase clinique"
+        ],
+        "correctIndices": [1, 3],
+        "explanation": "les quatres phases de developpement d’un medicament sont : la phase de conception qui debute par la recherche documentaire puis la recherche analytique, la phase pre-clinique qui consiste à faire des experiences in-vitro ou sur des animaux pour etudier l’efficacite et la toxicité du médicament, finalement la 4eme phase est la phase clinique."
+      },
+      {
+        "id": "q-pharm-9",
+        "text": "Les phases de développement d'un médicament sont",
+        "options": [
+          "Les études précliniques",
+          "Les études cliniques",
+          "Les études galéniques",
+          "Les études physicochimiques"
+        ],
+        "correctIndices": [0, 1]
+      },
+      {
+        "id": "q-pharm-10",
+        "text": "Pour obtenir son autorisation de mise sur le marché (AMM), le médicament doit prouver :",
+        "options": [
+          "Les résultats des études cliniques uniquement",
+          "son dossier doit contenir les résultats des études précliniques",
+          "son dossier doit contenir les résultats des études cliniques",
+          "Son dossier doit contenir les résultats des études de pharmacovigilance"
+        ],
+        "correctIndices": [1, 2],
+        "explanation": "l’autorisation est donnée avant la pharmacovigilence"
+      },
+      {
+        "id": "q-pharm-11",
+        "text": "Pour obtenir son autorisation de mise sur le marché (AMM), le médicament doit prouver",
+        "options": [
+          "son efficacité",
+          "son innocuité",
+          "Sa stabilité dans le temps",
+          "Ses limites"
+        ],
+        "correctIndices": [0, 1, 2],
+        "explanation": "diapos 30"
+      },
+      {
+        "id": "q-pharm-12",
+        "text": "La succession des phases de développement d'un médicament est comme suit :",
+        "options": [
+          "Conception d'un médicament, développement analytique, développement préclinique puis développement clinique",
+          "Développement analytique, développement préclinique, conception d'un médicament, puis développement clinique",
+          "Développement préclinique, développement clinique, développement analytique puis conception d'un médicament",
+          "Développement analytique, développement préclinique, puis développement clinique"
+        ],
+        "correctIndices": [0]
+      },
+      {
+        "id": "q-pharm-13",
+        "text": "Le développement analytique des médicaments comporte :",
+        "options": [
+          "La vérification de la structure de la molécule",
+          "La recherche des impuretés",
+          "La détermination de la méthode du dosage",
+          "Des études galéniques"
+        ],
+        "correctIndices": [0, 1, 2],
+        "explanation": "diapos 35, on a 4 points y compris la stabilité"
+      },
+      {
+        "id": "q-pharm-14",
+        "text": "L'évaluation préclinique s'effectue :",
+        "options": [
+          "Sont les étapes avant la 1ére administration à l’homme",
+          "chez les sujets sains",
+          "chez les sujets malades",
+          "In vitro"
+        ],
+        "correctIndices": [0, 3]
+      },
+      {
+        "id": "q-pharm-15",
+        "text": "L'évaluation préclinique s'effectue",
+        "options": [
+          "Sur des animaux de laboratoire.",
+          "Chez l'homme",
+          "Etudie la sécurité (toxicité) et l'activité du médicament (efficacité)",
+          "Ont pour objectif d’étudier l’activité pharmacologique et profil toxico"
+        ],
+        "correctIndices": [0, 2, 3]
+      },
+      {
+        "id": "q-pharm-16",
+        "text": "Les différents types d'études précliniques :",
+        "options": [
+          "Des études toxicologiques",
+          "Des études pharmacologiques",
+          "Des études de cancérogénèse",
+          "aucune"
+        ],
+        "correctIndices": [0, 1, 2]
+      },
+      {
+        "id": "q-pharm-17",
+        "text": "Les différents types d'études précliniques :",
+        "options": [
+          "Des études de pharmaco-économiques",
+          "Des études pharmacocinétiques",
+          "Des études pharmacodynamiques",
+          "Des études de reproduction"
+        ],
+        "correctIndices": [1, 2, 3]
+      },
+      {
+        "id": "q-pharm-18",
+        "text": "Les études précliniques du médicament ont pour objectif d'étudier :",
+        "options": [
+          "L'effet cancérigène du médicament",
+          "La pharmacodynamie du médicament",
+          "les effets indésirables éventuels du médicament",
+          "la pharmacocinétique du médicament chez l'homme"
+        ],
+        "correctIndices": [0, 1, 2],
+        "explanation": "les effets indesirables sont determinés par l’etude pharmacodynamique. Elle ne se fait pas chez l’homme mais chez les animaux c’est pour cela qu’on elimine la reponse d"
+      },
+      {
+        "id": "q-pharm-19",
+        "text": "Les études précliniques du médicament ont pour objectif d'étudier :",
+        "options": [
+          "La toxicite aigue",
+          "La toxicité chronique du médicament",
+          "L'effet mutagène du médicament",
+          "L'effet sur la reproduction du médicament"
+        ],
+        "correctIndices": [0, 1, 2, 3]
+      },
+      {
+        "id": "q-pharm-20",
+        "text": "Parmi les paramètres pharmacocinétiques cherchés au cours des études précliniques :",
+        "options": [
+          "La concentration maximale du produit",
+          "La demi-vie du produit",
+          "La concentration minimale du produit",
+          "aucune reponse"
+        ],
+        "correctIndices": [0, 1],
+        "explanation": "diapos 39"
+      },
+      {
+        "id": "q-pharm-21",
+        "text": "Parmi les paramètres pharmacocinétiques cherchés au cours des études précliniques :",
+        "options": [
+          "Le temps correspondant à la concentration maximale",
+          "le temps maximal",
+          "le volume de distribution",
+          "aucune"
+        ],
+        "correctIndices": [0, 1]
+      },
+      {
+        "id": "q-pharm-22",
+        "text": "Les études précliniques du médicament :",
+        "options": [
+          "Peuvent être effectués in vitro",
+          "Etudient la sécurité du médicament par des études de toxicité",
+          "Etudient le mécanisme d’action du médicament",
+          "Ne s’occupent pas des effets indesirables"
+        ],
+        "correctIndices": [0, 1, 2]
+      },
+      {
+        "id": "q-pharm-23",
+        "text": "La toxicité aigüe est :",
+        "options": [
+          "Une étude de la mortalité après une administration unique du produit chez l’animal",
+          "une étude de la mortalité après une administration répétée du produit chez l’animal",
+          "la dose qui tue 50 % des animaux dans un temps donné",
+          "la dose qui tue 100 % des animaux dans un temps donné"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "diapos 41"
+      },
+      {
+        "id": "q-pharm-24",
+        "text": "La toxicité chronique est :",
+        "options": [
+          "Une étude de la mortalité après une administration unique du produit chez l’animal",
+          "une étude de la mortalité après une administration répétée du produit chez l’animal",
+          "la dose qui tue 50 % des animaux dans un temps donné",
+          "la dose qui tue 100 % des animaux dans un temps donné",
+          "Aucune reponse n‘est juste"
+        ],
+        "correctIndices": [1],
+        "explanation": "diapos 24"
+      },
+      {
+        "id": "q-pharm-25",
+        "text": "La dose létale 50 est :",
+        "options": [
+          "La dose qui tue 50% des animaux après une administration répétée",
+          "La dose qui tue tous les animaux après 50 minutes",
+          "La dose qui tue 50% des animaux après une administration unique",
+          "c'est la dose qui tue 25% des animaux dans un temps déterminé"
+        ],
+        "correctIndices": [2],
+        "explanation": "diapos 41"
+      },
+      {
+        "id": "q-pharm-26",
+        "text": "La dose létale 50 est :",
+        "options": [
+          "permet l'évaluation de la toxicité chronique du médicament",
+          "plus cette dose est diminuée plus le médicament est toxique",
+          "plus cette dose est augmentée plus le médicament est toxique",
+          "Un paramètre de la toxicité aigue"
+        ],
+        "correctIndices": [1, 3],
+        "explanation": "diapos 41"
+      },
+      {
+        "id": "q-pharm-27",
+        "text": "L'étude de la forme galénique comprend :",
+        "options": [
+          "Des études de dissolution",
+          "Des études de péremption",
+          "Des études de délitement",
+          "Des études de recherche de germes"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "diapos 48"
+      },
+      {
+        "id": "q-pharm-28",
+        "text": "Les excipients ont pour rôle :",
+        "options": [
+          "De faciliter l'emploi du médicament",
+          "De modifier le profil pharmacodynamique du médicament",
+          "Modifier le profil pharmacocinétique du principe actif",
+          "aucune"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "diapos 47"
+      },
+      {
+        "id": "q-pharm-29",
+        "text": "Les excipients ont pour rôle :",
+        "options": [
+          "D'assurer la conservation du médicament",
+          "Faciliter la fabrication de la forme galénique",
+          "Eviter les effets indésirables des médicaments",
+          "Aucune réponse"
+        ],
+        "correctIndices": [0, 1],
+        "explanation": "diapos 47"
+      },
+      {
+        "id": "q-pharm-30",
+        "text": "Les excipients peuvent :",
+        "options": [
+          "Etre des lubrifiants",
+          "Etre des édulcorants",
+          "Modifier le profil pharmacocinétique du produit",
+          "Etre toxiques"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "« les excipients peuvent etre notoires »"
+      },
+      {
+        "id": "q-pharm-31",
+        "text": "Dans les essais cliniques, on réalise des études de :",
+        "options": [
+          "Toxicité",
+          "Pharmacocinétique",
+          "Pharmacodynamie",
+          "Pharmacovigilance"
+        ],
+        "correctIndices": [1, 2, 3]
+      },
+      {
+        "id": "q-pharm-32",
+        "text": "Les phases cliniques du développement d’un nouveau médicament sont réalisées :",
+        "options": [
+          "chez l’animal",
+          "chez les malades",
+          "chez les volontaires sains",
+          "sur une population particulière"
+        ],
+        "correctIndices": [1, 2, 3]
+      },
+      {
+        "id": "q-pharm-33",
+        "text": "Un essai clinique (EC):",
+        "options": [
+          "Est une technique d'expérimentation dont la méthodologie est codifiée de manière très rigoureuse,",
+          "Apprécie les effets d'un médicament sur l'homme sain uniquement,",
+          "Apprécie les effets d'un médicament sur l'homme sain et malade.",
+          "aucune"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "diapos 49"
+      },
+      {
+        "id": "q-pharm-34",
+        "text": "Un essai clinique (EC):",
+        "options": [
+          "Comprend deux phases I et II,",
+          "Répond obligatoirement aux bonnes pratiques cliniques (BPC).",
+          "Ne répond pas obligatoirement aux bonnes pratiques cliniques (BPC)",
+          "aucune"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-pharm-35",
+        "text": "le but des essais clinique est de",
+        "options": [
+          "Déterminer l’efficacité d’un nouveau médoc",
+          "Démontrer que le nouveau médicament est mieux toléré",
+          "Démontrer que le nouveau médicament est moins toléré",
+          "aucune"
+        ],
+        "correctIndices": [0, 1, 2]
+      },
+      {
+        "id": "q-pharm-36",
+        "text": "le but des essais clinique est de",
+        "options": [
+          "Démontrer que le nouveau médicament est mieux ou moins toléré",
+          "Démontrer que le nouveau médicament a un bon profil de sécurité",
+          "Chercher le médicament le moins cher",
+          "aucune"
+        ],
+        "correctIndices": [0, 1]
+      },
+      {
+        "id": "q-pharm-37",
+        "text": "Le but des essais précliniques et cliniques est:",
+        "options": [
+          "Établir la valeur thérapeutique d'un nouveau médicament",
+          "Éliminer les substances les plus dangereuses",
+          "Etablir l'efficacité chez les terrains à risque",
+          "Détecter les effets indésirables très rares"
+        ],
+        "correctIndices": [0, 1]
+      },
+      {
+        "id": "q-pharm-38",
+        "text": "Acteurs de l'essai clinique :",
+        "options": [
+          "Le Promoteur",
+          "Laboratoire pharmaceutique",
+          "l'investigateur représenté par le laboratoire pharmaceutique",
+          "L'investigateur"
+        ],
+        "correctIndices": [0, 3]
+      },
+      {
+        "id": "q-pharm-39",
+        "text": "Acteurs de l'essai clinique :",
+        "options": [
+          "Le pharmacologue",
+          "Le journaliste",
+          "Le pharmacien.",
+          "le moniteur de l'essai clinique qui assure le suivi de l'essai"
+        ],
+        "correctIndices": [0, 2, 3]
+      },
+      {
+        "id": "q-pharm-40",
+        "text": "Acteurs de l'essai clinique :",
+        "options": [
+          "le comité d'éthique",
+          "le Ministère de la santé",
+          "Authorite sanitaire",
+          "aucun"
+        ],
+        "correctIndices": [0],
+        "explanation": "le legislateur est un delegue du comite d’ethique"
+      },
+      {
+        "id": "q-pharm-41",
+        "text": "Parmi les cinq conditions de l'essai clinique ?",
+        "options": [
+          "Prérequis suffisant (résultats des essais précliniques)",
+          "L'existence des résultats des essais précliniques",
+          "L'absence de souffrance des animaux dans le protocole",
+          "Les résultats de l'expérimentation animale"
+        ],
+        "correctIndices": [0, 1, 3],
+        "explanation": "diapos 63"
+      },
+      {
+        "id": "q-pharm-42",
+        "text": "Parmi les cinq conditions de l'essai clinique ?",
+        "options": [
+          "Les résultats de la phase analytique",
+          "Valeur commerciale du projet",
+          "L'existence d'une valeur scientifique du projet",
+          "La présence obligatoire d'un consentement libre et éclairé des patients"
+        ],
+        "correctIndices": [2, 3],
+        "explanation": "diapos 63"
+      },
+      {
+        "id": "q-pharm-43",
+        "text": "Parmi les cinq conditions de l'essai clinique ?",
+        "options": [
+          "L'accord des volontaires est facultatif",
+          "Signature d'un contrat et d'une assurance entre le promoteur et les patients",
+          "Avis d'un comité d'éthique",
+          "L'avis d'un comité d'éthique est facultatif",
+          "La présence d'un avis favorable d'un comité d'éthique"
+        ],
+        "correctIndices": [1, 2, 4]
+      },
+      {
+        "id": "q-pharm-44",
+        "text": "Concernant les essais cliniques :",
+        "options": [
+          "La phase de tolérance est la phase II",
+          "Le dépôt du dossier d'AMM se fait au début de la phase III",
+          "La phase d'expertise clinique est la phase II",
+          "La phase d'efficacité est la phase II"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-pharm-45",
+        "text": "Parmi les caractéristiques des phases des essais cliniques :",
+        "options": [
+          "Phase I: réalisée chez un petit nombre de malades",
+          "Phase II: on évalue l'efficacité du produit",
+          "Phase III: phase de pharmacovigilance",
+          "Phase IV: Phase d'obtention de l'autorisation de mise sur le marché"
+        ],
+        "correctIndices": [1],
+        "explanation": "phase 1 se fait chez les sujets sains. Phase 3 est la phase d’expertise clinique. Phase 4 debute apres AMM"
+      },
+      {
+        "id": "q-pharm-46",
+        "text": "La phase I d'un essai clinique est :",
+        "options": [
+          "Une étape de tâtonnement",
+          "La phase de tolérance",
+          "La phase ou on évalue l’effet pharmacodynamique",
+          "C’est une phase où on recherche les paramètres pharmacocinétiques chez des patients sains.",
+          "Inclut les femmes susceptibles d'être enceintes, les enfants et les sujets âgés."
+        ],
+        "correctIndices": [0, 1, 2, 3]
+      },
+      {
+        "id": "q-pharm-47",
+        "text": "La phase I d'un essai clinique est :",
+        "options": [
+          "c’est une phase d’efficacité du médicament",
+          "réalisée chez un petit nombre de malades",
+          "C’est la phase qui se réalise chez des patients malades",
+          "Etudiée sur des milliers de sujets",
+          "aucune"
+        ],
+        "correctIndices": [4]
+      },
+      {
+        "id": "q-pharm-48",
+        "text": "La phase I d'un essai clinique est :",
+        "options": [
+          "On recueille déjà les effets indésirables",
+          "c’est l’étape la plus aléatoire des essais cliniques",
+          "La survenue d'un seul accident durant la phase I doit faire abandonner le produit",
+          "La phase de détermination des posologies et des rythmes d’administration pour la phase 2",
+          "C’est la phase qui se réalise chez les animaux"
+        ],
+        "correctIndices": [0, 1, 2, 3]
+      },
+      {
+        "id": "q-pharm-49",
+        "text": "La phase II des essais cliniques :",
+        "options": [
+          "La phase d’efficacité",
+          "C'est une phase d'expertise clinique",
+          "La phase de tolérance",
+          "on évalue l'efficacité du produit"
+        ],
+        "correctIndices": [0, 3]
+      },
+      {
+        "id": "q-pharm-50",
+        "text": "La phase II des essais cliniques :",
+        "options": [
+          "Recrute des sujets sains",
+          "Recrute des sujets malades",
+          "Peut être réalisée sans comparaison avec un placébo",
+          "Peut être réalisée avec comparaison avec un placébo"
+        ],
+        "correctIndices": [1, 2, 3]
+      },
+      {
+        "id": "q-pharm-51",
+        "text": "La phase II des essais cliniques :",
+        "options": [
+          "Peut comporter des études comparatives ou non",
+          "Est la phase où on recherche essentiellement la tolérance du médicament",
+          "Dure entre 1 et 2 ans",
+          "Détermine les paramètres pharmacocinétiques des patients lors de l’administration du produit étudié"
+        ],
+        "correctIndices": [0, 2, 3]
+      },
+      {
+        "id": "q-pharm-52",
+        "text": "La phase III des essais cliniques:",
+        "options": [
+          "S’effectue sur des patients involontaires en petit nombre",
+          "se pratiquent sur des volontaires sains",
+          "se pratiquent sur des malades hospitalisees",
+          "se pratiquent sur des malades ambulatoires"
+        ],
+        "correctIndices": [2, 3]
+      },
+      {
+        "id": "q-pharm-53",
+        "text": "La phase III des essais cliniques:",
+        "options": [
+          "C’est la phase de pharmacovigilance",
+          "c'est la phase d'expertise clinique",
+          "Comporte des essais multicentriques",
+          "comporte des essais comparatifs randomisés"
+        ],
+        "correctIndices": [1, 2, 3]
+      },
+      {
+        "id": "q-pharm-54",
+        "text": "La phase III des essais cliniques:",
+        "options": [
+          "comporte des essais dans plusieurs pays",
+          "Est souvent réalisée dans un grand centre spécialisé",
+          "Est une phase qui prouve l'efficacité du médicament",
+          "C’est la phase qui décide l’autorisation de mise sur le marché du produit"
+        ],
+        "correctIndices": [0, 2, 3],
+        "explanation": "les etudes comparatives prouvent l’efficacité n’est ce pas ?"
+      },
+      {
+        "id": "q-pharm-55",
+        "text": "La phase III des essais cliniques:",
+        "options": [
+          "c'est la phase qui suit l'autorisation de mise du médicament sur le marché",
+          "Le dépôt du dossier d’AMM se fait au début de la phase III",
+          "démontre par des essais comparatifs que le médicament à l’étude est plus actif que le placebo",
+          "aucune"
+        ],
+        "correctIndices": [2]
+      },
+      {
+        "id": "q-pharm-56",
+        "text": "La phase IV des essais cliniques :",
+        "options": [
+          "C'est l'étape de la pharmacovigilance,",
+          "c'est la phase de sécurité d'emploi du médicament",
+          "c'est la phase qui suit l'autorisation de mise sur le marché",
+          "C'est la phase d'étude qui suit la commercialisation du produit et se termine avec sa disparition du marché : période de vie publique du médicament."
+        ],
+        "correctIndices": [0, 1, 2, 3]
+      },
+      {
+        "id": "q-pharm-57",
+        "text": "La phase IV des essais cliniques :",
+        "options": [
+          "elle dure environ 3 ans",
+          "recherche des effets bénéfiques ou toxiques lors d'administration prolongée",
+          "Vise à démontrer l'efficacité de la molécule,",
+          "Implique un petit nombre (quelques dizaines) de malades volontaires formant un groupe homogène,",
+          "Phase d'obtention de l'autorisation de mise sur le marché"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-pharm-58",
+        "text": "Parmi les caractéristiques des phases des essais cliniques :",
+        "options": [
+          "Phase 1: réalisée chez un petit nombre de malades",
+          "La phase de tolérance est la phase II",
+          "Phase II: on évalue l'efficacité du produit",
+          "La phase d’expertise clinique est la phase II"
+        ],
+        "correctIndices": [2]
+      },
+      {
+        "id": "q-pharm-59",
+        "text": "Parmi les caractéristiques des phases des essais cliniques :",
+        "options": [
+          "Phase III: phase de pharmacovigilance",
+          "Le dépôt du dossier d’AMM se fait au début de la phase III",
+          "Phase IV: Phase d'obtention de l'autorisation de mise sur le marché",
+          "aucune"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-pharm-60",
+        "text": "Les essais cliniques avant L’AMM sont au nombre de :",
+        "options": [
+          "une phase",
+          "deux phases",
+          "trois phases",
+          "quatre phase"
+        ],
+        "correctIndices": [2]
+      },
+      {
+        "id": "q-pharm-61",
+        "text": "la demi-vie d’un medicament :",
+        "options": [
+          "caractéristique d’un médicament",
+          "indépendante de la voie d’administration",
+          "permet de prévoir l’état d’équilibre",
+          "permet de définir le rythme d’administration"
+        ],
+        "correctIndices": [0, 1, 2, 3]
+      }
+    ]
+  },
+  {
+    "id": "lesson-pharmaco-voies",
+    "name": "Voies d'administration",
+    "pdfs": [],
+    "questions": [
+      {
+        "id": "q-pharm-voies-1",
+        "text": "Les caractéristiques de la diffusion passive:",
+        "options": [
+          "Elle est non spécifique",
+          "Spécifique",
+          "Saturable"
+        ],
+        "correctIndices": [
+          0
+        ],
+        "explanation": "diapos 4"
+      },
+      {
+        "id": "q-pharm-voies-2",
+        "text": "Les caractéristiques de la diffusion passive:",
+        "options": [
+          "Absence de phénomène de compétition",
+          "S'effectue contre le gradient de concentration",
+          "S'effectue selon le gradient de concentration",
+          "Consomme de l'énergie"
+        ],
+        "correctIndices": [
+          0,
+          2
+        ],
+        "explanation": "diapos 4"
+      },
+      {
+        "id": "q-pharm-voies-3",
+        "text": "Les caractéristiques du transport actif:",
+        "options": [
+          "S'effectue selon le gradient de concentration",
+          "Nécessite un transporteur spécifique",
+          "Saturable",
+          "Spécifique",
+          "Consomme de l'énergie"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "explanation": "diapos 4"
+      },
+      {
+        "id": "q-pharm-voies-4",
+        "text": "La loi de Fick de diffusion des médicaments:",
+        "options": [
+          "c’est une diffusion passive",
+          "Est une diffusion active",
+          "spécifique",
+          "dépend de la fraction ionisée du médicament"
+        ],
+        "correctIndices": [
+          0,
+          3
+        ],
+        "explanation": "diapos 4, contrairement au mecanismes actifs influencés par la competition entre les molecules, la loi de Fick régit le transport passif en se fonadant sur les propriétés physiques de la membrane plutôt que sur les affinités spécifiques des solutés, pourtant la forme ionisée est plus difficile à absorbée car la membrane des cellules est lipidique."
+      },
+      {
+        "id": "q-pharm-voies-5",
+        "text": "La loi de Fick de diffusion des médicaments:",
+        "options": [
+          "Nécessite un transporteur spécifique",
+          "saturable",
+          "sans consommation d’énergie",
+          "Ne présente pas d'inhibition compétitive"
+        ],
+        "correctIndices": [
+          2,
+          3
+        ],
+        "explanation": "diapos 4, contrairement au mecanismes actifs influencés par la competition entre les molecules, la loi de Fick régit le transport passifen se fonadant sur les propriétésphsiques de la membrane plutôt que sur les affinités spécifiques des solutés"
+      },
+      {
+        "id": "q-pharm-voies-6",
+        "text": "Le choix de la voie d'administration est conditionné par :",
+        "options": [
+          "Facilité d'administration",
+          "Rapidité d'action désirée",
+          "Sexe du patient",
+          "Nature du médicament"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "diapos 5,+action locale ou generale, certaines proriétés imposent des voies particulières l’exemple d’un sujet comateux"
+      },
+      {
+        "id": "q-pharm-voies-7",
+        "text": "Les formes galéniques à administrer par voie orale:",
+        "options": [
+          "Comprimés",
+          "Sirops",
+          "Pilules",
+          "Ovules"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "diapos 8"
+      },
+      {
+        "id": "q-pharm-voies-8",
+        "text": "Laquelle ou lesquelles de ces voies d’administration médicamenteuse échappe(nt) au phénomène du premier passage hépatique :",
+        "options": [
+          "La voie sous-cutanée",
+          "La voie orale",
+          "La voie sublinguale",
+          "La voie rectale"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ],
+        "explanation": "diapos 7"
+      },
+      {
+        "id": "q-pharm-voies-9",
+        "text": "Quelles sont les voies d’administration qui évitent complètement le foie :",
+        "options": [
+          "La voie pulmonaire",
+          "La voie rectale",
+          "La voie sublinguale",
+          "La voie sous cutanée"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ],
+        "explanation": "diapos 7"
+      },
+      {
+        "id": "q-pharm-voies-10",
+        "text": "Quels sont les avantages de la voie orale :",
+        "options": [
+          "Pratique",
+          "Ambulatoire",
+          "Sans interférence avec les aliments ou les boissons"
+        ],
+        "correctIndices": [
+          0,
+          1
+        ],
+        "explanation": "diapos 13"
+      },
+      {
+        "id": "q-pharm-voies-11",
+        "text": "Quels sont les avantages de la voie orale :",
+        "options": [
+          "Economique et répétable",
+          "En cas d'intoxication : lavage de l'estomac",
+          "Biodisponibilité immédiate du principe actif"
+        ],
+        "correctIndices": [
+          0,
+          1
+        ],
+        "explanation": "diapos 13"
+      },
+      {
+        "id": "q-pharm-voies-12",
+        "text": "Les facteurs de variation de la cinétique d'absorption =d'absorption intestinale =d'absorption digestive sont :",
+        "options": [
+          "la forme pharmaceutique",
+          "la dissolution du principe actif",
+          "la liposolubilité du principe actif",
+          "la vidange gastrique",
+          "interactions médicament-aliments"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "explanation": "diapos 14"
+      },
+      {
+        "id": "q-pharm-voies-13",
+        "text": "Les facteurs de variation de la cinétique d'absorption =d'absorption intestinale =d'absorption digestive sont :",
+        "options": [
+          "Le débit sanguin intestinal",
+          "la vascularisation intestinale",
+          "l'effet du premier passage",
+          "La présence de glycoprotéine P au niveau des entérocytes"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 14"
+      },
+      {
+        "id": "q-pharm-voies-14",
+        "text": "Les facteurs de variation de la cinétique d'absorption =d'absorption intestinale =d'absorption digestive sont :",
+        "options": [
+          "Un syndrome de malabsorption intestinal",
+          "Une insuffisance cardiaque",
+          "Un repas riche en lipides",
+          "la composition du repas n’influence pas la cinétique d’absorption",
+          "La prise des médicaments à estomac vide",
+          "La prise de médicaments type pansement gastrique"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "explanation": "diapos 14, pour la proposition f je l’ai considéré vraie car ces medicaments tapissent l’epithelium intestinal donc ilss vont surement agir sur la diffusion"
+      },
+      {
+        "id": "q-pharm-voies-15",
+        "text": "La voie rectale est caractérisée par :",
+        "options": [
+          "Effet local seulement",
+          "Effet local et systémique",
+          "Facilité d'administration en cas de vomissements",
+          "Pratique chez l’enfant"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 20"
+      },
+      {
+        "id": "q-pharm-voies-16",
+        "text": "La voie rectale est caractérisée par :",
+        "options": [
+          "Utile en cas de diarrhée",
+          "Résorption totale du médicament",
+          "Pas d’altération du médicament par les enzymes digestives",
+          "Pas d’effet du 1er passage hépatique"
+        ],
+        "correctIndices": [
+          2,
+          3
+        ],
+        "explanation": "diapos 20 et 7"
+      },
+      {
+        "id": "q-pharm-voies-17",
+        "text": "La voie sous cutanée :",
+        "options": [
+          "Est utilisée pour les préparations non miscibles",
+          "Est utilisée pour les préparations à effet retard",
+          "Est à visée locale uniquement",
+          "La résorption est dépendante de la vascularisation"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "diapos 33"
+      },
+      {
+        "id": "q-pharm-voies-18",
+        "text": "La voie intramusculaire des médicaments:",
+        "options": [
+          "Est possible pour les solutions huileuses",
+          "Se fait dans le cadre supéro-interne des fesses",
+          "Permet des perfusions de grands volumes"
+        ],
+        "correctIndices": [
+          0
+        ],
+        "explanation": "diapos 35"
+      },
+      {
+        "id": "q-pharm-voies-19",
+        "text": "La voie intramusculaire des médicaments:",
+        "options": [
+          "A comme risque l'atteinte du nerf sciatique",
+          "Comprends la phase de résorption du médicament",
+          "Nécessite une bonne vascularisation des groupes musculaires concernés"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "diapos 35"
+      },
+      {
+        "id": "q-pharm-voies-20",
+        "text": "La voie intraveineuse est caractérisée par :",
+        "options": [
+          "L'utilisation de solutions aqueuses non stériles",
+          "La rapidité d'action",
+          "La seule voie possible pour certaines molécules",
+          "Le risque infectieux",
+          "Une voie d’urgence"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "id": "q-pharm-voies-21",
+        "text": "La voie intraveineuse est caractérisée par :",
+        "options": [
+          "Les préparations doivent être stériles",
+          "Est utilisé pour les médicaments insolubles",
+          "Présente une mauvaise biodisponibilité pour le médicament",
+          "Utilisée pour avoir une bonne biodisponibilité du médicament",
+          "elle évite l’effet de premier passage hépatique"
+        ],
+        "correctIndices": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "id": "q-pharm-voies-22",
+        "text": "Lors d’injection intraveineuse d’un médicament ayant une fenêtre thérapeutique étroite, il est préférable d’utiliser les techniques suivantes :",
+        "options": [
+          "la perfusion par gravité",
+          "la pousse seringue",
+          "la perfusion intraveineuse directe",
+          "Pompe à comptage de gouttes"
+        ],
+        "correctIndices": [
+          1,
+          3
+        ],
+        "explanation": "diapos 40"
+      },
+      {
+        "id": "q-pharm-voies-23",
+        "text": "La voie d’administration perlinguale du principe actif :",
+        "options": [
+          "Permet son drainage rapide dans circulation sanguine",
+          "Permet une résorption par la muqueuse buccale",
+          "Est une voie pour un traitement d’urgence",
+          "Le protège du phénomène de premier passage hépatique"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "diapos 17"
+      },
+      {
+        "id": "q-pharm-voies-24",
+        "text": "La voie sublinguale est utilisée pour :",
+        "options": [
+          "avoir un effet rapide du médicament",
+          "éviter l’effet du passage hépatique",
+          "diminuer la biodisponibilité du médicament",
+          "avoir un effet local au niveau de la bouche"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "id": "q-pharm-voies-25",
+        "text": "Les voies parentérales sont utilisées:",
+        "options": [
+          "en urgence",
+          "uniquement pour les préparations pharmaceutiques stériles",
+          "pour les médicaments insolubles",
+          "pour les médicaments qui ont une mauvaise biodisponibilité"
+        ],
+        "correctIndices": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "q-pharm-voies-26",
+        "text": "La perfusion des médicaments est utilisée",
+        "options": [
+          "Pour les médicaments toxiques",
+          "Pour les volumes importants",
+          "Pour administrer plusieurs médicaments en mm tps",
+          "Pour le médicament dont la demi-vie est courte",
+          "Pour avoir un effet rapide"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "id": "q-pharm-voies-27",
+        "text": "L'absorption des médicaments est meilleure pour :",
+        "options": [
+          "Les acides faibles",
+          "Les bases fortes",
+          "Les acides forts",
+          "Les bases faibles"
+        ],
+        "correctIndices": [
+          0,
+          3
+        ]
+      },
+      {
+        "id": "q-pharm-voies-28",
+        "text": "Parmi ces médicaments, lesquels l'absorption est indépendante du pH:",
+        "options": [
+          "Les acides forts",
+          "Les bases faibles",
+          "Les acides faibles",
+          "Les bases fortes"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ]
+      },
+      {
+        "id": "q-pharm-voies-29",
+        "text": "L'absorption est un processus :",
+        "options": [
+          "Par lequel le médicament passe du site d'absorption vers la circulation générale",
+          "par lequel passe le médicament arrive vers la circulation générale",
+          "Par lequel le médicament passe du site d'absorption vers son site d'action"
+        ],
+        "correctIndices": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "q-pharm-voies-30",
+        "text": "L'absorption est un processus :",
+        "options": [
+          "Qui n'est pas influencé par la voie d'administration du médicament",
+          "qui peut être influencé par un effet de premier passage hépatique",
+          "qui concerne les médicaments administrés par voies parentérales"
+        ],
+        "correctIndices": [
+          1
+        ]
+      },
+      {
+        "id": "q-pharm-voies-31",
+        "text": "La voie qui a la plus faible biodisponibilité :",
+        "options": [
+          "Voie orale",
+          "Voie sous cutanée",
+          "Voie rectale",
+          "Voie intramusculaire"
+        ],
+        "correctIndices": [
+          0
+        ]
+      },
+      {
+        "id": "q-pharm-voies-32",
+        "text": "Les 2 voies qui donnent la meilleure biodisponnibilité :",
+        "options": [
+          "IV",
+          "IM",
+          "SC",
+          "Intra arterielle"
+        ],
+        "correctIndices": [
+          3
+        ]
+      },
+      {
+        "id": "q-pharm-voies-33",
+        "text": "L'effet de premier passage hépatique:",
+        "options": [
+          "fait partie de la phase de métabolisation des médicaments du processus ADME",
+          "permet Une désintoxication des médicaments",
+          "permet La formation de métabolites parfois toxiques",
+          "permet La transformation en composés plus liposolubles"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ]
+      },
+      {
+        "id": "q-pharm-voies-34",
+        "text": "L'effet de premier passage hépatique:",
+        "options": [
+          "permet une perte de médicament par métabolisme hépatique",
+          "permet Une perte totale de l'efficacité thérapeutique",
+          "permet une perte partielle de l'efficacité thérapeutique",
+          "Peut donner la formation de métabolites inactifs"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "id": "q-pharm-voies-35",
+        "text": "Les conditions de franchissement d’un médicament de la barrière gastro-intestinale :",
+        "options": [
+          "Sont influencées par les caractéristiques physicochimiques des médicaments,",
+          "Dépendent du PKa du médicament",
+          "Seule la fraction ionisée est absorbée"
+        ],
+        "correctIndices": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "q-pharm-voies-36",
+        "text": "Les conditions de franchissement d’un médicament de la barrière gastro-intestinale :",
+        "options": [
+          "Ne sont pas influencées par les caractéristiques du milieu d'absorption,",
+          "Dépendent du pH du milieu",
+          "Ne dépendent pas de la vascularisation du milieu et le débit sanguin intestinal,"
+        ],
+        "correctIndices": [
+          1
+        ]
+      }
+    ]
+  }
+]

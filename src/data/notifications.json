@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "type": "info",
+    "message": "Bienvenue sur MedQCM Pro ! De nouveaux modules ont été ajoutés.",
+    "date": "2024-03-10"
+  },
+  {
+    "id": "2",
+    "type": "urgent",
+    "message": "Mise à jour importante des modules : Pharmacologie, Anapath, MI et Parasitologie.",
+    "date": "15/03/2026"
+  },
+  {
+    "id": "notif-4",
+    "type": "urgent",
+    "message": "Il y aura inchallah un update tous les 24 jours, je vais essayer d'ajouter tous les cours qu'on a fini dans l'amphi. J'espère que vous serez à jour pour chaque update et que vous corrigerez les réponses fausses le plus tôt possible.",
+    "date": "15/03/2026"
+  },
+  {
+    "id": "notif-3",
+    "type": "warning",
+    "message": "Le modèle d'IA a un nombre limité d'usage alors s'il vous plaît ne l'utilisez pas, mais je vais vous fournir la description exacte pour avoir des questions précises en utilisant l'IA Gemini.",
+    "date": "13/03/2026"
+  }
+]

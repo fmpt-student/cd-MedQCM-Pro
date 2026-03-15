@@ -1,0 +1,26 @@
+[
+  {
+    "id": "lesson-anat-1",
+    "name": "Généralités et Thorax",
+    "pdfs": [
+      { "id": "pdf1", "name": "Cours Thorax.pdf", "url": "#" },
+      { "id": "pdf2", "name": "Cours Membre Supérieur.pdf", "url": "#" }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Quel est l'os le plus long du corps humain ?",
+        "options": ["Humérus", "Fémur", "Tibia", "Fibula"],
+        "correctIndices": [1],
+        "explanation": "Le fémur est l'os de la cuisse et c'est le plus long du corps."
+      },
+      {
+        "id": "q2",
+        "text": "Concernant la cage thoracique :",
+        "options": ["Elle contient 12 paires de côtes", "Le sternum est un os plat", "Toutes les côtes s'articulent directement avec le sternum", "Elle protège le cœur et les poumons"],
+        "correctIndices": [0, 1, 3],
+        "explanation": "Il y a 12 paires de côtes. Les côtes flottantes (11 et 12) ne s'articulent pas avec le sternum."
+      }
+    ]
+  }
+]

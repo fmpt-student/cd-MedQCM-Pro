@@ -1,0 +1,1151 @@
+[
+  {
+    "id": "lesson-malinf-fievre",
+    "name": "syndrome fébrile+fièvre liée à l'infection",
+    "questions": [
+      {
+        "id": "q-mi-fievre-1",
+        "text": "les signes évocateurs d'une urgence devant une fièvre sont",
+        "options": [
+          "Amaigrissement",
+          "Anosmie",
+          "Douleur lombaire",
+          "Purpura",
+          "Vomissements"
+        ],
+        "correctIndices": [3],
+        "explanation": "le seul signe évoqué dans diapos 9 mais je ne suis pas sure par exemple une fievre prolongée+amaigrissement est un signe de cancer ou bien les vomissement+fievre sont un signe d’infection"
+      },
+      {
+        "id": "q-mi-fievre-2",
+        "text": "le diagnostic de gravité d'une fièvre repose sur :",
+        "options": [
+          "La décompensation d'une tare sous-jacente",
+          "La durée de la fièvre",
+          "Le calcul du Qsofa",
+          "Le degré de la fièvre",
+          "Le terrain"
+        ],
+        "correctIndices": [2, 4],
+        "explanation": "diapos 9-10-11"
+      },
+      {
+        "id": "q-mi-fievre-3",
+        "text": "Quels sont les éléments à prendre en considération pour le calcul du QSOFA ?",
+        "options": [
+          "La fréquence cardiaque",
+          "La fréquence respiratoire",
+          "La pression artérielle",
+          "La température",
+          "L'état de conscience"
+        ],
+        "correctIndices": [1, 2, 4],
+        "explanation": "diapos 10"
+      },
+      {
+        "id": "q-mi-fievre-4",
+        "text": "Quelle infection est caractérisée par une fièvre ondulante",
+        "options": [
+          "Brucellose",
+          "Leishmaniose",
+          "Paludisme",
+          "Leptospirose",
+          "Rickettsiose"
+        ],
+        "correctIndices": [0],
+        "explanation": "gemini"
+      },
+      {
+        "id": "q-mi-fievre-5",
+        "text": "Quelle infection est caractérisée par une fièvre en plateau",
+        "options": [
+          "Borréliose de Lyme",
+          "Grippe",
+          "Leptospirose",
+          "Paludisme",
+          "Tuberculose"
+        ],
+        "correctIndices": [1],
+        "explanation": "gemini"
+      },
+      {
+        "id": "q-mi-fievre-6",
+        "text": "Avant le 3ème de jour d'une fièvre isolée sans signes de gravité",
+        "options": [
+          "Il n'y a pas lieu de prescrire des examens biologiques",
+          "Il n'y a pas lieu de prescrire des examens radiologiques",
+          "Il n'y a pas lieu de prescrire un antibiotique",
+          "L'antipyrétique seul peut être suffisant",
+          "Les corticoïdes peuvent améliorer les symptômes"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "diapos 18-30"
+      },
+      {
+        "id": "q-mi-fievre-7",
+        "text": "Chez un patient diabétique qui fait de la fièvre le germe le plus probable est :",
+        "options": [
+          "Listéria",
+          "Salmonella",
+          "Staphylocoque",
+          "Streptocoque",
+          "Virus grippal"
+        ],
+        "correctIndices": [2],
+        "explanation": "gemini"
+      },
+      {
+        "id": "q-mi-fievre-8",
+        "text": "Vous examinez ce jour un adolescent à votre consultation pour fièvre aigue et angines. Quels sont les 2 germes à évoquer en 1ère intention?",
+        "options": [
+          "Coronavirus",
+          "Cytomégalovirus",
+          "Coxiella Burnetti",
+          "Epstein Barr virus",
+          "Streptocoque pneumonia"
+        ],
+        "correctIndices": [1, 3],
+        "explanation": "gemini"
+      },
+      {
+        "id": "q-mi-fievre-9",
+        "text": "Un patient se présente de lui-même aux urgences pour une fièvre à 39° depuis 02 jours. La fréquence respiratoire est 26 cycles/min, la TA est 100/50 mmHg, la fréquence cardiaque est 120 battements/min. Que préconisez-vous ?",
+        "options": [
+          "Un retour à domicile avec un rendez-vous de consultation",
+          "Une hospitalisation",
+          "Une antibiothérapie orale",
+          "Une antibiothérapie intra-veineuse",
+          "La réalisation de prélèvements à visée bactériologique"
+        ],
+        "correctIndices": [1],
+        "explanation": "qsofa est égale à 2, apres hospitalisation il aura une antibiotherapie puis un examen bacteriologique qui va preciser le meilleur antibiotique à prescrire"
+      },
+      {
+        "id": "q-mi-fievre-10",
+        "text": "Mme MC vous consulte dans votre cabinet ce jour pour une fièvre à 38.3° C depuis 4 jours. L'examen clinique trouve une fréquence cardiaque à 120 bpm, une PA 90/40mmHg, une fréquence respiratoire à 19 cycles/min, Calculer le QSofa:",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-mi-fievre-11",
+        "text": "chez un patient splénectomisé qui fait de la fièvre le germe incriminé est :",
+        "options": [
+          "Listériose",
+          "Grippe",
+          "Salmonellose",
+          "Staphylocoque",
+          "Streptocoque"
+        ],
+        "correctIndices": [4],
+        "explanation": "gemini"
+      }
+    ],
+    "pdfs": []
+  },
+  {
+    "id": "lesson-malinf-parasito-intro",
+    "name": "introduction à la parasitologie",
+    "questions": [
+      {
+        "id": "q-mi-parasito-1",
+        "text": "On qualifie de parasite, l’être vivant animal ou fongique qui vit associé à son hôte:",
+        "options": [
+          "Sans aucun effet néfaste pour l'hôte.",
+          "Sans aucun dommage pour les deux associés",
+          "Les deux êtres vivants (parasite et hôte) profitent de cette association.",
+          "Avec bénéfice pour l’hôte et le parasite",
+          "aucune"
+        ],
+        "correctIndices": [4]
+      },
+      {
+        "id": "q-mi-parasito-2",
+        "text": "On qualifie de parasite, l’être vivant animal ou fongique qui vit associé à son hôte:",
+        "options": [
+          "Avec un bénéfice pour l'hôte et un dommage pour le parasite",
+          "Au dépend duquel il puise ses nutriments.",
+          "Chez qui il entraine un dommage (maladie).",
+          "Le parasite tire profit (nutriments) et l'hôte subit un dommage (maladie).",
+          "Sans aucun bénéfice pour les deux êtres vivants associés (parasite et hôte)"
+        ],
+        "correctIndices": [1, 2, 3]
+      },
+      {
+        "id": "q-mi-parasito-3",
+        "text": "Le cycle évolutif d'un parasite est :",
+        "options": [
+          "L'ensemble de transformations obligatoires subies par le parasite pour passer d'une génération à la suivante",
+          "Dit monoxène quand il se déroule chez un seul hôte.",
+          "Dit monoxène quand il se déroule chez deux hôtes dont un et un hôte intermédiaire",
+          "Dit hétéroxène quand il fait intervenir deux ou plusieurs hôtes.",
+          "Dit hétéroxène quand il se déroule chez un seul hôte appelé hôte définitif"
+        ],
+        "correctIndices": [0, 1, 3],
+        "explanation": "diapos 17 et 18"
+      },
+      {
+        "id": "q-mi-parasito-4",
+        "text": "Acteurs du cycle parasitaire",
+        "options": [
+          "Le parasite est un être vivant qui se nourrit aux dépens d'un autre organisme vivant en entrainant un dommage chez lui",
+          "Hôte intermédiaire est un hôte chez lequel le parasite va subir une évolution larvaire et/ou va effectuer sa reproduction asexuée",
+          "Hôte accidentel est un hôte inhabituel qui héberge la forme infestante du parasite",
+          "Le vecteur est un agent transmetteur des parasites d'un hôte à un autre",
+          "Le réservoir est un organisme vivant ou substrat inerte capable de conserver un parasite durant longues périodes"
+        ],
+        "correctIndices": [0, 3, 4],
+        "explanation": "diapos 33 35 et l’ancien cours, mais je ne suis pas sre concernant la proposition c"
+      },
+      {
+        "id": "q-mi-parasito-5",
+        "text": "Relation hôte-parasite",
+        "options": [
+          "Hôte définitif est un hôte chez lequel le parasite atteint sa maturité et effectue sa reproduction sexuée",
+          "Commensalisme est un état néfaste pour le parasite entrainant des dommages pour l'hôte",
+          "Impasse parasitaire signifie une erreur de situation du parasite chez l'hôte définitif",
+          "Botriocéphale est un parasite qui agit par spoliation de la vitamine B12",
+          "Réviviscence est une semi-immunité acquise après quelques années d'exposition dans les pays endémiques au paludisme"
+        ],
+        "correctIndices": [0, 3],
+        "explanation": "l’ancien cours, la Réviviscence est une reapparition de symptomes, la prémunition est le bon terme"
+      },
+      {
+        "id": "q-mi-parasito-6",
+        "text": "On qualifie d'opportuniste l'être vivant qui :",
+        "options": [
+          "Ne deviendra jamais pathogène",
+          "Peut-être commensal chez son hôte",
+          "Peut-être saprophyte du milieu extérieur",
+          "Peut saisir l'occasion d'une immunodépression pour devenir pathogène",
+          "Est toujours pathogène quel que soit l'état immunitaire de l'hôte"
+        ],
+        "correctIndices": [1, 2, 3],
+        "explanation": "l’ancien cours"
+      },
+      {
+        "id": "q-mi-parasito-7",
+        "text": "Examen parasitologique des selles",
+        "options": [
+          "Outil biologique important du diagnostic des parasitoses intestinales",
+          "Nécessite une prise d'antiseptiques intestinaux la veille de l'examen.",
+          "La prise des antiseptiques intestinaux est nécessaire avant d'effectuer cet examen",
+          "La coloration Ziehl Neelsen modifiée est une technique spécifique pour la détection des larves d'anguillules",
+          "La technique de Baerman est basée le phénomène l'hygrotropisme et le thermotropisme des larves d'anguillule"
+        ],
+        "correctIndices": [0, 4],
+        "explanation": "propos e d’apres gemini"
+      },
+      {
+        "id": "q-mi-parasito-8",
+        "text": "Examen parasitologique des selles",
+        "options": [
+          "Les techniques de sédimentation et de flottation sont basées sur le principe de densité",
+          "Dans la technique de flottation les parasites sédimentent au fond de tube de concentration",
+          "La technique de Ritchie modifiée est une technique physique basée sur le phénomène de densité.",
+          "L'examen microscopique permet de visualiser les parasites adultes à l'œil nu.",
+          "La leucoconcentration est une technique de concentration des selles physico-chimique"
+        ],
+        "correctIndices": [0],
+        "explanation": "l’ancien cours : examen des selles"
+      },
+      {
+        "id": "q-mi-parasito-9",
+        "text": "Parmi les parasites suivants, lesquels mènent une vie intracellulaire chez l'homme :",
+        "options": [
+          "Giardia intestinals",
+          "Ieishmania donovani",
+          "trichomonas vaginalis",
+          "Plasmodium ovale",
+          "Toxoplasma gondi"
+        ],
+        "correctIndices": [1, 3, 4]
+      },
+      {
+        "id": "q-mi-parasito-10",
+        "text": "Lesquels de ces parasites sont des flagellés :",
+        "options": [
+          "Leishmania major",
+          "Giardia intestinalis",
+          "Trichomonas vaginalis",
+          "Toxoplasma gondii",
+          "Cryptosporidium parvum"
+        ],
+        "correctIndices": [0, 1, 2],
+        "explanation": "diapos 9"
+      },
+      {
+        "id": "q-mi-parasito-11",
+        "text": "Lesquels de ces parasites sont des flagellés :",
+        "options": [
+          "Plasmodium ovale",
+          "Plasmodium malariae",
+          "Trypanosoma",
+          "Isospora belli"
+        ],
+        "correctIndices": [2],
+        "explanation": "diapos 9"
+      },
+      {
+        "id": "q-mi-parasito-12",
+        "text": "Les Protozoaires :",
+        "options": [
+          "Sont des vers parasites de l'homme",
+          "Sont des cellules eucaryotes",
+          "Sont des microorganismes pluricellulaires",
+          "Les flagellés sont des protozoaires immobiles"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-mi-parasito-13",
+        "text": "Les Protozoaires :",
+        "options": [
+          "Les amibes sont des protozoaires mobiles à l’aide de pseudopodes",
+          "Les rhizopodes sont des protozoaires mobiles à l'aide de flagelles",
+          "Les sporozoaires est un groupe de protozoaires immobiles",
+          "Ascaris lumbricoides est un protozoaire mobile",
+          "Plasmodium falciparum est un protozoaire mobile"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "diapos 9, ascaris sont des helminthes et le plasmodium est sporozoaire"
+      },
+      {
+        "id": "q-mi-parasito-14",
+        "text": "Lesquels parmi ces protozoaires, ont un cycle biologique monoxène :",
+        "options": [
+          "Entamoeba histolytica",
+          "Trypanosoma cruzi",
+          "Leishmania infantum",
+          "Trichomonas vaginalis",
+          "Plasmodium Falciparum"
+        ],
+        "correctIndices": [0, 3]
+      },
+      {
+        "id": "q-mi-parasito-15",
+        "text": "Lesquels parmi ces protozoaires, ont un cycle biologique hétéroxène :",
+        "options": [
+          "Toxoplasma gondii",
+          "Entarnoeba histolytica",
+          "Giardia",
+          "Trichomonas vaginalis",
+          "Plasmodium falciparum"
+        ],
+        "correctIndices": [0, 4]
+      },
+      {
+        "id": "q-mi-parasito-16",
+        "text": "Lequel de ces parasites est un protozoaire flagellé :",
+        "options": [
+          "Entamoeba histolytica",
+          "Entamoeba coli",
+          "Giardia intestinalis",
+          "Leishmania tropica"
+        ],
+        "correctIndices": [2, 3],
+        "explanation": "diapo9"
+      },
+      {
+        "id": "q-mi-parasito-17",
+        "text": "Lequel de ces parasites est un protozoaire flagellé :",
+        "options": [
+          "Leishmania infantum",
+          "Toxoplasma gondi",
+          "Trichomonas vaginalis",
+          "Trypanosoma cruzii"
+        ],
+        "correctIndices": [0, 2, 3],
+        "explanation": "diapos 9"
+      },
+      {
+        "id": "q-mi-parasito-18",
+        "text": "Lequel de ces parasites est un protozoaire flagellé :",
+        "options": [
+          "Trypanosoma brucei",
+          "Plasmodium falciparum",
+          "Cryptosporidium parvum",
+          "Naegleria fowleri"
+        ],
+        "correctIndices": [0],
+        "explanation": "diapos9"
+      },
+      {
+        "id": "q-mi-parasito-19",
+        "text": "Lesquels parmi ces protozoaires, peuvent une multiplication sexuée",
+        "options": [
+          "Plasmodiumn Vivax",
+          "Trichomonas vaginalis",
+          "Giardia intestinalis",
+          "Entamœba histolytica",
+          "Cryptosporidium pavum"
+        ],
+        "correctIndices": [0, 4]
+      }
+    ],
+    "pdfs": []
+  },
+  {
+    "id": "lesson-malinf-giardiose-trichomonose",
+    "name": "giardiose et trichomonose uro_génitale",
+    "questions": [
+      {
+        "id": "q-mi-giar-trich-1",
+        "text": "La giardiose intestinale est une protozoose est un protozoaire est une parasitose:",
+        "options": [
+          "Appartenant au groupe des métazoaires",
+          "Due à un parasite appartenant au groupe des amibes",
+          "Appartient au groupe de coccidies",
+          "Est du à un flagellé intestinal nommé Trichomonas intestinalis",
+          "aucune"
+        ],
+        "correctIndices": [4]
+      },
+      {
+        "id": "q-mi-giar-trich-2",
+        "text": "La giardiose intestinale est une protozoose est un protozoaire est une parasitose:",
+        "options": [
+          "Parasitose cosmopolite qui touche plus fréquemment les enfants que les adultes",
+          "est une parasitose pluricellulaire",
+          "Due à un protzoose unicellulaire flagellé",
+          "Appartenant au groupe des flagellés",
+          "Qui se déplace par des pseudopodes"
+        ],
+        "correctIndices": [0, 2, 3]
+      },
+      {
+        "id": "q-mi-giar-trich-3",
+        "text": "Concernant les formes de la giardiose intestinale :",
+        "options": [
+          "Se présente sous forme végétative seule",
+          "Qui peut exister sous une forme végétative ou kystique.",
+          "Due à un protoaire qui ne s'enkyste jamais"
+        ],
+        "correctIndices": [1],
+        "explanation": "diapos 5 6"
+      },
+      {
+        "id": "q-mi-giar-trich-4",
+        "text": "Concernant le mouvement de la giardiose intestinale :",
+        "options": [
+          "Dont la forme végétative est mobile",
+          "La forme vegetative est immobile",
+          "Dont la forme végétative se déplace grâce à des pseudopodes.",
+          "Qui se déplace par des flagelles.",
+          "La forme végétative comporte une seule paire de flagelles"
+        ],
+        "correctIndices": [0, 3]
+      },
+      {
+        "id": "q-mi-giar-trich-5",
+        "text": "Concernant la localisation de la giardiose intestinale :",
+        "options": [
+          "Vit habituellement en intracell",
+          "Vit a l’interieur des hematies",
+          "Localisation est Surtout intestinal",
+          "est une parasitose Du tube digestif de l'homme.",
+          "est une parasitose Du tractus respiratoire de l'homme"
+        ],
+        "correctIndices": [2, 3]
+      },
+      {
+        "id": "q-mi-giar-trich-6",
+        "text": "Concernant le cycle et le reservoir de la giardiose intestinale :",
+        "options": [
+          "A un cycle évolutif hétéroxène",
+          "Qui a un cycle biologique monoxène (cycle direct chez l’homme)",
+          "Qui a un mollusque d'eau douce comme hôte intermédiaire",
+          "Le Chat est un hote intermediaire"
+        ],
+        "correctIndices": [1],
+        "explanation": "diapos 8"
+      },
+      {
+        "id": "q-mi-giar-trich-7",
+        "text": "Concernant la transmission de la giardiose intestinale :",
+        "options": [
+          "Transmission par piqure d'insectes",
+          "Transmission transcutanee",
+          "Qui se transmet par voie orale.",
+          "Transmis par ingestion des kystes du parasite",
+          "Les trophozoites sont responsables de la transmission de la maladie"
+        ],
+        "correctIndices": [2, 3],
+        "explanation": "diapos 7-9"
+      },
+      {
+        "id": "q-mi-giar-trich-8",
+        "text": "Concernant les manifestations de la giardiose intestinale :",
+        "options": [
+          "Qui peut se manifester par une malabsorption intestinal de certains nutriments",
+          "Qui peut se manifester par une diarrhée.",
+          "Se manifeste par une diarrhée glairo-sanglante",
+          "Qui peut être responsable de douleurs abdominales",
+          "Se manifeste essentiellement par une diarrhée chronique avec douleurs abdominales"
+        ],
+        "correctIndices": [0, 1, 2, 3, 4],
+        "explanation": "diapos 11-13"
+      },
+      {
+        "id": "q-mi-giar-trich-9",
+        "text": "Le diagnostic biologique de la giardiose intestinale :",
+        "options": [
+          "découverte de formes kystiques ou végétatives du parasite dans les selles.",
+          "Se fait par examen parasitologique des selles",
+          "peut se faire par examen direct sur un échantillon de selles",
+          "basé sur la mise en évidence des kystes de Giardia intestinalis"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "diapos 15"
+      },
+      {
+        "id": "q-mi-giar-trich-10",
+        "text": "Le diagnostic biologique de la giardiose intestinale :",
+        "options": [
+          "Peut se faire par la mise en évidence du parasite dans le liquide de tubage duodénal",
+          "basé sur la technique de Baerman",
+          "principalement par la recherche des anticorps anti-Giardia dans le sérum.",
+          "Se fait par la mise en évidence des antigènes du parasite dans le sang"
+        ],
+        "correctIndices": [0, 3],
+        "explanation": "se fait principalement sur les selles par visionnage des kystes et des formes vegetatives."
+      },
+      {
+        "id": "q-mi-giar-trich-11",
+        "text": "Le diagnostic biologique de la giardiose intestinale :",
+        "options": [
+          "Se fait par la mise en évidence hyperéosinophilie massive dans le sang",
+          "Se fait habituellement par culture sur milieu Sabouraud chloramphénicol",
+          "Se fait habituellement par serologie",
+          "aucune"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-mi-giar-trich-12",
+        "text": "La prévention de l'infection par Giardia intestinalis peut se faire par :",
+        "options": [
+          "Un lavage soigneux des mains avant le repas",
+          "Un lavage soigneux des mains apres le repas",
+          "Une bonne hygiène du péril fécal",
+          "bonne gestion du peril fecal",
+          "la lutte contre les rongeurs"
+        ],
+        "correctIndices": [0, 2, 3],
+        "explanation": "diapos 23"
+      },
+      {
+        "id": "q-mi-giar-trich-13",
+        "text": "La prévention de l'infection par Giardia intestinalis peut se faire par :",
+        "options": [
+          "sur la bonne hygiène fécale et alimentaire",
+          "La consommation de fruits et lêgumes bien lavés",
+          "L'installation d'un réseau d'assainissement des eaux usées",
+          "L'approvisionnement des populations en eau potable"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "diapos 23"
+      },
+      {
+        "id": "q-mi-giar-trich-14",
+        "text": "La prévention de l'infection par Giardia intestinalis peut se faire par :",
+        "options": [
+          "La consommation de viande du mouton bien cuite",
+          "Bien cuir a viande de boeuf",
+          "Chaussure en zone d’endemie",
+          "L'utilisation de moustiquaires imprégnées d'insecticides",
+          "aucune"
+        ],
+        "correctIndices": [4],
+        "explanation": "diapos 23"
+      },
+      {
+        "id": "q-mi-giar-trich-15",
+        "text": "La trichomonose uro-génitale est une parasitose :",
+        "options": [
+          "Est due à Trichomonas Vaginalis",
+          "Due a un champignon",
+          "Due à un protozoaire flagellé",
+          "Aucune"
+        ],
+        "correctIndices": [0, 3],
+        "explanation": "diapos 25"
+      },
+      {
+        "id": "q-mi-giar-trich-16",
+        "text": "La trichomonose uro-génitale est une parasitose :",
+        "options": [
+          "Appartient au groupe des sporozoaires",
+          "Qui se manifeste habituellement chez la femme par des leucorrhées verdâtres",
+          "Due à un parasite pluricellulaire",
+          "Qui est unicellulaire"
+        ],
+        "correctIndices": [1, 3],
+        "explanation": "diapos 29"
+      },
+      {
+        "id": "q-mi-giar-trich-17",
+        "text": "Concernant les formes de la trichomonose vaginale :",
+        "options": [
+          "Peut s’enkyster et rester viable pendant plusieurs annees",
+          "Qui n'a pas de forme kystique",
+          "Qui présente un seul flagelle",
+          "Qui a 4 flagelles antérieurs et un flagelle postérieur qui Sous-tend une membrane ondulante."
+        ],
+        "correctIndices": [1, 3],
+        "explanation": "diapos 26"
+      },
+      {
+        "id": "q-mi-giar-trich-18",
+        "text": "Concernant la localisation de la trichomonose vaginale :",
+        "options": [
+          "Qui vit dans la lumière intestinale de l'homme",
+          "qui vit en intracellulaire.",
+          "qui vit en extracellulaire dans la cavité uro-génitale"
+        ],
+        "correctIndices": [2],
+        "explanation": "diapos 28"
+      },
+      {
+        "id": "q-mi-giar-trich-19",
+        "text": "Concernant le cycle et le reservoir de la trichomonose vaginale :",
+        "options": [
+          "Dont le réservoir est le milieu extérieur",
+          "Qui a un insecte hématophage comme hôte intermédiaire",
+          "Dont le cycle biologique est monoxène",
+          "Dont le cycle biologique est hétéroxène",
+          "Commune à l'homme et à l'animal"
+        ],
+        "correctIndices": [2],
+        "explanation": "diapos 28"
+      },
+      {
+        "id": "q-mi-giar-trich-20",
+        "text": "Concernant la transmission de la trichomonose vaginale :",
+        "options": [
+          "A transmission interhumaine",
+          "Qui se transmet par la consommation d'eau ou d'aliments souillée par le parasite",
+          "Dont la transmission se fait par ingestion du protozoaire",
+          "transmission De animal a homme",
+          "Qui se transmet essentiellement à l'Homme par voie sexuelle"
+        ],
+        "correctIndices": [0, 4],
+        "explanation": "diapos 28"
+      },
+      {
+        "id": "q-mi-giar-trich-21",
+        "text": "Concernant le diagnostic de la trichomonose vaginale :",
+        "options": [
+          "se fait par examen direct sur prélèvement génital",
+          "se fait par la mise en évidence du parasite sur prélèvement vaginal par examen direct à l’état frais",
+          "Se fait essentiellement par la sérologie."
+        ],
+        "correctIndices": [0, 1],
+        "explanation": "diapos 34"
+      },
+      {
+        "id": "q-mi-giar-trich-22",
+        "text": "Concernant la prophylaxie contre la trichomonose vaginale se fait:",
+        "options": [
+          "laver les mains avant repas",
+          "se fait par une bonne hygiène du péril fécal",
+          "habituellement par la lutte contre le péril fécal.",
+          "Bonne gestion du péril fécal.",
+          "consiste aussi à traiter le partenaire."
+        ],
+        "correctIndices": [4],
+        "explanation": "diapos 38"
+      }
+    ],
+    "pdfs": []
+  },
+  {
+    "id": "lesson-malinf-amibiase",
+    "name": "amibiase due à Entamoeba hystolitica",
+    "questions": [
+      {
+        "id": "q-mi-amibiase-1",
+        "text": "parmi les parasites suivants appartiennent au groupe des amibes:",
+        "options": [
+          "Entamoeba histolytica",
+          "Trypanosoma cruzi",
+          "Acanthamoeba culbertsoni Yannodar",
+          "Naegleria fowleri",
+          "Sarcocystis suihominis"
+        ],
+        "correctIndices": [0, 2, 3],
+        "explanation": "cours intro diapos 9"
+      },
+      {
+        "id": "q-mi-amibiase-2",
+        "text": "L'amoœæbose intestinale est due à :",
+        "options": [
+          "L’amibe Entamœba histolytica",
+          "Entamoeba coli."
+        ],
+        "correctIndices": [0],
+        "explanation": "entamoeba.coli n’est pas responsable de l’amibiase, d’apres l’introduction c’est l’entamoeba hystolitica"
+      },
+      {
+        "id": "q-mi-amibiase-3",
+        "text": "L'amoœæbose intestinale appartient:",
+        "options": [
+          "au groupe des coccidies",
+          "au groupe des sporozoaires",
+          "Est un rhizopode",
+          "Helminthiase cosmopolite"
+        ],
+        "correctIndices": [2],
+        "explanation": "diapos 4"
+      },
+      {
+        "id": "q-mi-amibiase-4",
+        "text": "L'amoœæbose intestinale se caracterise par ces caracteristiques:",
+        "options": [
+          "Pluricellulaires",
+          "Unicellulaires",
+          "Vit en intracellulaire (la forme hematophage)",
+          "Se présente uniquement sous forme végétative"
+        ],
+        "correctIndices": [1],
+        "explanation": "les GR se trouvent a l’interieur de son cytoplasme"
+      },
+      {
+        "id": "q-mi-amibiase-5",
+        "text": "Concernant E. histolytica histolytica",
+        "options": [
+          "La forme hématophage Entamoeba histolytica histolytica Se présente sous forme végétative pouvant contenir des hematies dans son cytoplasme",
+          "Dont la forme hématophage Entamoeba histolytica histolytica Se présente sous forme d'un kyste avec 4 noyaux",
+          "La forme hématophage Entamoeba histolytica histolytica Ne s'enkyste jamais",
+          "La forme végétative hématophage est la forme non pathogène",
+          "Peut contenir des hématies plus au moins lysées dans ses vacuoles digestives"
+        ],
+        "correctIndices": [0, 2, 4],
+        "explanation": "diapos 10"
+      },
+      {
+        "id": "q-mi-amibiase-6",
+        "text": "Concernant la forme kystique de l’amibiase",
+        "options": [
+          "Le kyste est la forme de résistance et de dissémination",
+          "Le kyste comporte 8 noyaux",
+          "Dont le kyste mature contient 4 noyaux"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "diapos 10"
+      },
+      {
+        "id": "q-mi-amibiase-7",
+        "text": "Concernant la forme kystique de l’amibiase",
+        "options": [
+          "Dont la sous-espèce Entamoeba histolytica minuta peut s'enkyster",
+          "Capables de s'enkyster donnant des kystes résistants dans le milieu extérieur",
+          "Dont la forme végétative Peut s'enkyster immédiatement"
+        ],
+        "correctIndices": [0, 1]
+      },
+      {
+        "id": "q-mi-amibiase-8",
+        "text": "Concernant le deplacement de l'amoœæbose intestinale :",
+        "options": [
+          "E. histolytica est toujours immobile",
+          "Mobiles grâce à des flagelles",
+          "un protozoaire cilié",
+          "aucune"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-mi-amibiase-9",
+        "text": "Concernant le deplacement de l'amoœæbose intestinale :",
+        "options": [
+          "Se déplace grâce à l’émission de pseudopodes",
+          "Dont la forme végétative se déplace grâce à un pseudopode qu’elle emet",
+          "Dont la forme végétative se déplace grâce à des flagelles"
+        ],
+        "correctIndices": [0, 1],
+        "explanation": "diapos 8"
+      },
+      {
+        "id": "q-mi-amibiase-10",
+        "text": "Concernant le cycle de l'amoœæbose intestinale :",
+        "options": [
+          "Le cycle est hétéroxène",
+          "Dont le cycle biologique est monoxène",
+          "Dont le cycle biologique fait intervenir un hôte intermédiaire"
+        ],
+        "correctIndices": [1],
+        "explanation": "par mains sales"
+      },
+      {
+        "id": "q-mi-amibiase-11",
+        "text": "Concernant le cycle de l'amoœæbose intestinale :",
+        "options": [
+          "Dont le réservoir est l'homme",
+          "Dont l’hote definitif est l’homme",
+          "Le reservoir de la forme hematophage est Uniquement l’homme"
+        ],
+        "correctIndices": [1, 2],
+        "explanation": "diapos 11"
+      },
+      {
+        "id": "q-mi-amibiase-12",
+        "text": "Concernant la transmission de l'amoœæbose intestinale se fait:",
+        "options": [
+          "de l'animal vers l'homme",
+          "par les chiens",
+          "qui se passe entre l'homme et les moutons",
+          "par voie orale"
+        ],
+        "correctIndices": [3],
+        "explanation": "diapos 11"
+      },
+      {
+        "id": "q-mi-amibiase-13",
+        "text": "Concernant la transmission de l'amoœæbose intestinale se fait:",
+        "options": [
+          "par voie respiratoire",
+          "par voie transcutanee",
+          "transmission vectorielle",
+          "à l'Homme par ingestion de forme kystique"
+        ],
+        "correctIndices": [2, 3],
+        "explanation": "diapos 11, voie vectorielle par dissemination"
+      },
+      {
+        "id": "q-mi-amibiase-14",
+        "text": "Concernant la transmission de l'amoœæbose intestinale se fait:",
+        "options": [
+          "Qui peut être transmise par les mains sales",
+          "Liée au péril fécal",
+          "Qui peut être contractée par l'ingestion de viande/de bœuf/de porc peu cuite.",
+          "La forme hematophage Possede un mollusque comme intermediaire"
+        ],
+        "correctIndices": [0, 1]
+      },
+      {
+        "id": "q-mi-amibiase-15",
+        "text": "Concernant les manifestations de l'amoœæbose intestinale :",
+        "options": [
+          "Peut engendrer des manifestations cliniques intestinales ou extra-intestinales.",
+          "La forme intestinale se manifeste par un syndrome dysentérique",
+          "Qui peut se manifester par une dysenterie non fébrile.",
+          "Se manifeste par une diarrhée glairo-sanglante"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "diapos 22-23"
+      },
+      {
+        "id": "q-mi-amibiase-16",
+        "text": "Concernant les manifestations de l'amoœæbose intestinale :",
+        "options": [
+          "Se manifeste par une douleur abdominale",
+          "Qui ne peut jamais être mortelle.",
+          "Peut avoir Localisation hépatique",
+          "La forme extra-intestinale se manifeste par tableau d'abcès hépatique"
+        ],
+        "correctIndices": [0, 2, 3],
+        "explanation": "diapos 24"
+      },
+      {
+        "id": "q-mi-amibiase-17",
+        "text": "Concernant le diagnostic de l'amoœæbose intestinale :",
+        "options": [
+          "basé sur l'examen parasitologique des secrétions bronchiques",
+          "Essentiellement par l’examen parasitologique des selles",
+          "L'examen parasitologique des selles met en évidence des kystes and/ou des formes végétatives d'Enamoeba histolytica",
+          "recherche du parasite par examen direct dans les selles"
+        ],
+        "correctIndices": [1, 2, 3],
+        "explanation": "diapos 27"
+      },
+      {
+        "id": "q-mi-amibiase-18",
+        "text": "Concernant le diagnostic de l'amoœæbose intestinale :",
+        "options": [
+          "peut se faire par recherche du parasite dans un prelevemet sanguin",
+          "recherche de kystes du parasite dans les selles",
+          "mise en évidence de forme végétative Entamæba histolytica histolytica avec des vacuoles digestives contenant des hématies."
+        ],
+        "correctIndices": [1, 2]
+      },
+      {
+        "id": "q-mi-amibiase-19",
+        "text": "Concernant le diagnostic de l'amoœæbose intestinale :",
+        "options": [
+          "essentiellement par la sérologie",
+          "se fait par la sérologie.",
+          "surtout la recherche d'anticorps anti-Entamcæbe histolytice dans le sang",
+          "La sérologie est la base du diagnostic de la forme extra-intestinale"
+        ],
+        "correctIndices": [3],
+        "explanation": "La sérologie est la base du diagnostic de la forme extra-intestinale"
+      },
+      {
+        "id": "q-mi-amibiase-20",
+        "text": "Concernant la prévention contre l'amoœæbose intestinale :",
+        "options": [
+          "bonne hygiène alimentaire. :lavage des fruits et legumes avt de consommer",
+          "Lavage des mains avant repas",
+          "bonne hygiene du peril fecale",
+          "porte de chaussure essentiellement"
+        ],
+        "correctIndices": [0, 1, 2],
+        "explanation": "diapos 33"
+      }
+    ],
+    "pdfs": []
+  },
+  {
+    "id": "lesson-malinf-leishmaniose",
+    "name": "leishmaniose",
+    "questions": [
+      {
+        "id": "q-mi-leish-1",
+        "text": "Concernant le groupe des parasites du genre leishmania:",
+        "options": [
+          "Due à un ver hématophage",
+          "Appartient aux Amibes",
+          "Est une amibe tellurique",
+          "qui se déplace grâce à des pseudopodes.",
+          "aucune"
+        ],
+        "correctIndices": [4],
+        "explanation": "cours intro"
+      },
+      {
+        "id": "q-mi-leish-2",
+        "text": "Concernant le groupe des parasites du genre leishmania:",
+        "options": [
+          "Est un flagellé tissulaire.",
+          "Appartient au groupe des flagellés",
+          "Est un protozoaire flagellé.",
+          "Protozoaire immobile"
+        ],
+        "correctIndices": [0, 1, 2]
+      },
+      {
+        "id": "q-mi-leish-3",
+        "text": "Concernant le groupe des parasites du genre leishmania:",
+        "options": [
+          "Est un sporozoaire peu pathogène",
+          "Sont des protozoaires appartenant au groupe des coccidies",
+          "Protozoaire appartenant à la famille des plasmodidae",
+          "Parasite Unicellulaire"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-mi-leish-4",
+        "text": "Concernant la presentation des parasites du genre leishmania:",
+        "options": [
+          "Peut se présenter sous deux formes amastigotes chez l'homme et les animaux, et promastigote chez le vecteur (Phlébotome).",
+          "La forme promastigote est la forme infestante",
+          "se multiplie par un mode asexué par des divisions binaires",
+          "Peuvent être responsables d'une leishmaniose cutanée ou viscérale"
+        ],
+        "correctIndices": [0, 1, 2, 3]
+      },
+      {
+        "id": "q-mi-leish-5",
+        "text": "Concernant le reservoir des parasites du genre leishmania:",
+        "options": [
+          "Intracellulaire obligatoire",
+          "Qui vit en intracellulaire",
+          "Vit dans la lumière du gros intestin",
+          "Sont des protozoaires flagellés de la cavité intestinale qui vivent en intracellulaire chez l'homme."
+        ],
+        "correctIndices": [0, 1, 3],
+        "explanation": "les reservoires sont l’homme et les animaux et chez ces especes on trouve la forme amastigote intracellulaire. Je ne suis pas sure de la proposition d mais chez le vecteur ce sont des protozoaires intestinaux"
+      },
+      {
+        "id": "q-mi-leish-6",
+        "text": "Concernant le cycle des parasites du genre leishmania:",
+        "options": [
+          "Due à un parasite dont le cycle biologique est monoxène",
+          "Possède un cycle hétéroxène",
+          "Pourra avoir le chien comme réservoir",
+          "Le réservoir de Leishmania tropica est humain",
+          "par ingestion accidentelle du parasite"
+        ],
+        "correctIndices": [1, 2, 3]
+      },
+      {
+        "id": "q-mi-leish-7",
+        "text": "Concernant la transmission des parasites du genre leishmania:",
+        "options": [
+          "Transmis vectorielle à l'homme par un petit moucheron du genre Phlebotomus",
+          "à l'homme par un insecte vecteur du genre Anopheles.",
+          "Possèdent un cycle biologique hétéroxène.",
+          "à l’homme par ingestion elements souillées par les formes kystiques du germe",
+          "par contact avec le malade"
+        ],
+        "correctIndices": [0, 2]
+      },
+      {
+        "id": "q-mi-leish-8",
+        "text": "Concernant le diagnostic des parasites du genre leishmania:",
+        "options": [
+          "examen direct",
+          "au laboratoire par examen direct apres coloration MGG"
+        ],
+        "correctIndices": [0, 1],
+        "explanation": "diapos 38"
+      },
+      {
+        "id": "q-mi-leish-9",
+        "text": "Concernant la prévention contre les parasites du genre leishmania:",
+        "options": [
+          "utiliser des moustiquaires imprégnées d’insecticides",
+          "bonne cuisson des aliments avant leur consommation",
+          "lutte contre insecte vecteur"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "diapos 52"
+      },
+      {
+        "id": "q-mi-leish-10",
+        "text": "La leishmaniose viscérale à Leishmania infantum est une maladie parasitaire :",
+        "options": [
+          "Qui se transmet à l'Homme par ingestion d'aliments souillés",
+          "Dont le réservoir est le chien"
+        ],
+        "correctIndices": [1],
+        "explanation": "diapos 16"
+      },
+      {
+        "id": "q-mi-leish-11",
+        "text": "Leishmaniose viscérale se manifeste par :",
+        "options": [
+          "Des ulcérations cutanées en bouton d'orient",
+          "Qui se manifeste toujours par une diarrhée",
+          "Qui se manifeste habituellement par une splénomégalie",
+          "Une pâleur témoin de l’anémie ."
+        ],
+        "correctIndices": [2, 3],
+        "explanation": "diapos 26"
+      },
+      {
+        "id": "q-mi-leish-12",
+        "text": "Leishmaniose viscérale se manifeste par :",
+        "options": [
+          "une fièvre anarchique",
+          "Une destruction de la cloison nasale aboutissant à une perforation",
+          "Des infections à répétition",
+          "Des hémorragies"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "elle affaiblit le système immunitaire donc elle se manifeste par des infections a repetition, concernant la fievre, la source est gemini"
+      },
+      {
+        "id": "q-mi-leish-13",
+        "text": "Diagnostic de la leishmaniose viscérale",
+        "options": [
+          "L'hémogramme met en évidence une pancytopénie",
+          "L'électrophorèse des protides montre une hypergammaglobulinémie polyclonale",
+          "Basé sur la détection de formes promastigotes intracellulaire",
+          "peut se faire Sur un prélèvement de ponction médullaire."
+        ],
+        "correctIndices": [0, 1, 3]
+      },
+      {
+        "id": "q-mi-leish-14",
+        "text": "Diagnostic de la leishmaniose viscérale",
+        "options": [
+          "Le prélèvement est fait par un frottis cutané",
+          "Se fait sur frottis des expectorations bronchiques",
+          "peut se faire Par examen direct après coloration MGG d'un frottis médullaire.",
+          "La sérologie aide au diagnostic"
+        ],
+        "correctIndices": [2, 3]
+      },
+      {
+        "id": "q-mi-leish-15",
+        "text": "Diagnostic de la leishmaniose viscérale",
+        "options": [
+          "La sérologie n’a aucun intérêt diagnostique",
+          "L'Immunofluorescence indirecte est la technique de référence pour la détection des anticorps spécifiques",
+          "peut se faire Par recherche de l'ADN parasitaire.",
+          "peut se faire Par un examen parasitologique des selles."
+        ],
+        "correctIndices": [2]
+      },
+      {
+        "id": "q-mi-leish-16",
+        "text": "La leishmaniose cutanée est une affection dermatologique:",
+        "options": [
+          "Due a un protozoaire flagelle",
+          "Due à un parasite dont le cycle biologique est monoxène",
+          "Qui peut être due à l'espèce Leishmania tropica",
+          "Dont le réservoir pourrait être l'homme"
+        ],
+        "correctIndices": [0, 2, 3]
+      },
+      {
+        "id": "q-mi-leish-17",
+        "text": "La transmission de la leishmaniose cutanée se fait par :",
+        "options": [
+          "Qui pourrait être transmise de l'animal (un rongeur par exemple) à l'homme",
+          "Dont la transmission se fait habituellement par l'intermédiaire de piqure d'un insecte vecteur du genre Phlebotomus.",
+          "Dont la transmission se fait exclusivement par contact direct entre le sujet infecté et le sujet sain.",
+          "Qui se transmet habituellement à l'Homme par contact direct avec le malade"
+        ],
+        "correctIndices": [0, 1],
+        "explanation": "le rongeur donne L.major responsable de l’infection cutanée"
+      },
+      {
+        "id": "q-mi-leish-18",
+        "text": "Le diagnostic de la leishmaniose cutanée se fait par :",
+        "options": [
+          "Par la recherche de larves de parasite après coloration par le lugol.",
+          "Par coloration MGG",
+          "Par la mise en évidence de formes kystiques en extracellulaire",
+          "Par la recherche de formes promestigotes sur ponction médullaire"
+        ],
+        "correctIndices": [1, 2],
+        "explanation": "je ne suis pas sure but le site de piqure peut contenir la forme promastigote"
+      },
+      {
+        "id": "q-mi-leish-19",
+        "text": "Le diagnostic de la leishmaniose cutanée se fait par :",
+        "options": [
+          "recherche directe de formes amastigotes par examen direct sur prélèvement cutané :",
+          "ne peut se faire que par la sérologie",
+          "habituellement par la recherche d’anticorps sériques",
+          "culture sur milieu NNN",
+          "Par recherche de l'ADN parasitaire par PCR"
+        ],
+        "correctIndices": [0, 3, 4]
+      },
+      {
+        "id": "q-mi-leish-20",
+        "text": "La prophylaxie contre la leishmaniose cutanée se fait par :",
+        "options": [
+          "se protéger des piqûres du phlébotome",
+          "bien gérer le péril fécal",
+          "bone hygiene coporelle",
+          "bonne cuisson de poisson"
+        ],
+        "correctIndices": [0],
+        "explanation": "diapos 52"
+      },
+      {
+        "id": "q-mi-leish-21",
+        "text": "La prophylaxie contre la leishmaniose cutanée se fait par :",
+        "options": [
+          "bien laver les fruits et legumes avant consommation",
+          "une bonne cuisson du poisson avant sa consommation",
+          "bien laver les mains avant le repas",
+          "port de vetements longs"
+        ],
+        "correctIndices": [3]
+      }
+    ],
+    "pdfs": []
+  }
+]

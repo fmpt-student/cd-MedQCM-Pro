@@ -1,0 +1,33 @@
+[
+  {
+    "id": "lesson-bc-intro",
+    "name": "Introduction à la Biochimie Clinique",
+    "pdfs": [],
+    "questions": [
+      {
+        "id": "q-bc-1",
+        "text": "Retenez les propositions justes :",
+        "options": [
+          "la précision, c'est la reproductibilité d'une méthode analytique",
+          "La spécificité, c'est la plus petite quantité détectable d'une substance à doser",
+          "l'exactitude définie à quel point la valeur mesurée est proche de la valeur réelle",
+          "la sensibilité peut être définie par la capacité de discrimination entre la substance à doser et ses interférences"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "La précision (fidélité) correspond à la reproductibilité. L'exactitude (justesse) correspond à la proximité avec la valeur vraie."
+      },
+      {
+        "id": "q-bc-2",
+        "text": "Retenez les propositions justes :",
+        "options": [
+          "la sensibilité d'un test est la proportion du patient ayant un test positif parmi les patients ayant la maladie",
+          "la spécificité d'un test est proportionnelle est la proportion des patients ayant un test positif parmi les patients ayant la maladie",
+          "la proportion des patients n’ayant pas la maladie parmi ceux qui ont un test positif défini la valeur prédictive négative d'un test",
+          "la proportion des patients ayant la maladie parmi ceux qui ont un test positif défini la valeur prédictive positive de ce test"
+        ],
+        "correctIndices": [0, 2, 3],
+        "explanation": "La sensibilité est P(T+|M). La VPP est P(M|T+)."
+      }
+    ]
+  }
+]

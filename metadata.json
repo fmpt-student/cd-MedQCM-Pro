@@ -1,0 +1,5 @@
+{
+  "name": "MedQCM Pro",
+  "description": "Une plateforme interactive pour réviser des QCMs par année, semestre et module, avec support PDF et génération de questions par IA.",
+  "requestFramePermissions": []
+}

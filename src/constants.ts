@@ -1,26 +1,13 @@
-import { DataStore } from './types';
+import { DataStore, Lesson, AppNotification } from './types';
+import anat1Lessons from './data/mod-anat-1.json';
+import bcIntroLessons from './data/mod-s3-biochimie-clinique.json';
+import pharmacoLessons from './data/mod-s4-pharmaco-toxico.json';
+import anatPathLessons from './data/mod-s4-anat-path.json';
+import malInfLessons from './data/mod-s4-mal-inf-parasito.json';
+import notifications from './data/notifications.json';
 
 export const INITIAL_DATA: DataStore = {
-  notifications: [
-    {
-      id: 'notif-1',
-      type: 'info',
-      message: 'Bienvenue sur la nouvelle plateforme de QCM, MedQCM Pro !',
-      date: new Date().toLocaleDateString('fr-FR')
-    },
-    {
-      id: 'notif-2',
-      type: 'warning',
-      message: 'Le modèle d\'IA a un nombre limité d\'usage alors s\'il vous plaît ne l\'utilisez pas, mais je vais vous fournir la description exacte pour avoir des questions précises en utilisant l\'IA Gemini.',
-      date: new Date().toLocaleDateString('fr-FR')
-    },
-    {
-      id: 'notif-3',
-      type: 'urgent',
-      message: 'Ce site est en cours de maintenance il sera utilisable le plus tôt possible.',
-      date: new Date().toLocaleDateString('fr-FR')
-    }
-  ],
+  notifications: notifications as AppNotification[],
   years: [
     {
       id: 'annee-1',
@@ -34,32 +21,7 @@ export const INITIAL_DATA: DataStore = {
               id: 'mod-anat-1',
               name: 'Anatomie I',
               description: 'Anatomie du thorax et des membres.',
-              lessons: [
-                {
-                  id: 'lesson-anat-1',
-                  name: 'Généralités et Thorax',
-                  pdfs: [
-                    { id: 'pdf1', name: 'Cours Thorax.pdf', url: '#' },
-                    { id: 'pdf2', name: 'Cours Membre Supérieur.pdf', url: '#' }
-                  ],
-                  questions: [
-                    {
-                      id: 'q1',
-                      text: 'Quel est l\'os le plus long du corps humain ?',
-                      options: ['Humérus', 'Fémur', 'Tibia', 'Fibula'],
-                      correctIndices: [1],
-                      explanation: 'Le fémur est l\'os de la cuisse et c\'est le plus long du corps.'
-                    },
-                    {
-                      id: 'q2',
-                      text: 'Concernant la cage thoracique :',
-                      options: ['Elle contient 12 paires de côtes', 'Le sternum est un os plat', 'Toutes les côtes s\'articulent directement avec le sternum', 'Elle protège le cœur et les poumons'],
-                      correctIndices: [0, 1, 3], 
-                      explanation: 'Il y a 12 paires de côtes. Les côtes flottantes (11 et 12) ne s\'articulent pas avec le sternum.'
-                    }
-                  ]
-                }
-              ]
+              lessons: anat1Lessons as Lesson[]
             },
             {
               id: 'mod-s1-bioch',
@@ -185,39 +147,7 @@ export const INITIAL_DATA: DataStore = {
                id: 'mod-s3-2',
                name: 'Biochimie Clinique',
                description: 'Exploration biochimique des fonctions.',
-               lessons: [
-                 {
-                   id: 'lesson-bc-intro',
-                   name: 'Introduction à la Biochimie Clinique',
-                   pdfs: [],
-                   questions: [
-                     {
-                       id: 'q-bc-1',
-                       text: 'Retenez les propositions justes :',
-                       options: [
-                         'la précision, c\'est la reproductibilité d\'une méthode analytique',
-                         'La spécificité, c\'est la plus petite quantité détectable d\'une substance à doser',
-                         'l\'exactitude définie à quel point la valeur mesurée est proche de la valeur réelle',
-                         'la sensibilité peut être définie par la capacité de discrimination entre la substance à doser et ses interférences'
-                       ],
-                       correctIndices: [0, 2],
-                       explanation: 'La précision (fidélité) correspond à la reproductibilité. L\'exactitude (justesse) correspond à la proximité avec la valeur vraie.'
-                     },
-                     {
-                       id: 'q-bc-2',
-                       text: 'Retenez les propositions justes :',
-                       options: [
-                         'la sensibilité d\'un test est la proportion du patient ayant un test positif parmi les patients ayant la maladie',
-                         'la spécificité d\'un test est proportionnelle est la proportion des patients ayant un test positif parmi les patients ayant la maladie',
-                         'la proportion des patients n’ayant pas la maladie parmi ceux qui ont un test positif défini la valeur prédictive négative d\'un test',
-                         'la proportion des patients ayant la maladie parmi ceux qui ont un test positif défini la valeur prédictive positive de ce test'
-                       ],
-                       correctIndices: [0, 2, 3],
-                       explanation: 'La sensibilité est P(T+|M). La VPP est P(M|T+).'
-                     }
-                   ]
-                 }
-               ]
+               lessons: bcIntroLessons as Lesson[]
              }
           ]
         },
@@ -235,19 +165,19 @@ export const INITIAL_DATA: DataStore = {
               id: 'mod-s4-anat-path',
               name: 'Anatomo-pathologie',
               description: 'Étude des lésions macroscopiques et microscopiques.',
-              lessons: []
+              lessons: anatPathLessons as Lesson[]
             },
             {
               id: 'mod-s4-pharmaco-toxico',
               name: 'Pharmacologie & Toxicologie',
               description: 'Étude des médicaments et des substances toxiques.',
-              lessons: []
+              lessons: pharmacoLessons as Lesson[]
             },
             {
               id: 'mod-s4-mal-inf-parasito',
               name: 'Maladies infectieuses & Parasitologie',
               description: 'Étude des agents infectieux et des parasites.',
-              lessons: []
+              lessons: malInfLessons as Lesson[]
             },
             {
               id: 'mod-s4-imag-med',
@@ -274,12 +204,12 @@ export const INITIAL_DATA: DataStore = {
       ]
     },
     {
-        id: 'annee-4',
-        name: '4ème Année Médecine',
-        semesters: [
-          { id: 's7', name: 'Semestre 7', modules: [] },
-          { id: 's8', name: 'Semestre 8', modules: [] }
-        ]
+      id: 'annee-4',
+      name: '4ème Année Médecine',
+      semesters: [
+        { id: 's7', name: 'Semestre 7', modules: [] },
+        { id: 's8', name: 'Semestre 8', modules: [] }
+      ]
     }
   ]
 };

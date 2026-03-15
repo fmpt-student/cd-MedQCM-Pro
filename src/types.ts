@@ -12,12 +12,18 @@ export interface PdfResource {
   url: string;
 }
 
+export interface Lesson {
+  id: string;
+  name: string;
+  questions: Question[];
+  pdfs: PdfResource[];
+}
+
 export interface Module {
   id: string;
   name: string;
   description?: string;
-  questions: Question[];
-  pdfs: PdfResource[];
+  lessons: Lesson[];
 }
 
 export interface Semester {

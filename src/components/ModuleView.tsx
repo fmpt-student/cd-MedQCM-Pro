@@ -49,6 +49,8 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
   const [currentTestIndex, setCurrentTestIndex] = useState(0);
   const [testAnswers, setTestAnswers] = useState<Record<string, number[]>>({}); // Map: QuestionID -> Array of OptionIndices
   const [testConfig, setTestConfig] = useState<Record<string, number>>({}); // LessonID -> QuestionCount
+  const [testType, setTestType] = useState<'by-lesson' | 'global'>('global');
+  const [globalQuestionCount, setGlobalQuestionCount] = useState(20);
 
   // Helper to get all questions/pdfs across all lessons
   const allQuestions = moduleData.lessons.flatMap(l => l.questions);
@@ -171,14 +173,50 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
   const startTest = () => {
       let finalQuestions: Question[] = [];
       
-      moduleData.lessons.forEach(lesson => {
-        const count = testConfig[lesson.id] || 0;
-        if (count > 0) {
-          const eligible = lesson.questions.filter(q => !q.id.startsWith('ai-'));
-          const shuffled = [...eligible].sort(() => 0.5 - Math.random()).slice(0, count);
-          finalQuestions = [...finalQuestions, ...shuffled];
+      if (testType === 'by-lesson') {
+        moduleData.lessons.forEach(lesson => {
+          const count = testConfig[lesson.id] || 0;
+          if (count > 0) {
+            const eligible = lesson.questions.filter(q => !q.id.startsWith('ai-'));
+            const shuffled = [...eligible].sort(() => 0.5 - Math.random()).slice(0, count);
+            finalQuestions = [...finalQuestions, ...shuffled];
+          }
+        });
+      } else {
+        // GLOBAL TEST LOGIC
+        const lessonsWithQuestions = moduleData.lessons.filter(l => l.questions.filter(q => !q.id.startsWith('ai-')).length > 0);
+        const L = lessonsWithQuestions.length;
+        const N = globalQuestionCount;
+
+        if (L === 0) {
+          alert("Aucune question disponible dans ce module.");
+          return;
         }
-      });
+
+        if (N >= L) {
+          // At least one per lesson
+          lessonsWithQuestions.forEach(lesson => {
+            const eligible = lesson.questions.filter(q => !q.id.startsWith('ai-'));
+            const randomQ = eligible[Math.floor(Math.random() * eligible.length)];
+            finalQuestions.push(randomQ);
+          });
+
+          // Remaining N - L questions from the whole pool (excluding those already picked)
+          const remainingPool = lessonsWithQuestions.flatMap(l => 
+            l.questions.filter(q => !q.id.startsWith('ai-') && !finalQuestions.some(fq => fq.id === q.id))
+          );
+          const shuffledRemaining = remainingPool.sort(() => 0.5 - Math.random()).slice(0, N - L);
+          finalQuestions = [...finalQuestions, ...shuffledRemaining];
+        } else {
+          // Pick N random lessons
+          const shuffledLessons = [...lessonsWithQuestions].sort(() => 0.5 - Math.random()).slice(0, N);
+          shuffledLessons.forEach(lesson => {
+            const eligible = lesson.questions.filter(q => !q.id.startsWith('ai-'));
+            const randomQ = eligible[Math.floor(Math.random() * eligible.length)];
+            finalQuestions.push(randomQ);
+          });
+        }
+      }
 
       if (finalQuestions.length === 0) {
         alert("Veuillez sélectionner au moins une question.");
@@ -485,53 +523,101 @@ export const ModuleView: React.FC<ModuleViewProps> = ({ moduleData, onBack, onUp
                         </div>
                         <h2 className="text-2xl font-bold text-slate-900 mb-2">Configuration de l'Examen</h2>
                         <p className="text-slate-600 leading-relaxed">
-                            Sélectionnez le nombre de questions par cours pour votre test personnalisé.
+                            Choisissez le mode de test et le nombre de questions.
                         </p>
                       </div>
-                      
-                      <div className="space-y-4 mb-8">
-                        {moduleData.lessons.map(lesson => {
-                          const eligible = getEligibleQuestions(lesson.id);
-                          if (eligible.length === 0) return null;
-                          return (
-                            <div key={lesson.id} className="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-100">
-                              <div className="flex-1">
-                                <h4 className="font-semibold text-slate-800">{lesson.name}</h4>
-                                <p className="text-xs text-slate-500">{eligible.length} questions disponibles</p>
-                              </div>
-                              <div className="flex items-center gap-3">
-                                <input 
-                                  type="number"
-                                  min="0"
-                                  max={eligible.length}
-                                  value={testConfig[lesson.id] || 0}
-                                  onChange={e => setTestConfig({...testConfig, [lesson.id]: Math.min(eligible.length, parseInt(e.target.value) || 0)})}
-                                  className="w-16 border border-slate-300 rounded-lg p-2 text-center text-sm font-bold focus:ring-2 focus:ring-primary-500 outline-none"
-                                />
-                                <button 
-                                  onClick={() => setTestConfig({...testConfig, [lesson.id]: eligible.length})}
-                                  className="text-[10px] font-bold text-primary-600 hover:underline uppercase"
-                                >
-                                  Max
-                                </button>
-                              </div>
-                            </div>
-                          );
-                        })}
-                        {moduleData.lessons.every(l => getEligibleQuestions(l.id).length === 0) && (
-                          <div className="text-center py-6 text-slate-400 italic text-sm">
-                            Aucune question de cours disponible pour le test.
-                          </div>
-                        )}
+
+                      {/* Mode Toggle */}
+                      <div className="flex p-1 bg-slate-100 rounded-xl mb-8">
+                        <button 
+                          onClick={() => setTestType('global')}
+                          className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all ${testType === 'global' ? 'bg-white text-primary-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                        >
+                          Examen Global
+                        </button>
+                        <button 
+                          onClick={() => setTestType('by-lesson')}
+                          className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all ${testType === 'by-lesson' ? 'bg-white text-primary-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                        >
+                          Par Cours
+                        </button>
                       </div>
+                      
+                      {testType === 'global' ? (
+                        <div className="space-y-6 mb-8">
+                          <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 text-center">
+                            <label className="block text-sm font-bold text-slate-700 mb-4 uppercase tracking-wider">
+                              Nombre total de questions
+                            </label>
+                            <div className="flex items-center justify-center gap-4">
+                              <button 
+                                onClick={() => setGlobalQuestionCount(Math.max(1, globalQuestionCount - 5))}
+                                className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50"
+                              >
+                                -5
+                              </button>
+                              <input 
+                                type="number"
+                                min="1"
+                                max={allQuestions.filter(q => !q.id.startsWith('ai-')).length}
+                                value={globalQuestionCount}
+                                onChange={e => setGlobalQuestionCount(Math.max(1, parseInt(e.target.value) || 1))}
+                                className="w-24 text-center text-3xl font-bold bg-transparent border-b-2 border-primary-500 focus:outline-none text-slate-900"
+                              />
+                              <button 
+                                onClick={() => setGlobalQuestionCount(Math.min(allQuestions.filter(q => !q.id.startsWith('ai-')).length, globalQuestionCount + 5))}
+                                className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50"
+                              >
+                                +5
+                              </button>
+                            </div>
+                            <p className="mt-4 text-xs text-slate-500 italic">
+                              {globalQuestionCount >= moduleData.lessons.length 
+                                ? "Au moins une question par cours sera incluse." 
+                                : "Les cours seront sélectionnés aléatoirement."}
+                            </p>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="space-y-4 mb-8">
+                          {moduleData.lessons.map(lesson => {
+                            const eligible = getEligibleQuestions(lesson.id);
+                            if (eligible.length === 0) return null;
+                            return (
+                              <div key={lesson.id} className="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <div className="flex-1">
+                                  <h4 className="font-semibold text-slate-800">{lesson.name}</h4>
+                                  <p className="text-xs text-slate-500">{eligible.length} questions disponibles</p>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                  <input 
+                                    type="number"
+                                    min="0"
+                                    max={eligible.length}
+                                    value={testConfig[lesson.id] || 0}
+                                    onChange={e => setTestConfig({...testConfig, [lesson.id]: Math.min(eligible.length, parseInt(e.target.value) || 0)})}
+                                    className="w-16 border border-slate-300 rounded-lg p-2 text-center text-sm font-bold focus:ring-2 focus:ring-primary-500 outline-none"
+                                  />
+                                  <button 
+                                    onClick={() => setTestConfig({...testConfig, [lesson.id]: eligible.length})}
+                                    className="text-[10px] font-bold text-primary-600 hover:underline uppercase"
+                                  >
+                                    Max
+                                  </button>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
 
                       <div className="flex flex-col items-center gap-4">
                         <div className="bg-slate-900 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2">
-                          Total : {Object.values(testConfig).reduce((a, b) => a + b, 0)} questions
+                          Total : {testType === 'global' ? globalQuestionCount : Object.values(testConfig).reduce((a, b) => a + b, 0)} questions
                         </div>
                         <button 
                             onClick={startTest}
-                            disabled={Object.values(testConfig).reduce((a, b) => a + b, 0) === 0}
+                            disabled={testType === 'global' ? globalQuestionCount === 0 : Object.values(testConfig).reduce((a, b) => a + b, 0) === 0}
                             className="w-full bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-all font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             Commencer l'examen
