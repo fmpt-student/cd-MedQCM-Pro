@@ -27,7 +27,7 @@ jobs:
 
       - name: Install dependencies
         # 'npm install' est plus souple que 'npm ci' et fonctionne sans package-lock.json
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build
         run: npm run build
