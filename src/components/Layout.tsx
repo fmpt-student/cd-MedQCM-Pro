@@ -1,5 +1,6 @@
 import React from 'react';
 import { LayoutDashboard, GraduationCap, Mail, BellPlus } from 'lucide-react';
+import { CONTACT_EMAIL } from '../constants';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -55,12 +56,12 @@ export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onCont
               Une question ou une suggestion ? Écrivez-nous.
             </p>
             <a 
-              href="mailto:linahousni8@gmail.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="flex items-center gap-2 w-full text-primary-600 p-2 rounded-lg hover:bg-primary-50 transition-all text-xs font-bold truncate"
               title="Cliquez pour envoyer un email"
             >
               <Mail className="w-3.5 h-3.5 shrink-0" />
-              linahousni8@gmail.com
+              {CONTACT_EMAIL}
             </a>
           </div>
         </div>
@@ -83,7 +84,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onCont
                <BellPlus className="w-6 h-6" />
              </button>
              <a 
-               href="mailto:linahousni8@gmail.com"
+               href={`mailto:${CONTACT_EMAIL}`}
                className="text-primary-600 p-2 hover:bg-primary-50 rounded-full transition-colors flex items-center gap-1"
                title="Contact"
              >

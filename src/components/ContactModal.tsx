@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, Mail } from 'lucide-react';
+import { CONTACT_EMAIL } from '../constants';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -30,11 +31,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
           </p>
 
           <a 
-            href="mailto:linahousni18@gmail.com"
+            href={`mailto:${CONTACT_EMAIL}`}
             className="inline-flex items-center gap-3 bg-primary-600 text-white px-8 py-4 rounded-xl hover:bg-primary-700 transition-all font-bold shadow-lg hover:shadow-primary-200 active:scale-95"
           >
             <Mail className="w-5 h-5" />
-            linahousni18@gmail.com
+            {CONTACT_EMAIL}
           </a>
           
           <p className="text-xs text-slate-400 mt-6 italic">

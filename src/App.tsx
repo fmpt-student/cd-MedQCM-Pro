@@ -3,7 +3,7 @@ import { Layout } from './components/Layout';
 import { ModuleView } from './components/ModuleView';
 import { NotificationBanner } from './components/NotificationBanner';
 import { NotificationManagerModal } from './components/NotificationManagerModal';
-import { INITIAL_DATA } from './constants';
+import { INITIAL_DATA, CONTACT_EMAIL } from './constants';
 import { Year, Semester, Module, AppNotification } from './types';
 import { Folder, FolderOpen, Book, ChevronRight, Mail } from 'lucide-react';
 
@@ -67,11 +67,11 @@ export default function App() {
         <div className="flex flex-col items-center md:items-end gap-2">
           <p className="text-xs text-slate-500 italic">Une question ou une suggestion ? Écrivez-nous.</p>
           <a 
-            href="mailto:linahousni8@gmail.com"
+            href={`mailto:${CONTACT_EMAIL}`}
             className="flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl hover:bg-primary-700 transition-all text-sm font-bold shadow-lg hover:shadow-primary-100 active:scale-95"
           >
             <Mail className="w-4 h-4" />
-            linahousni8@gmail.com
+            {CONTACT_EMAIL}
           </a>
         </div>
       </div>
