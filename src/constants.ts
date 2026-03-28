@@ -6,6 +6,8 @@ import anatPathLessons from './data/mod-s4-anat-path.json';
 import malInfLessons from './data/mod-s4-mal-inf-parasito.json';
 import notifications from './data/notifications.json';
 
+export const CONTACT_EMAIL = 'linahousni18@gmail.com';
+
 export const INITIAL_DATA: DataStore = {
   notifications: notifications as AppNotification[],
   years: [
