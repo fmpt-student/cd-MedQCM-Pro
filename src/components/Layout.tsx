@@ -48,14 +48,21 @@ export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onCont
 
         </nav>
 
-        <div className="p-4 border-t border-slate-100">
-          <button 
-            onClick={onContactClick}
-            className="flex items-center justify-center gap-2 w-full bg-slate-800 text-white p-3 rounded-lg hover:bg-slate-900 transition-all shadow-md hover:shadow-lg text-sm font-medium"
-          >
-            <Mail className="w-4 h-4" />
-            Contactez-nous
-          </button>
+        <div className="p-4 border-t border-slate-100 bg-slate-50">
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 px-1">Support</p>
+          <div className="space-y-1">
+            <p className="text-xs text-slate-600 px-1 leading-relaxed">
+              Une question ou une suggestion ? Écrivez-nous.
+            </p>
+            <a 
+              href="mailto:linahousni8@gmail.com"
+              className="flex items-center gap-2 w-full text-primary-600 p-2 rounded-lg hover:bg-primary-50 transition-all text-xs font-bold truncate"
+              title="Cliquez pour envoyer un email"
+            >
+              <Mail className="w-3.5 h-3.5 shrink-0" />
+              linahousni8@gmail.com
+            </a>
+          </div>
         </div>
       </aside>
 
@@ -75,14 +82,14 @@ export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onCont
              >
                <BellPlus className="w-6 h-6" />
              </button>
-             <button 
-               onClick={onContactClick} 
+             <a 
+               href="mailto:linahousni8@gmail.com"
                className="text-primary-600 p-2 hover:bg-primary-50 rounded-full transition-colors flex items-center gap-1"
                title="Contact"
              >
                <Mail className="w-6 h-6" />
                <span className="text-xs font-bold md:hidden">Contact</span>
-             </button>
+             </a>
            </div>
         </header>
 

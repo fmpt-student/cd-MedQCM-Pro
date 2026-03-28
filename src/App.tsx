@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Layout } from './components/Layout';
 import { ModuleView } from './components/ModuleView';
-import { ContactModal } from './components/ContactModal';
 import { NotificationBanner } from './components/NotificationBanner';
 import { NotificationManagerModal } from './components/NotificationManagerModal';
 import { INITIAL_DATA } from './constants';
@@ -15,7 +14,6 @@ export default function App() {
   const [selectedModule, setSelectedModule] = useState<Module | null>(null);
   
   // Modals state
-  const [isContactOpen, setIsContactOpen] = useState(false);
   const [isNotifManagerOpen, setIsNotifManagerOpen] = useState(false);
 
   const handleUpdateModule = (updatedModule: Module) => {
@@ -66,13 +64,16 @@ export default function App() {
           <h1 className="text-3xl font-bold text-slate-900 mb-2">Bienvenue sur <span className="text-primary-600">MedQCM Pro</span></h1>
           <p className="text-slate-600 max-w-2xl">Sélectionnez votre année d'étude pour accéder aux modules, QCMs et ressources PDF.</p>
         </div>
-        <button 
-          onClick={() => setIsContactOpen(true)}
-          className="flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium shadow-sm self-center md:self-end"
-        >
-          <Mail className="w-4 h-4 text-primary-600" />
-          Besoin d'aide ? Contactez-nous
-        </button>
+        <div className="flex flex-col items-center md:items-end gap-2">
+          <p className="text-xs text-slate-500 italic">Une question ou une suggestion ? Écrivez-nous.</p>
+          <a 
+            href="mailto:linahousni8@gmail.com"
+            className="flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl hover:bg-primary-700 transition-all text-sm font-bold shadow-lg hover:shadow-primary-100 active:scale-95"
+          >
+            <Mail className="w-4 h-4" />
+            linahousni8@gmail.com
+          </a>
+        </div>
       </div>
 
       {/* Notifications Area */}
@@ -132,7 +133,7 @@ export default function App() {
   return (
     <Layout 
       onNavigateHome={resetSelection}
-      onContactClick={() => setIsContactOpen(true)}
+      onContactClick={() => {}}
       onManageNotifications={() => setIsNotifManagerOpen(true)}
     >
       {selectedModule ? (
@@ -144,8 +145,6 @@ export default function App() {
       ) : (
         renderDashboard()
       )}
-
-      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       
       <NotificationManagerModal 
           isOpen={isNotifManagerOpen} 
