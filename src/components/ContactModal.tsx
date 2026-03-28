@@ -20,7 +20,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
     const body = encodeURIComponent(`Message de: ${email}\n\n${message}`);
     
     // Ouvre le client mail par défaut
-    window.location.href = `mailto:linahousni18@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `<mailto:linahousni18@gmail.com?subject=${subject}&body=${body}`;
     
     // Fermer la modale après un court délai
     setTimeout(() => {

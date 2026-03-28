@@ -6,7 +6,7 @@ import { NotificationBanner } from './components/NotificationBanner';
 import { NotificationManagerModal } from './components/NotificationManagerModal';
 import { INITIAL_DATA } from './constants';
 import { Year, Semester, Module, AppNotification } from './types';
-import { Folder, FolderOpen, Book, ChevronRight } from 'lucide-react';
+import { Folder, FolderOpen, Book, ChevronRight, Mail } from 'lucide-react';
 
 export default function App() {
   const [data, setData] = useState(INITIAL_DATA);
@@ -61,9 +61,18 @@ export default function App() {
 
   const renderDashboard = () => (
     <div className="max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="mb-8 text-center md:text-left">
-        <h1 className="text-3xl font-bold text-slate-900 mb-2">Bienvenue sur <span className="text-primary-600">MedQCM Pro</span></h1>
-        <p className="text-slate-600 max-w-2xl">Sélectionnez votre année d'étude pour accéder aux modules, QCMs et ressources PDF.</p>
+      <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div className="text-center md:text-left">
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">Bienvenue sur <span className="text-primary-600">MedQCM Pro</span></h1>
+          <p className="text-slate-600 max-w-2xl">Sélectionnez votre année d'étude pour accéder aux modules, QCMs et ressources PDF.</p>
+        </div>
+        <button 
+          onClick={() => setIsContactOpen(true)}
+          className="flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium shadow-sm self-center md:self-end"
+        >
+          <Mail className="w-4 h-4 text-primary-600" />
+          Besoin d'aide ? Contactez-nous
+        </button>
       </div>
 
       {/* Notifications Area */}
