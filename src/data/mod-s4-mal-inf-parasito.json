@@ -199,8 +199,8 @@
           "Le vecteur est un agent transmetteur des parasites d'un hôte à un autre",
           "Le réservoir est un organisme vivant ou substrat inerte capable de conserver un parasite durant longues périodes"
         ],
-        "correctIndices": [0, 3, 4],
-        "explanation": "diapos 33 35 et l’ancien cours, mais je ne suis pas sre concernant la proposition c"
+        "correctIndices": [0, 2, 3, 4],
+        "explanation": "diapos 33 35 de notre cours et aussi le contenu de l’ancien cours, mais je ne suis pas sure concernant la proposition c"
       },
       {
         "id": "q-mi-parasito-5",
