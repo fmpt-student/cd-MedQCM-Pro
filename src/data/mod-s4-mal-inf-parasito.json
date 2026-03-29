@@ -105,7 +105,7 @@
           "Streptocoque pneumonia"
         ],
         "correctIndices": [1, 3],
-        "explanation": "gemini"
+        "explanation": "voir le cours d'adénopathie"
       },
       {
         "id": "q-mi-fievre-9",
@@ -199,8 +199,8 @@
           "Le vecteur est un agent transmetteur des parasites d'un hôte à un autre",
           "Le réservoir est un organisme vivant ou substrat inerte capable de conserver un parasite durant longues périodes"
         ],
-        "correctIndices": [0, 1, 3, 4],
-        "explanation": "diapos 33 35 de notre cours et aussi le contenu de l’ancien cours, mais je ne suis pas sure concernant la proposition c"
+        "correctIndices": [0, 3, 4],
+        "explanation": "diapos 33 35 et l’ancien cours, mais je ne suis pas sre concernant la proposition c"
       },
       {
         "id": "q-mi-parasito-5",
@@ -1144,6 +1144,739 @@
           "port de vetements longs"
         ],
         "correctIndices": [3]
+      }
+    ],
+    "pdfs": []
+  },
+  {
+    "id": "lesson-malinf-sepsis",
+    "name": "Syndromes septiques et choc septique",
+    "questions": [
+      {
+        "id": "q-mi-sepsis-1",
+        "text": "Le syndrome de réponse inflammatoire systémique (SRIS) comprend :",
+        "options": [
+          "Anémie < 8 g/dl",
+          "Anémie < 8 g/dl",
+          "GCS < 15",
+          "GCS > 15",
+          "aucune"
+        ],
+        "correctIndices": [4],
+        "explanation": "diapos 7"
+      },
+      {
+        "id": "q-mi-sepsis-2",
+        "text": "Le syndrome de réponse inflammatoire systémique (SRIS) comprend",
+        "options": [
+          "Fréquence respiratoire > 30/min",
+          "Fréquence cardiaque : > 120 batt/min",
+          "Fréquence cardiaque : > 100 batt/min",
+          "Température > 38°C ou < 36°C",
+          "fréquence respiratoire > 25"
+        ],
+        "correctIndices": [3],
+        "explanation": "diapos 7"
+      },
+      {
+        "id": "q-mi-sepsis-3",
+        "text": "Le syndrome de réponse inflammatoire systémique est défini par",
+        "options": [
+          "Fréquence cardiaque > 90 batt/min",
+          "Fréquence respiratoire > 30 cycles/min",
+          "temperature : 37,5°C",
+          "PAS < 100 mmHg",
+          "Température > 37,5"
+        ],
+        "correctIndices": [0],
+        "explanation": "diapos 7"
+      },
+      {
+        "id": "q-mi-sepsis-4",
+        "text": "Un patient hospitalisé et perfusé se plaint d’une fièvre après 4 jours. Vous pensez à une bactériémie nosocomiale à staphylocoque. Quel traitement vous donnez ?",
+        "options": [
+          "Ampicilline",
+          "Ceftriaxone",
+          "Gentamycine",
+          "Rifampicine",
+          "Vancomycine"
+        ],
+        "correctIndices": [3, 4],
+        "explanation": "diapos 34"
+      },
+      {
+        "id": "q-mi-sepsis-5",
+        "text": "Dans le sepsis à point de départ digestif",
+        "options": [
+          "Les germes responsables sont les staphylocoques",
+          "Les germes responsables sont les staphylocoques BGN",
+          "Les germes responsables sont les entérobactéries",
+          "Les germes responsables sont les anaérobies",
+          "La recherche d'une endocardite est systématique"
+        ],
+        "correctIndices": [2, 3, 4],
+        "explanation": "diapos 32,22"
+      },
+      {
+        "id": "q-mi-sepsis-6",
+        "text": "Dans le sepsis à point de départ digestif",
+        "options": [
+          "La recherche d'une porte d'entrée pulmonaire est systématique",
+          "Ils se compliquent de choc septique",
+          "Le métronidazole per os est utilisé dans les formes graves avec la ceftriaxone",
+          "La durée de l'antibiothérapie est de 28 jours",
+          "La durée de l'antibiothérapie est de 7 jours"
+        ],
+        "correctIndices": [1, 4],
+        "explanation": "diapos 29, la voie per os veut dire la voie orale et si c’est un cas compliqué on utilise IV"
+      },
+      {
+        "id": "q-mi-sepsis-7",
+        "text": "Au cours d'une bactériémie",
+        "options": [
+          "La porte d'entrée est retrouvée dans 70% des cas",
+          "La porte d'entrée est retrouvée dans 50% des cas",
+          "La radiographie thoracique normale élimine une pneumonie",
+          "La radiographie thoracique normale n'élimine pas une pneumonie",
+          "Les hémocultures peuvent être négatives"
+        ],
+        "correctIndices": [3, 4],
+        "explanation": "diapos 21"
+      },
+      {
+        "id": "q-mi-sepsis-8",
+        "text": "Au cours d'une bactériémie",
+        "options": [
+          "Le KT central est retiré systématiquement pour étude bactériologique",
+          "La fièvre est toujours présente",
+          "L'hypothermie est un signe de gravité",
+          "Les frissons ont la même valeur diagnostique que la fièvre",
+          "Retour à domicile"
+        ],
+        "correctIndices": [0, 2]
+      },
+      {
+        "id": "q-mi-sepsis-9",
+        "text": "Au cours d'une bactériémie communautaire chez un diabétique",
+        "options": [
+          "La porte d'entrée urinaire est la principale porte d'entrée",
+          "La radiographie thoracique normale élimine une pneumonie",
+          "Les hémocultures peuvent être négatives",
+          "Les BGN sont les principaux germes",
+          "La fièvre est toujours présente"
+        ],
+        "correctIndices": [2]
+      },
+      {
+        "id": "q-mi-sepsis-10",
+        "text": "les signes de gravité d'une bactériémie sont :",
+        "options": [
+          "Confusion",
+          "Diminution de la PAS de 20 mmHg par rapport à la PAS initiale",
+          "Purpura thrombopénique",
+          "Oligurie < 1 ml/Kg/h",
+          "SaO2 < 90%"
+        ],
+        "correctIndices": [0, 2, 4],
+        "explanation": "diapos 15-16"
+      },
+      {
+        "id": "q-mi-sepsis-11",
+        "text": "Le traitement probabiliste à débuter devant une bactériémie grave communautaire sans signes de porte d'entrée repose sur :",
+        "options": [
+          "Amikacine",
+          "Cefotaxime",
+          "Ciprofloxacine",
+          "Ertapénème",
+          "Metronidazole"
+        ],
+        "correctIndices": [0, 1, 3],
+        "explanation": "diapos 30"
+      },
+      {
+        "id": "q-mi-sepsis-12",
+        "text": "Les bactériémies à staphylocoque coagulase positive :",
+        "options": [
+          "La porte d'entrée principale est la sonde urinaire en milieu de soins",
+          "Le diabète est un terrain favorisant",
+          "Les hémocultures négatives éliminent le diagnostic",
+          "Une bi-antibiothérapie par voie IV est la règle",
+          "Une endocardite est systématiquement recherchée"
+        ],
+        "correctIndices": [1, 4]
+      },
+      {
+        "id": "q-mi-sepsis-13",
+        "text": "Concernant la réalisation des hémocultures :",
+        "options": [
+          "Les hémocultures négatives veulent dire absence de bactériémie",
+          "Une hémoculture positive à staphylocoque aureus signe une bactériémie",
+          "Une hémoculture positive à staphylocoque à coagulase négative signe une infection",
+          "Les hémocultures sont faites au pic fébrile pour augmenter leur sensibilité",
+          "Les hémocultures sont toujours faites avant l'antibiothérapie"
+        ],
+        "correctIndices": [1, 2],
+        "explanation": "diapos 17"
+      },
+      {
+        "id": "q-mi-sepsis-14",
+        "text": "les hémocultures permettent le diagnostic des maladies suivantes",
+        "options": [
+          "Borréliose de Lyme",
+          "Méningococcie",
+          "Méningite à listéria",
+          "Meningite tuberculeuse",
+          "Leptospirose"
+        ],
+        "correctIndices": [0, 1, 2],
+        "explanation": "d et e prennent des mois"
+      },
+      {
+        "id": "q-mi-sepsis-15",
+        "text": "les hémocultures permettent le diagnostic des maladies suivantes",
+        "options": [
+          "Leishmaniose viscérale",
+          "Fievre typhoide",
+          "Grippe",
+          "Rickettsiose",
+          "Sepsis a staphylocoque"
+        ],
+        "correctIndices": [0, 1, 4],
+        "explanation": "c et d vivent dans les cellules"
+      },
+      {
+        "id": "q-mi-sepsis-16",
+        "text": "Quels sont les recommandations d'une bonne réalisation des hémocultures ?",
+        "options": [
+          "Prélèvement du flacon anaérobie puis du flacon aérobie",
+          "Prélèvement de 05 ml de sang dans chaque flacon",
+          "Prélèvement réalisé au pic thermique exclusivement",
+          "Prélèvement du KT central systématique",
+          "Prélèvement toujours réalisé avant l'antibiothérapie"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-mi-sepsis-17",
+        "text": "Un patient se présente de lui-même aux urgences pour une fièvre à 39°. La fréquence respiratoire est 25 cycles/min, la TA est 90/60 mmHg, la fréquence cardiaque est 120 battements/min. Que diagnostiquez-vous ?",
+        "options": [
+          "Un choc septique",
+          "Une bactériémie",
+          "Une infection",
+          "Un sepsis",
+          "Un syndrome de réponse inflammatoire systémique"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-mi-sepsis-18",
+        "text": "Un patient se présente de lui-même aux urgences pour une fièvre à 39°. La fréquence respiratoire est 40 cycles/min, la TA est 90/50 mmHg, la fréquence cardiaque est 120 battements/min. Que diagnostiquez-vous ?",
+        "options": [
+          "Un choc septique",
+          "Une bactériémie",
+          "Une infection",
+          "Un sepsis",
+          "Un syndrome de réponse inflammatoire systémique"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-mi-sepsis-19",
+        "text": "Un patient se présente de lui-même aux urgences pour une fièvre à 39°- 40°. La fréquence respiratoire est 25 cycles/min, la TA est 100/60- 110/50 mmHg, la fréquence cardiaque est 110-120 battements/min. Que diagnostiquez vous ?",
+        "options": [
+          "Un choc septique",
+          "Une bactériémie",
+          "Une infection",
+          "Un sepsis",
+          "Un syndrome de réponse inflammatoire systémique"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-mi-sepsis-20",
+        "text": "chez un patient splénectomisé qui fait de la fièvre le germe incriminé est :",
+        "options": [
+          "Listériose",
+          "Grippe",
+          "Salmonellose",
+          "Staphylocoque",
+          "Streptocoque"
+        ],
+        "correctIndices": [4],
+        "explanation": "gemini"
+      },
+      {
+        "id": "q-mi-sepsis-21",
+        "text": "Vous examinez ce jour un adolescent à votre consultation pour fièvre aigue et angines. Quels sont les 2 germes à évoquer en 1ère intention?",
+        "options": [
+          "Coronavirus",
+          "Cytomégalovirus",
+          "Coxiella Burnetti",
+          "Epstein Barr virus",
+          "Streptocoque pneumonia"
+        ],
+        "correctIndices": [1, 3],
+        "explanation": "cours d’adénopathies"
+      },
+      {
+        "id": "q-mi-sepsis-22",
+        "text": "Chez un patient diabétique qui fait de la fièvre le germe le plus probable est :",
+        "options": [
+          "Listéria",
+          "Salmonella",
+          "Staphylocoque",
+          "Streptocoque",
+          "Virus grippal"
+        ],
+        "correctIndices": [2]
+      }
+    ],
+    "pdfs": []
+  },
+  {
+    "id": "lesson-malinf-adenopathies",
+    "name": "adénopathies infectieuses",
+    "questions": [
+      {
+        "id": "q-mi-adeno-1",
+        "text": "Le ou les étiologies des adénopathies infectieuses localisées sans inoculation sont :",
+        "options": [
+          "Leishmaniose cutanée",
+          "Syphilis",
+          "Histoplasmose",
+          "Chlamydiae trachomatis",
+          "Tuberculose"
+        ],
+        "correctIndices": [0, 1, 2, 3, 4],
+        "explanation": "diapos 14"
+      },
+      {
+        "id": "q-mi-adeno-2",
+        "text": "Vous examinez un patient aux urgences pour fièvre : Vous trouvez des polyadénopathies. Quels diagnostics évoquez-vous ?",
+        "options": [
+          "Brucellose",
+          "Endocardite",
+          "Hépatite virale non B non C",
+          "Toxoplasmose",
+          "VIH"
+        ],
+        "correctIndices": [0, 3, 4],
+        "explanation": "diapos 16"
+      },
+      {
+        "id": "q-mi-adeno-3",
+        "text": "Quel(s) bilan(s) réalisez-vous en 1ère intention devant la découverte d'adénopathies",
+        "options": [
+          "Hémogramme",
+          "Test rapide VIH",
+          "TPHA-VDRL",
+          "Radiographie du thorax",
+          "Créatininémie"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "diapos 15"
+      },
+      {
+        "id": "q-mi-adeno-4",
+        "text": "Quel est ou quels sont les germes responsables d'adénopathie avec lésion d’inoculation ?",
+        "options": [
+          "Treponema pallidum",
+          "Leishmania",
+          "Toxoplasma gondii",
+          "Bacille de koch",
+          "Bartonella henselae"
+        ],
+        "correctIndices": [1, 4],
+        "explanation": "diapos 14"
+      },
+      {
+        "id": "q-mi-adeno-5",
+        "text": "Quel(s) bilan(s) vous demandez devant une adénopathie cervicale qui dure depuis 03 mois ?",
+        "options": [
+          "TDM thoracique",
+          "Intradermoréaction à la tuberculine",
+          "NFS",
+          "Sérologie typhoïde",
+          "Sérologie VIH"
+        ],
+        "correctIndices": [1, 2],
+        "explanation": "diapos 13, B :IDR"
+      },
+      {
+        "id": "q-mi-adeno-6",
+        "text": "Mr YS consulte pour une fièvre avec sueurs nocturnes depuis 25 jours. L'examen clinique trouve une fièvre à 39°C, une fréquence cardiaque à 110 bpm, une PA 110/60mmHg, une fréquence respiratoire à 28 cycles/min, une splénomégalie à 15 cm, adénopathies cervicales. Calculer le QSofa:",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-mi-adeno-7",
+        "text": "Quels sont les examens complémentaires à prescrire pour Mr YS ?",
+        "options": [
+          "PCR BK dans les expectorations",
+          "Sérologie Widal et Félix",
+          "Hémocultures",
+          "Sérologie Wright",
+          "Sérologie de Martin et Petit"
+        ],
+        "correctIndices": [0, 2, 3],
+        "explanation": "parmi les examens complémentaires de 1ere intention face à une splenomégalie : IDR à la tuberculine pour chercher la tuberculose et les hémocultures. Le patient présente une adénopathie donc il peut etre infecté par une brucellose donc on prescrit aussi la serologie de Wright"
+      }
+    ],
+    "pdfs": []
+  },
+  {
+    "id": "lesson-malinf-mononucleose",
+    "name": "syndrome mononucléosique",
+    "questions": [
+      {
+        "id": "q-mi-mono-1",
+        "text": "La mononucléose infectieuse",
+        "options": [
+          "Elle traduit la primo-infection par l’Epstein-Barr-Virus (EBV)",
+          "Il n’y a pas de rechutes et l’immunité est définitive",
+          "La transmission est sexuelle et sanguine",
+          "Le diagnostic sérologique montre IgM anti VCA + et anti EBNA -",
+          "Le frottis montre de grands lymphocytes B hyperbasophiles"
+        ],
+        "correctIndices": [0, 1, 3, 4],
+        "explanation": "diapos 11, 7 15 16"
+      },
+      {
+        "id": "q-mi-mono-2",
+        "text": "Le diagnostic d'un syndrome mononucléosique impose la réalisation",
+        "options": [
+          "Une PCR VHC",
+          "Une sérologie CMV",
+          "Une sérologie VIH type ELISA",
+          "Un MNI-test",
+          "Transaminases"
+        ],
+        "correctIndices": [3, 4],
+        "explanation": "diapos 15"
+      },
+      {
+        "id": "q-mi-mono-3",
+        "text": "Devant un syndrome mononucléosique quels sont les analyses de 1ère intention ?",
+        "options": [
+          "Frottis sanguin à la recherche de blastes circulants",
+          "Test rapide VIH",
+          "Sérologie toxoplasmose",
+          "PCR BK dans les expectorations",
+          "MNI test"
+        ],
+        "correctIndices": [4],
+        "explanation": "diapos 9"
+      },
+      {
+        "id": "q-mi-mono-4",
+        "text": "Un patient XY se présente à votre consultation avec un exanthème fébrile depuis 2 jours. Sa NFS montre un syndrome mononucléosique. Quelles sont les étiologies ?",
+        "options": [
+          "Parvovirus",
+          "Epstein Barr Virus",
+          "Toxoplamasma Gondii",
+          "Virus de l'hépatite C",
+          "Virus de l'hépatite B",
+          "Virus de l'Immunodéficience Humaine"
+        ],
+        "correctIndices": [1, 5],
+        "explanation": "diapos 10"
+      },
+      {
+        "id": "q-mi-mono-5",
+        "text": "Quels examens biologiques prescrivez-vous à Mr XY en 1ère intention ?",
+        "options": [
+          "Sérologie EBV",
+          "Sérologie HVC",
+          "Sérologie Parvovirus",
+          "Sérologie toxoplasmose",
+          "Sérologie VIH"
+        ],
+        "correctIndices": [0, 4]
+      }
+    ],
+    "pdfs": []
+  },
+  {
+    "id": "lesson-malinf-paludisme",
+    "name": "paludisme",
+    "questions": [
+      {
+        "id": "q-mi-palu-1",
+        "text": "Paludisme est une protozoose= est une maladie parasitaire :",
+        "options": [
+          "Dont l’agent est un flagellé pathogène",
+          "L’espèce Plasmodium vivax est responsable de reviviscence"
+        ],
+        "correctIndices": [1],
+        "explanation": "reviviscence veut dire rechute, diapos 17. Le plasmodium est un sporozoaire"
+      },
+      {
+        "id": "q-mi-palu-2",
+        "text": "Plasmodium falciparum",
+        "options": [
+          "Est une amibe pathogène",
+          "appartient au groupe des flagellés",
+          "aucune"
+        ],
+        "correctIndices": [2]
+      },
+      {
+        "id": "q-mi-palu-3",
+        "text": "Repartition et Geographie du paludisme:",
+        "options": [
+          "Fréquente dans les régions tropicales",
+          "Fréquente dans les regions desertiques arides",
+          "Fréquente en Afrique subsaharienne"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "diapos 5"
+      },
+      {
+        "id": "q-mi-palu-4",
+        "text": "Concernant le reservoir de Plasmodium falciparum :",
+        "options": [
+          "Est une parasitose sanguicole",
+          "Est un hématozoaire",
+          "Est une érythrocytopathie",
+          "Vit à l'intérieur des hématies chez l'homme",
+          "Dont l’agent Vit en intracellulaire chez l'homme"
+        ],
+        "correctIndices": [0, 1, 3, 4],
+        "explanation": "sanguicole veut dire vit dans le sang"
+      },
+      {
+        "id": "q-mi-palu-5",
+        "text": "Cycle du Paludisme",
+        "options": [
+          "Est monoxène direct.",
+          "Plasmodium falciparum Est un protozoaire qui a un cycle monoxène",
+          "Cycle hétéroxène à 2 hôtes intermédiaires successives l'anophèle et les bovins",
+          "Se déroule uniquement chez l'homme comme hôte définitif.",
+          "aucune"
+        ],
+        "correctIndices": [4],
+        "explanation": "diapos 15"
+      },
+      {
+        "id": "q-mi-palu-6",
+        "text": "Cycle du Paludisme",
+        "options": [
+          "Est hétéroxène et implique un insecte vecteur du genre Anophèles.",
+          "L’homme représente un hôte accidentel",
+          "L’anophele femelle represente un hôte définitif",
+          "Plasmodium falciparum Est un être vivant qui a le chat comme hôte définitif"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "diapos 15"
+      },
+      {
+        "id": "q-mi-palu-7",
+        "text": "Multiplication du Paludisme",
+        "options": [
+          "Peut se multiplier chez l’insecte vecteur",
+          "Multiplication sexuee",
+          "Présente un cycle dont la phase sexuée se déroule chez l'anophèle femelle",
+          "Les hypnozoites sont responsables de réviviscence du Plasmodium falciparum"
+        ],
+        "correctIndices": [0, 1, 2],
+        "explanation": "d :la reviviscence est la caractéristique des p ovalae et vivax. Diapos : 20 21"
+      },
+      {
+        "id": "q-mi-palu-8",
+        "text": "Multiplication du Paludisme",
+        "options": [
+          "La schizogonie hépatocytaire se répète toute les 48 h pour le Plasmodium falciparum",
+          "La schizogonie érythrocytaire aboutit à l'éclatement des hématies",
+          "Nécessite un milieu aquatique pour le développement des larves d'Anophèles."
+        ],
+        "correctIndices": [1, 2],
+        "explanation": "diapos 18, 13, c’est la shizogonie érythrocytaire qui se répéte dans ce cycle"
+      },
+      {
+        "id": "q-mi-palu-9",
+        "text": "Parmi les caracteristiques du Plasmodium falciparum",
+        "options": [
+          "Le gamétocyte est falciforme",
+          "granulations de Schüffner",
+          "tache de Maurer",
+          "schizonte carré"
+        ],
+        "correctIndices": [0, 2],
+        "explanation": "diapos 37"
+      },
+      {
+        "id": "q-mi-palu-10",
+        "text": "Transmission du Paludisme",
+        "options": [
+          "Peut se transmettre par transfusion sanguine",
+          "Plasmodium falciparum se transmet à l'Homme par un insecte du genre Anopheles",
+          "Qui se transmet habituellement par piqûre d'un moustique femelle du genre Anopheles",
+          "Qui se transmet par un insecte vecteur"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "diapos 14"
+      },
+      {
+        "id": "q-mi-palu-11",
+        "text": "Transmission du Paludisme",
+        "options": [
+          "Est transmise par piqûre du phlébotome",
+          "Plasmodium falciparum Transmise par phelbotomus",
+          "Parasitose à transmission vectorielle",
+          "Transmis par voie orale"
+        ],
+        "correctIndices": [2],
+        "explanation": "diapos 14"
+      },
+      {
+        "id": "q-mi-palu-12",
+        "text": "Manifestations du Paludisme",
+        "options": [
+          "Qui se manifeste principalement par une fièvre",
+          "Qui se manifeste en plus de la fièvre par l’anémie",
+          "Qui se manifeste par des frissons",
+          "Peut être grave"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "diapos 27 28"
+      },
+      {
+        "id": "q-mi-palu-13",
+        "text": "Manifestations du Paludisme",
+        "options": [
+          "Plasmodium falciparum Peut être responsable d'un paludisme grave",
+          "Plasmodium falciparum Peut être responsable du neuropaludisme",
+          "Tout les especes causent un neuropaludisme",
+          "Qui peut être grave par l'accès pernicieux dû à l'infection par l'espèce Plasmodium falciparum.",
+          "possede une action pyrogene"
+        ],
+        "correctIndices": [0, 1, 3, 4],
+        "explanation": "diapos 25, son action pyrogène est due à l’hémozoine"
+      },
+      {
+        "id": "q-mi-palu-14",
+        "text": "Le diagnostic biologique du Paludisme",
+        "options": [
+          "Qui se manifeste toujours par une hyperéosinophilie",
+          "L'hémogramme montre une anémie macrocytaire",
+          "Est une urgence",
+          "Dont le diagnostic d’urgence peut se faire par une goutte épaisse"
+        ],
+        "correctIndices": [2, 3],
+        "explanation": "anémie hémolytique"
+      },
+      {
+        "id": "q-mi-palu-15",
+        "text": "Le diagnostic biologique du Paludisme",
+        "options": [
+          "le diagnostic d'urgence se fait essentiellement par la sérologie",
+          "le diagnostic d'urgence peut se faire par examen direct",
+          "Est basé sur le couple frottis sanguin - goutte épaisse",
+          "se fait par examen direct d'un frottis sanguin coloré au MGG"
+        ],
+        "correctIndices": [1, 2],
+        "explanation": "diapos 44,diapos 31 33"
+      },
+      {
+        "id": "q-mi-palu-16",
+        "text": "Le diagnostic biologique du Paludisme",
+        "options": [
+          "L'état frais du sang montre des parasites mobiles",
+          "se fait par la recherche du parasite sur prélèvement sanguin",
+          "La goutte épaisse est une technique de concentration plus sensible que le frottis",
+          "Le frottis est beaucoup plus sensible que la goutte épaisse"
+        ],
+        "correctIndices": [1, 2],
+        "explanation": "diapos 31"
+      },
+      {
+        "id": "q-mi-palu-17",
+        "text": "Le diagnostic biologique du Paludisme",
+        "options": [
+          "La goutte épaisse permet de poser le diagnostic d'espèce",
+          "Le frottis permet de poser le diagnostic d'espèce",
+          "Les tests immunochromatographiques (test rapides) permettant d’estimer la Parasitémie",
+          "Est basé sur la sérologie qui doit être réalisée au moment des pics fébriles"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-mi-palu-18",
+        "text": "Le diagnostic biologique du Paludisme",
+        "options": [
+          "La sérologie est la base du diagnostic",
+          "Le trophozoite ayant un noyau scindé en deux ‘’aspect en bracelet arabe’’ est en faveur de Plasmodium falciparum",
+          "Le trophozoite falciparum est sous forme de bague à chaton"
+        ],
+        "correctIndices": [1]
+      },
+      {
+        "id": "q-mi-palu-19",
+        "text": "Elements caracteristiques et favorisants le paludisme:",
+        "options": [
+          "Liee aux habitudes alimentaires",
+          "Favorisée par une mauvaise hygiene oro-fecale",
+          "Qui est liée au péril fecal,",
+          "aucune"
+        ],
+        "correctIndices": [3]
+      },
+      {
+        "id": "q-mi-palu-20",
+        "text": "La prophylaxie du paludisme peut se faire par:",
+        "options": [
+          "La prise d'une chimioprophylaxie active.",
+          "l'utilisation de chimioprophylaxie pour les voyageurs non immuns se rendant dans les zones endémiques",
+          "Chimioprophylaxie antipaludéenne",
+          "L'utilisation d'une prophylaxie médicamenteuse contre le protozoaire",
+          "La lutte contre les mollusques d'eau douce"
+        ],
+        "correctIndices": [0, 1, 2, 3],
+        "explanation": "diapos 49-53"
+      },
+      {
+        "id": "q-mi-palu-21",
+        "text": "La prophylaxie du paludisme peut se faire par:",
+        "options": [
+          "L'utilisation des insecticides autour des habitations.",
+          "L'utilisation de moustiquaires pour se protéger des piqûres de l'insecte en zones d’endemie.",
+          "Applications sur la peau de répulsifs cutanés contre les piqûres d'insectes",
+          "un lavage Soigneux des crudités/ fruits et légumes"
+        ],
+        "correctIndices": [0, 1, 2],
+        "explanation": "diapos 49-53"
+      },
+      {
+        "id": "q-mi-palu-22",
+        "text": "La prophylaxie du paludisme peut se faire par:",
+        "options": [
+          "le lavage des mains",
+          "Le lavage des mains avant les repas",
+          "Le lavage des fruits et légumes avant leur consommation",
+          "bonne cuisson",
+          "aucune"
+        ],
+        "correctIndices": [4],
+        "explanation": "diapos 49-53"
+      },
+      {
+        "id": "q-mi-palu-23",
+        "text": "La prophylaxie du paludisme peut se faire par:",
+        "options": [
+          "Filtrer eau de boisson avant de consommer",
+          "Le drainage des collections d'eau autour des habitations",
+          "Lutte contre les rongeurs sauvages",
+          "La lutte contre le péril fécal.",
+          "Installation de toilettes de l’approvisionnement en eau potable"
+        ],
+        "correctIndices": [1],
+        "explanation": "diapos 49-53"
       }
     ],
     "pdfs": []

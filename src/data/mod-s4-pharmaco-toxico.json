@@ -695,18 +695,9 @@
           "trois phases",
           "quatre phase"
         ],
-        "correctIndices": [2]
-      },
-      {
-        "id": "q-pharm-61",
-        "text": "la demi-vie d’un medicament :",
-        "options": [
-          "caractéristique d’un médicament",
-          "indépendante de la voie d’administration",
-          "permet de prévoir l’état d’équilibre",
-          "permet de définir le rythme d’administration"
-        ],
-        "correctIndices": [0, 1, 2, 3]
+        "correctIndices": [
+          2
+        ]
       }
     ]
   },
@@ -726,7 +717,7 @@
         "correctIndices": [
           0
         ],
-        "explanation": "diapos 4"
+        "explanation": "Diapo 4."
       },
       {
         "id": "q-pharm-voies-2",
@@ -741,7 +732,7 @@
           0,
           2
         ],
-        "explanation": "diapos 4"
+        "explanation": "Diapo 4."
       },
       {
         "id": "q-pharm-voies-3",
@@ -759,7 +750,7 @@
           3,
           4
         ],
-        "explanation": "diapos 4"
+        "explanation": "Diapo 4."
       },
       {
         "id": "q-pharm-voies-4",
@@ -774,7 +765,7 @@
           0,
           3
         ],
-        "explanation": "diapos 4, contrairement au mecanismes actifs influencés par la competition entre les molecules, la loi de Fick régit le transport passif en se fonadant sur les propriétés physiques de la membrane plutôt que sur les affinités spécifiques des solutés, pourtant la forme ionisée est plus difficile à absorbée car la membrane des cellules est lipidique."
+        "explanation": "Diapo 4. Contrairement aux mécanismes actifs influencés par la compétition entre les molécules, la loi de Fick régit le transport passif en se fondant sur les propriétés physiques de la membrane plutôt que sur les affinités spécifiques des solutés. Cependant, la forme ionisée est plus difficile à absorber car la membrane des cellules est lipidique."
       },
       {
         "id": "q-pharm-voies-5",
@@ -789,7 +780,7 @@
           2,
           3
         ],
-        "explanation": "diapos 4, contrairement au mecanismes actifs influencés par la competition entre les molecules, la loi de Fick régit le transport passifen se fonadant sur les propriétésphsiques de la membrane plutôt que sur les affinités spécifiques des solutés"
+        "explanation": "Diapo 4. Contrairement aux mécanismes actifs influencés par la compétition entre les molécules, la loi de Fick régit le transport passif en se fondant sur les propriétés physiques de la membrane plutôt que sur les affinités spécifiques des solutés."
       },
       {
         "id": "q-pharm-voies-6",
@@ -805,7 +796,7 @@
           1,
           3
         ],
-        "explanation": "diapos 5,+action locale ou generale, certaines proriétés imposent des voies particulières l’exemple d’un sujet comateux"
+        "explanation": "Diapo 5. Action locale ou générale. Certaines propriétés imposent des voies particulières, par exemple chez un sujet comateux."
       },
       {
         "id": "q-pharm-voies-7",
@@ -821,7 +812,7 @@
           1,
           2
         ],
-        "explanation": "diapos 8"
+        "explanation": "Diapo 8."
       },
       {
         "id": "q-pharm-voies-8",
@@ -837,7 +828,7 @@
           2,
           3
         ],
-        "explanation": "diapos 7"
+        "explanation": "Diapo 7."
       },
       {
         "id": "q-pharm-voies-9",
@@ -853,7 +844,7 @@
           2,
           3
         ],
-        "explanation": "diapos 7"
+        "explanation": "Diapo 7."
       },
       {
         "id": "q-pharm-voies-10",
@@ -867,7 +858,7 @@
           0,
           1
         ],
-        "explanation": "diapos 13"
+        "explanation": "Diapo 13."
       },
       {
         "id": "q-pharm-voies-11",
@@ -881,7 +872,7 @@
           0,
           1
         ],
-        "explanation": "diapos 13"
+        "explanation": "Diapo 13."
       },
       {
         "id": "q-pharm-voies-12",
@@ -900,7 +891,7 @@
           3,
           4
         ],
-        "explanation": "diapos 14"
+        "explanation": "Diapo 14."
       },
       {
         "id": "q-pharm-voies-13",
@@ -917,7 +908,7 @@
           2,
           3
         ],
-        "explanation": "diapos 14"
+        "explanation": "Diapo 14."
       },
       {
         "id": "q-pharm-voies-14",
@@ -936,7 +927,7 @@
           2,
           5
         ],
-        "explanation": "diapos 14, pour la proposition f je l’ai considéré vraie car ces medicaments tapissent l’epithelium intestinal donc ilss vont surement agir sur la diffusion"
+        "explanation": "Diapo 14. Pour la proposition f, elle est considérée comme vraie car ces médicaments tapissent l'épithélium intestinal, ce qui influence la diffusion."
       },
       {
         "id": "q-pharm-voies-15",
@@ -952,7 +943,7 @@
           2,
           3
         ],
-        "explanation": "diapos 20"
+        "explanation": "Diapo 20."
       },
       {
         "id": "q-pharm-voies-16",
@@ -967,7 +958,7 @@
           2,
           3
         ],
-        "explanation": "diapos 20 et 7"
+        "explanation": "Diapos 20 et 7."
       },
       {
         "id": "q-pharm-voies-17",
@@ -983,7 +974,7 @@
           1,
           3
         ],
-        "explanation": "diapos 33"
+        "explanation": "Diapo 33."
       },
       {
         "id": "q-pharm-voies-18",
@@ -996,7 +987,7 @@
         "correctIndices": [
           0
         ],
-        "explanation": "diapos 35"
+        "explanation": "Diapo 35."
       },
       {
         "id": "q-pharm-voies-19",
@@ -1011,7 +1002,7 @@
           1,
           2
         ],
-        "explanation": "diapos 35"
+        "explanation": "Diapo 35."
       },
       {
         "id": "q-pharm-voies-20",
@@ -1028,7 +1019,8 @@
           2,
           3,
           4
-        ]
+        ],
+        "explanation": ""
       },
       {
         "id": "q-pharm-voies-21",
@@ -1044,7 +1036,8 @@
           0,
           3,
           4
-        ]
+        ],
+        "explanation": ""
       },
       {
         "id": "q-pharm-voies-22",
@@ -1059,7 +1052,7 @@
           1,
           3
         ],
-        "explanation": "diapos 40"
+        "explanation": "Diapo 40."
       },
       {
         "id": "q-pharm-voies-23",
@@ -1075,7 +1068,7 @@
           1,
           3
         ],
-        "explanation": "diapos 17"
+        "explanation": "Diapo 17."
       },
       {
         "id": "q-pharm-voies-24",
@@ -1090,7 +1083,8 @@
           0,
           1,
           3
-        ]
+        ],
+        "explanation": ""
       },
       {
         "id": "q-pharm-voies-25",
@@ -1104,7 +1098,8 @@
         "correctIndices": [
           0,
           1
-        ]
+        ],
+        "explanation": ""
       },
       {
         "id": "q-pharm-voies-26",
@@ -1120,10 +1115,152 @@
           1,
           2,
           3
-        ]
+        ],
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "id": "lesson-pharmaco-cinetique",
+    "name": "La pharmacocinétique",
+    "pdfs": [],
+    "questions": [
+      {
+        "id": "q-pharm-cin-1",
+        "text": "La pharmacocinétique est :",
+        "options": [
+          "Etude descriptive and quantitative du devenir du médicament dans l'organisme",
+          "Etude de l'influence du médicament sur l'organisme",
+          "Etude de l'influence de l'organisme sur le médicament",
+          "Etude des mécanismes d'action des médicaments"
+        ],
+        "correctIndices": [
+          2
+        ],
+        "explanation": "diapos 3"
       },
       {
-        "id": "q-pharm-voies-27",
+        "id": "q-pharm-cin-2",
+        "text": "La pharmacocinétique est :",
+        "options": [
+          "L’objectif de la pharmacocinétique est d’équilibrer l’organisme par rapport au médicament",
+          "pour but de concevoir le schéma thérapeutique",
+          "De déterminer les doses de médicament à administrer",
+          "De déterminer le rythme d’administration du médicament"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "l’étude des paramètres comme le temps de demi-vie et la concentration plasmatique permettent de réaliser ces buts"
+      },
+      {
+        "id": "q-pharm-cin-3",
+        "text": "But de la pharmacocinétique :",
+        "options": [
+          "Adaptation posologique",
+          "Effet optimal",
+          "Meilleure efficacité",
+          "Minimum effets secondaires (rapport B/R)"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "l’étude des paramètres comme le temps de demi-vie et la concentration plasmatique permettent de réaliser ces buts"
+      },
+      {
+        "id": "q-pharm-cin-4",
+        "text": "La résorption d’un médicament pris par voie orale dépend:",
+        "options": [
+          "De la prise en même temps d’autres médicaments",
+          "De l’interaction avec les aliments",
+          "Du pH gastro-intestinal",
+          "Du péristaltisme gastro-intestinal"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 13"
+      },
+      {
+        "id": "q-pharm-cin-5",
+        "text": "L'absorption est un processus :",
+        "options": [
+          "Par lequel le médicament passe du site d'absorption vers la circulation générale",
+          "par lequel passe le médicament arrive vers la circulation générale",
+          "Par lequel le médicament passe du site d'absorption vers son site d'action"
+        ],
+        "correctIndices": [
+          0,
+          1
+        ],
+        "explanation": "diapos 5"
+      },
+      {
+        "id": "q-pharm-cin-6",
+        "text": "L'absorption est un processus :",
+        "options": [
+          "Qui n'est pas influencé par la voie d'administration du médicament",
+          "qui peut être influencé par un effet de premier passage hépatique",
+          "qui concerne les médicaments administrés par voies parentérales"
+        ],
+        "correctIndices": [
+          1
+        ],
+        "explanation": "diapos 5"
+      },
+      {
+        "id": "q-pharm-cin-7",
+        "text": "Les conditions de franchissement d’un médicament de la barrière gastro-intestinale :",
+        "options": [
+          "Sont influencées par les caractéristiques physicochimiques des médicaments",
+          "Dépendent du PKa du médicament",
+          "Seule la fraction ionisée est absorbée"
+        ],
+        "correctIndices": [
+          0,
+          1
+        ],
+        "explanation": "diapos 7 8 9"
+      },
+      {
+        "id": "q-pharm-cin-8",
+        "text": "Les conditions de franchissement d’un médicament de la barrière gastro-intestinale :",
+        "options": [
+          "Ne sont pas influencées par les caractéristiques du milieu d'absorption",
+          "Dépendent du pH du milieu",
+          "Ne dépendent pas de la vascularisation du milieu et le débit sanguin intestinal"
+        ],
+        "correctIndices": [
+          1
+        ],
+        "explanation": "diapos 7 8 9"
+      },
+      {
+        "id": "q-pharm-cin-9",
+        "text": "La diffusion des médicaments au niveau de la barrière intestinale selon la loi de Fick:",
+        "options": [
+          "Est une diffusion active",
+          "Nécessite un transporteur spécifique",
+          "N'est pas saturable",
+          "Dépend de la fraction non ionisée du médicament"
+        ],
+        "correctIndices": [
+          2,
+          3
+        ],
+        "explanation": "diapos 11"
+      },
+      {
+        "id": "q-pharm-cin-10",
         "text": "L'absorption des médicaments est meilleure pour :",
         "options": [
           "Les acides faibles",
@@ -1134,10 +1271,11 @@
         "correctIndices": [
           0,
           3
-        ]
+        ],
+        "explanation": "diapos 8"
       },
       {
-        "id": "q-pharm-voies-28",
+        "id": "q-pharm-cin-11",
         "text": "Parmi ces médicaments, lesquels l'absorption est indépendante du pH:",
         "options": [
           "Les acides forts",
@@ -1148,61 +1286,92 @@
         "correctIndices": [
           1,
           2
-        ]
+        ],
+        "explanation": "diapos 8"
       },
       {
-        "id": "q-pharm-voies-29",
-        "text": "L'absorption est un processus :",
+        "id": "q-pharm-cin-12",
+        "text": "Les caractéristiques du transport actif lors de l'absorption des médicaments :",
         "options": [
-          "Par lequel le médicament passe du site d'absorption vers la circulation générale",
-          "par lequel passe le médicament arrive vers la circulation générale",
-          "Par lequel le médicament passe du site d'absorption vers son site d'action"
+          "Non spécifique",
+          "Non compétitif",
+          "Se fait contre le gradient de concentration",
+          "Consomme de l'énergie"
+        ],
+        "correctIndices": [
+          2,
+          3
+        ],
+        "explanation": "diapos 13"
+      },
+      {
+        "id": "q-pharm-cin-13",
+        "text": "Les facteurs qui influencent l'absorption des médicaments sont :",
+        "options": [
+          "La vidange gastrique",
+          "La dissolution du principe actif",
+          "La demi-vie du médicament",
+          "Le débit sanguin intestinal"
         ],
         "correctIndices": [
           0,
-          1
-        ]
-      },
-      {
-        "id": "q-pharm-voies-30",
-        "text": "L'absorption est un processus :",
-        "options": [
-          "Qui n'est pas influencé par la voie d'administration du médicament",
-          "qui peut être influencé par un effet de premier passage hépatique",
-          "qui concerne les médicaments administrés par voies parentérales"
-        ],
-        "correctIndices": [
-          1
-        ]
-      },
-      {
-        "id": "q-pharm-voies-31",
-        "text": "La voie qui a la plus faible biodisponibilité :",
-        "options": [
-          "Voie orale",
-          "Voie sous cutanée",
-          "Voie rectale",
-          "Voie intramusculaire"
-        ],
-        "correctIndices": [
-          0
-        ]
-      },
-      {
-        "id": "q-pharm-voies-32",
-        "text": "Les 2 voies qui donnent la meilleure biodisponnibilité :",
-        "options": [
-          "IV",
-          "IM",
-          "SC",
-          "Intra arterielle"
-        ],
-        "correctIndices": [
+          1,
           3
-        ]
+        ],
+        "explanation": "diapos 7 8 9 13"
       },
       {
-        "id": "q-pharm-voies-33",
+        "id": "q-pharm-cin-14",
+        "text": "Les facteurs qui influencent l'absorption des médicaments sont :",
+        "options": [
+          "La clairance rénale",
+          "L'effet de premier passage intestinal",
+          "La forme galénique du médicament",
+          "Les interactions médicament-aliment"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 7 8 9 13 et la forme galénique est le paramètre qui détermine la dissolution"
+      },
+      {
+        "id": "q-pharm-cin-15",
+        "text": "Le coefficient d'absorption intestinal peut être influencé par :",
+        "options": [
+          "La vidange gastrique",
+          "Le débit sanguin intestinal",
+          "Le phénomène de dissolution",
+          "Aucune réponse"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "diapos 7 8 9 13"
+      },
+      {
+        "id": "q-pharm-cin-16",
+        "text": "Le Vidange gastrique : est influencée par:",
+        "options": [
+          "Prise d’aliments qui la ralentit (graisses)",
+          "Effort, douleur, émotion la freinent",
+          "DLD l’augmente",
+          "morphine augmente le VG",
+          "Métoclopramide accélère la VG"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "explanation": "diapos 7 8 9 13"
+      },
+      {
+        "id": "q-pharm-cin-17",
         "text": "L'effet de premier passage hépatique:",
         "options": [
           "fait partie de la phase de métabolisation des médicaments du processus ADME",
@@ -1213,10 +1382,11 @@
         "correctIndices": [
           1,
           2
-        ]
+        ],
+        "explanation": "diapos 16"
       },
       {
-        "id": "q-pharm-voies-34",
+        "id": "q-pharm-cin-18",
         "text": "L'effet de premier passage hépatique:",
         "options": [
           "permet une perte de médicament par métabolisme hépatique",
@@ -1228,32 +1398,1087 @@
           0,
           2,
           3
-        ]
+        ],
+        "explanation": "diapos 16"
       },
       {
-        "id": "q-pharm-voies-35",
-        "text": "Les conditions de franchissement d’un médicament de la barrière gastro-intestinale :",
+        "id": "q-pharm-cin-19",
+        "text": "La biodisponibilité d'un médicament :",
         "options": [
-          "Sont influencées par les caractéristiques physicochimiques des médicaments,",
-          "Dépendent du PKa du médicament",
-          "Seule la fraction ionisée est absorbée"
+          "c'est le pourcentage de médicament qui atteint la veine porte",
+          "Est le temps nécessaire pour que le médicament arrive à la circulation générale",
+          "Est le paramètre pharmacocinétique décrivant l'étape de l'absorption",
+          "Est le paramètre pharmacocinétique décrivant l'étape du métabolisme"
+        ],
+        "correctIndices": [
+          2
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-20",
+        "text": "La biodisponibilité d'un médicament :",
+        "options": [
+          "Le coefficient d'absorption conditionne cette biodisponibilité",
+          "peut être influencée par l'effet de premier passage intestinal",
+          "peut être influencée par l'effet de premier passage hépatique",
+          "peut être influencée par l'effet de premier passage pulmonaire"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-21",
+        "text": "Les facteurs qui peuvent influencer la biodisponibilité sont:",
+        "options": [
+          "Le coefficient d'absorption",
+          "Le premier passage intestinal",
+          "Le premier passage hépatique",
+          "Le premier passage pulmonaire"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-22",
+        "text": "Cochez les 2 voies d’administration des médicaments qui donnent la meilleure biodisponibilité :",
+        "options": [
+          "La voie intra-artérielle",
+          "La voie sous-cutanée",
+          "La voie intramusculaire",
+          "La voie intraveineuse"
+        ],
+        "correctIndices": [
+          0,
+          3
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-23",
+        "text": "Cochez les 2 voies d'administration des médicaments qui donnent la plus faible biodisponibilité :",
+        "options": [
+          "La voie intra-artérielle",
+          "La voie sous-cutanée",
+          "La voie intramusculaire",
+          "La voie intraveineuse"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-24",
+        "text": "Laquelle parmi ces voies d'administration qui a la biodisponibilité la plus faible:",
+        "options": [
+          "La voie orale",
+          "La voie sous cutanée",
+          "La voie intramusculaire",
+          "La voie rectale"
+        ],
+        "correctIndices": [
+          0
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-25",
+        "text": "La biodisponibilité du médicament est :",
+        "options": [
+          "la quantité qui est absorbée",
+          "la quantité qui subit l’effet de premier passage hépatique",
+          "la fraction qui atteint la circulation générale",
+          "totale pour les médicaments administrés par voie intraveineuse"
+        ],
+        "correctIndices": [
+          2,
+          3
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-26",
+        "text": "La biodisponibilité du médicament permet de",
+        "options": [
+          "déterminer la quantité qui est absorbé",
+          "d’évaluer l’intérêt de la voie orale par rapport à la voie intraveineuse",
+          "de connaître la dose administrée",
+          "comparer deux formes administrées par voie orale"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-27",
+        "text": "la biodisponibilité du médicament est:",
+        "options": [
+          "la quantité qui est absorbée par l’organisme",
+          "la quantité qui subit l’effet de premier passage hépatique",
+          "la fraction qui atteint la circulation générale",
+          "la fraction absorbée plus l’effet de premier passage hépatique"
+        ],
+        "correctIndices": [
+          2
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-28",
+        "text": "La biodisponibilité est l’étude de :",
+        "options": [
+          "la quantité du médicament qui atteint de la circulation sanguine",
+          "la vitesse de passage du médicament dans la circulation sanguine",
+          "la quantité du médicament dans la circulation sanguine et sa vitesse de passage",
+          "est un paramètre pharmacocinétique"
+        ],
+        "correctIndices": [
+          2,
+          3
+        ],
+        "explanation": "diapos 18-23"
+      },
+      {
+        "id": "q-pharm-cin-29",
+        "text": "les médicaments à fort fixation protéique sont :",
+        "options": [
+          "la Warfarine",
+          "la morphine",
+          "l’aspirine",
+          "le paracétamol"
+        ],
+        "correctIndices": [
+          0
+        ],
+        "explanation": "la warfarine est un AVK, diapos 26"
+      },
+      {
+        "id": "q-pharm-cin-30",
+        "text": "L’intestin est le lieu privilégié pour la résorption des médicaments :",
+        "options": [
+          "à cause de sa petite surface d’échange",
+          "pour son débit sanguin important",
+          "à cause de son pH",
+          "à cause de la présence des transporteurs"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-31",
+        "text": "La résorption d’un médicament pris par voie orale dépend:",
+        "options": [
+          "De la prise en même temps d’autres médicaments",
+          "De l’interaction avec les aliments",
+          "Du pH gastro-intestinal",
+          "Du péristaltisme gastro-intestinal",
+          "l’absorption digestive peut être influencée une antibiothérapie à large spectre"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "explanation": "voir le 2e cours"
+      },
+      {
+        "id": "q-pharm-cin-32",
+        "text": "Les facteurs qui influencent l’absorption des médicaments sont :",
+        "options": [
+          "le lieu de l’absorption",
+          "les transporteurs au niveau des membranes biologiques",
+          "la nature chimique du médicament",
+          "les maladies gastro-intestinales"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 7 8 9 13"
+      },
+      {
+        "id": "q-pharm-cin-33",
+        "text": "L’absorption digestive du médicament dépend :",
+        "options": [
+          "de la forme pharmaceutique",
+          "des caractéristiques physico-chimiques du médicament",
+          "de l’activité du médicament",
+          "des caractéristiques physiopathologiques"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "diapos 7 8 9 13"
+      },
+      {
+        "id": "q-pharm-cin-34",
+        "text": "L’absorption est un processus :",
+        "options": [
+          "par lequel passe le médicament inchangé vers la circulation générale",
+          "qui n’est pas influencé par la voie d’administration du médicament",
+          "par lequel passe le médicament vers son site d’action",
+          "qui concerne les médicaments administrés par voies parentérales"
+        ],
+        "correctIndices": [
+          0
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-35",
+        "text": "Dans la distribution d’un médicament :",
+        "options": [
+          "la première cible est les protéines tissulaires",
+          "c’est la forme liée aux protéines qui diffuse vers les tissus",
+          "le médicament peut exister sous forme libre ou liée aux protéines plasmatiques",
+          "le médicament ne peut exister que sous forme liée aux protéines plasmatiques",
+          "seule la forme libre diffuse vers les tissus"
+        ],
+        "correctIndices": [
+          2,
+          4
+        ],
+        "explanation": "diapos 24"
+      },
+      {
+        "id": "q-pharm-cin-36",
+        "text": "Dans la distribution d’un médicament :",
+        "options": [
+          "l’albumine représente le principal transporteur",
+          "un médicament est mieux distribué s’il est plus hydrosoluble",
+          "le degré de vascularisation/irrigation des tissus et organes influence la distribution du médicament",
+          "la concentration d'une substance dans le plasma est considérée comme proportionnelle à sa concentration au niveau des sites d'action puisqu'un équilibre s'établit entre la concentration plasmatique libre du médicament et les différentes concentrations tissulaires"
+        ],
+        "correctIndices": [
+          0,
+          2
+        ],
+        "explanation": "diapos 30"
+      },
+      {
+        "id": "q-pharm-cin-37",
+        "text": "La forme liée du médicament aux protéines plasmatiques :",
+        "options": [
+          "est une forme de stockage du médicament",
+          "est une forme de transport du médicament",
+          "est la forme active",
+          "diffuse vers l’organe ou le tissu cible"
+        ],
+        "correctIndices": [
+          1
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-38",
+        "text": "Les médicaments sont mieux distribués s'ils présentent :",
+        "options": [
+          "une forte liaison protéique plasmatique",
+          "une faible liaison aux protéines plasmatiques",
+          "une forte affinité pour les protéines tissulaires",
+          "une liposolubilité importante",
+          "une hydrosolubilité importante"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 30"
+      },
+      {
+        "id": "q-pharm-cin-39",
+        "text": "Parmi les facteurs influençant la distribution des médicaments dans les organes :",
+        "options": [
+          "le taux de fixation protéique plasmatique",
+          "le taux de fixation protéique tissulaire",
+          "la liposolubilité uniquement",
+          "l'hydrosolubilité uniquement"
         ],
         "correctIndices": [
           0,
           1
-        ]
+        ],
+        "explanation": "diapos 30"
       },
       {
-        "id": "q-pharm-voies-36",
-        "text": "Les conditions de franchissement d’un médicament de la barrière gastro-intestinale :",
+        "id": "q-pharm-cin-40",
+        "text": "Parmi les facteurs qui peuvent modifier le volume de distribution :",
         "options": [
-          "Ne sont pas influencées par les caractéristiques du milieu d'absorption,",
-          "Dépendent du pH du milieu",
-          "Ne dépendent pas de la vascularisation du milieu et le débit sanguin intestinal,"
+          "en cas de variations de la concentration des protéines plasmatiques",
+          "l’hypoalbuminémie",
+          "la grossesse",
+          "l’insuffisance rénale"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 33"
+      },
+      {
+        "id": "q-pharm-cin-41",
+        "text": "Parmi les facteurs qui peuvent modifier le volume de distribution :",
+        "options": [
+          "l’obésité",
+          "l'arthrite rhumatoïde",
+          "en cas de variations de la concentration plasmatique de l'albumine"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "diapos 33, l'obésité est la modification du ratio masse grasse / masse maigre"
+      },
+      {
+        "id": "q-pharm-cin-42",
+        "text": "Le passage du médicament à travers les membranes est facile pour :",
+        "options": [
+          "les molécules hydrophiles",
+          "les molécules lipophiles",
+          "les molécules chargées",
+          "les molécules dont le passage est passif"
+        ],
+        "correctIndices": [
+          1,
+          3
+        ],
+        "explanation": "Dans le diapos 10, le passage passif est le mode le plus courant donc la molécule dotée de cette capacité est mieux absorbée. Ces molécules sont lipophiles car la membrane cellulaire est une bicouche lipidique qui laisse passer facilement les matières grasses."
+      },
+      {
+        "id": "q-pharm-cin-43",
+        "text": "La distribution des médicaments se fait au niveau :",
+        "options": [
+          "des érythrocytes",
+          "des protéines plasmatiques",
+          "des organes",
+          "des membranes"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "Ce sont les acteurs cités dans cette phase : les protéines et les érythrocytes sont des transporteurs et les organes sont les récepteurs."
+      },
+      {
+        "id": "q-pharm-cin-44",
+        "text": "Le volume de distribution d’un médicament est :",
+        "options": [
+          "Quantité administrée par voie IV (mg) / Concentration plasmatique (mg/L)",
+          "Concentration plasmatique (mg/L) / Quantité administrée par voie IV (mg)",
+          "un espace virtuel",
+          "un paramètre qui permet de déterminer la biodisponibilité"
+        ],
+        "correctIndices": [
+          0,
+          3
+        ],
+        "explanation": "diapos 31"
+      },
+      {
+        "id": "q-pharm-cin-45",
+        "text": "La traversée des membranes biologiques est favorisée par :",
+        "options": [
+          "la forte lipophilie de la molécule",
+          "la faible lipophilie de la molécule",
+          "l’état non ionisé de la molécule",
+          "l’état ionisé de la molécule"
+        ],
+        "correctIndices": [
+          0,
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-46",
+        "text": "Le transport actif à travers les membranes :",
+        "options": [
+          "se fait selon le gradient de concentration",
+          "se fait contre le gradient de concentration",
+          "nécessite de l’énergie",
+          "est un phénomène non saturable"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ],
+        "explanation": "diapos 12"
+      },
+      {
+        "id": "q-pharm-cin-47",
+        "text": "La distribution d’un médicament dépend de :",
+        "options": [
+          "son pKa",
+          "sa liposolubilité",
+          "ses concentrations plasmatiques",
+          "la concentration du complexe médicament-protéines plasmatiques"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 29"
+      },
+      {
+        "id": "q-pharm-cin-48",
+        "text": "Concernant le métabolisme hépatique des médicaments :",
+        "options": [
+          "le cytochrome P450 joue un rôle primordial",
+          "le cytochrome participe essentiellement à des réactions de réduction",
+          "le cytochrome permet d’augmenter la liposolubilité",
+          "le cytochrome participe essentiellement à des réactions d’oxydation"
+        ],
+        "correctIndices": [
+          0,
+          3
+        ],
+        "explanation": "diapos 36"
+      },
+      {
+        "id": "q-pharm-cin-49",
+        "text": "Les rôles et fonctions du cytochrome P450 sont :",
+        "options": [
+          "le métabolisme des acides gras",
+          "la synthèse des acides gras",
+          "la synthèse du thromboxane",
+          "la réduction des médicaments"
+        ],
+        "correctIndices": [
+          0,
+          2
+        ],
+        "explanation": "diapos 36"
+      },
+      {
+        "id": "q-pharm-cin-50",
+        "text": "Les rôles et fonctions du cytochrome P450 sont :",
+        "options": [
+          "l'oxydation des médicaments",
+          "la transformation des médicaments en composés plus liposolubles",
+          "la biosynthèse des acides biliaires",
+          "la dégradation des acides biliaires"
+        ],
+        "correctIndices": [
+          0,
+          2
+        ],
+        "explanation": "diapos 36"
+      },
+      {
+        "id": "q-pharm-cin-51",
+        "text": "Le métabolisme des médicaments :",
+        "options": [
+          "est un moyen de défense de l’organisme",
+          "ralentit l’élimination des médicaments",
+          "accélère l’élimination des médicaments",
+          "rend actifs quelques médicaments"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ],
+        "explanation": "Le foie est un organe qui détoxifie le sang donc il a un rôle de défense contre toutes les molécules étrangères. Il assure la modification du PA en une substance plus hydrosoluble donc il accélère l’élimination du médicament par voie rénale. D’après diapos 44, il rend quelques PA actifs."
+      },
+      {
+        "id": "q-pharm-cin-52",
+        "text": "Les réactions de biotransformation sont des réactions :",
+        "options": [
+          "de fonctionnalisation",
+          "de conjugaison",
+          "qui se font exclusivement dans le foie",
+          "qui ne se font qu’avec le cytochrome P450"
+        ],
+        "correctIndices": [
+          0,
+          1
+        ],
+        "explanation": "diapos 38"
+      },
+      {
+        "id": "q-pharm-cin-53",
+        "text": "Dans l'étape du métabolisme des médicaments :",
+        "options": [
+          "le foie est l'organe essentiel du métabolisme",
+          "certains médicaments ne sont pas métabolisés dans l'organisme et sont éliminés tels quels sous leurs formes actives",
+          "une prodrogue est un médicament administré sous sa forme active qui donne une molécule inactive dans l'organisme",
+          "un médicament peut avoir un ou plusieurs métabolites"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-54",
+        "text": "Lors du métabolisme d'un médicament, il peut subir :",
+        "options": [
+          "des réactions de phase I (fonctionnalisation)",
+          "des réactions de phase II (conjugaison)",
+          "des réactions de phase I et II",
+          "aucune, le médicament est éliminé tel quel sous forme active"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "diapos 38"
+      },
+      {
+        "id": "q-pharm-cin-55",
+        "text": "Lors du métabolisme d'un médicament, il peut subir :",
+        "options": [
+          "des réactions de phase I (fonctionnalisation) seulement",
+          "des réactions de phase I et II",
+          "le métabolisme peut donner lieu à un métabolite toxique du médicament",
+          "aucune transformation, le médicament est éliminé tel quel sous forme active"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ],
+        "explanation": "diapos 38"
+      },
+      {
+        "id": "q-pharm-cin-56",
+        "text": "Les réactions de phase II sont des réactions :",
+        "options": [
+          "d’oxydation",
+          "de réduction",
+          "d’hydrolyse",
+          "de conjugaison"
+        ],
+        "correctIndices": [
+          3
+        ],
+        "explanation": "diapos 38"
+      },
+      {
+        "id": "q-pharm-cin-57",
+        "text": "Les réactions de phase I sont des réactions :",
+        "options": [
+          "d’oxydation",
+          "de réduction",
+          "d’hydrolyse",
+          "d'acétylation"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "diapos 38"
+      },
+      {
+        "id": "q-pharm-cin-58",
+        "text": "Les enzymes les plus impliquées dans la phase I du métabolisme sont :",
+        "options": [
+          "les cytochromes",
+          "les phospholipases",
+          "l’acétylcholinestérase",
+          "l’adényl cyclase"
+        ],
+        "correctIndices": [
+          0
+        ],
+        "explanation": "Les autres ne réduisent/oxydent/hydrolisent pas."
+      },
+      {
+        "id": "q-pharm-cin-59",
+        "text": "Les réactions de phase II :",
+        "options": [
+          "la greffe de groupement conjugué sur le métabolite issu de la phase I",
+          "la greffe de groupement conjugué sur le médicament inchangé",
+          "donnent naissance à des produits hydrosolubles (pour faciliter leur élimination)",
+          "donnent naissance à des produits liposolubles"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-60",
+        "text": "Métabolisme hépatique :",
+        "options": [
+          "le cytochrome P450 joue un rôle principal dans le métabolisme des médicaments",
+          "le cytochrome P450 est inhibé dans l’induction",
+          "le cytochrome P450 est stimulé dans l’induction",
+          "le métabolisme hépatique a un rôle de détoxification des médicaments"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-61",
+        "text": "Le cycle entéro-hépatique (CEH) des médicaments :",
+        "options": [
+          "permet la détoxification des médicaments",
+          "diminue la durée d’action des médicaments",
+          "fait partie de la phase de distribution des médicaments",
+          "rend les médicaments plus hydrosolubles"
+        ],
+        "correctIndices": [
+          0,
+          3
+        ],
+        "explanation": "diapos 43 41"
+      },
+      {
+        "id": "q-pharm-cin-62",
+        "text": "Le cycle entéro-hépatique (CEH) des médicaments :",
+        "options": [
+          "concerne surtout les médicaments hydrosolubles",
+          "concerne surtout les médicaments liposolubles",
+          "plus le médicament est liposoluble, plus il fait des CEH"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ],
+        "explanation": "diapos 43 41"
+      },
+      {
+        "id": "q-pharm-cin-63",
+        "text": "Les facteurs modifiant le métabolisme hépatique :",
+        "options": [
+          "Le polymorphisme génétique",
+          "L’âge avancé",
+          "La grossesse",
+          "La nutrition"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 51-56"
+      },
+      {
+        "id": "q-pharm-cin-64",
+        "text": "Les facteurs modifiant le métabolisme hépatique :",
+        "options": [
+          "Hépatite virale",
+          "Un surdosage",
+          "Cirrhose"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "diapos 51-56"
+      },
+      {
+        "id": "q-pharm-cin-65",
+        "text": "Les facteurs intrinsèques modifiant le métabolisme hépatique sont :",
+        "options": [
+          "L'âge extrême",
+          "La grossesse",
+          "Le polymorphisme génétique",
+          "Une hépatite virale aiguë"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 51-56"
+      },
+      {
+        "id": "q-pharm-cin-66",
+        "text": "Le polymorphisme génétique est un des facteurs influençant :",
+        "options": [
+          "L’absorption du médicament",
+          "La distribution du médicament",
+          "La biotransformation du médicament",
+          "L’élimination"
+        ],
+        "correctIndices": [
+          2
+        ],
+        "explanation": "diapos 51-56"
+      },
+      {
+        "id": "q-pharm-cin-67",
+        "text": "Les conséquences chez les métaboliseurs lents sont :",
+        "options": [
+          "Une concentration plasmatique des médicaments augmentée",
+          "Une concentration plasmatique diminuée",
+          "La demi-vie des médicaments diminue",
+          "Des effets toxiques sont possibles"
+        ],
+        "correctIndices": [
+          0,
+          4
+        ],
+        "explanation": "diapos 51-56"
+      },
+      {
+        "id": "q-pharm-cin-68",
+        "text": "Les conséquences chez les métaboliseurs lents sont :",
+        "options": [
+          "Des effets indésirables fréquents",
+          "Les effets indésirables sont moins fréquents",
+          "Une absence d’activité thérapeutique pour les prodrogues"
+        ],
+        "correctIndices": [
+          0,
+          2
+        ],
+        "explanation": "diapos 51-56"
+      },
+      {
+        "id": "q-pharm-cin-69",
+        "text": "Les conséquences chez les métaboliseurs rapides sont :",
+        "options": [
+          "La concentration plasmatique des médicaments augmente",
+          "La réponse thérapeutique est inefficace",
+          "La demi-vie des médicaments diminue",
+          "Des effets hépatiques sont possibles"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 51-56"
+      },
+      {
+        "id": "q-pharm-cin-70",
+        "text": "Le métabolisme des médicaments peut :",
+        "options": [
+          "Modifier leur diffusion",
+          "Aboutir à des produits toxiques",
+          "Donner naissance à des métabolites actifs",
+          "Subir des phénomènes d’induction enzymatique"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-71",
+        "text": "L'association Rifampicine-Isoniazide entraîne :",
+        "options": [
+          "Une baisse de la concentration plasmatique de l'isoniazide",
+          "Une augmentation de la concentration plasmatique de l'isoniazide",
+          "La formation d'un métabolite inactif",
+          "La possibilité d'une hépatite",
+          "Formation de métabolite réactif"
+        ],
+        "correctIndices": [
+          0,
+          3
+        ],
+        "explanation": "diapos 55"
+      },
+      {
+        "id": "q-pharm-cin-72",
+        "text": "Les paramètres de l'élimination d'un organe sont :",
+        "options": [
+          "La constante de vitesse d'élimination",
+          "La clairance",
+          "Le coefficient d'absorption",
+          "La demi-vie d'élimination"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "diapos 58"
+      },
+      {
+        "id": "q-pharm-cin-73",
+        "text": "Lors de l'élimination des médicaments :",
+        "options": [
+          "Le temps de demi-vie d'élimination (t1/2) représente le temps nécessaire pour que la concentration maximale du principe actif double",
+          "Le médicament peut être éliminé sous forme inchangée",
+          "Le médicament peut être éliminé sous forme de métabolites inactifs, actifs ou toxiques"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-74",
+        "text": "Lors de l'élimination des médicaments :",
+        "options": [
+          "Le temps de demi-vie d'élimination (t1/2) représente le temps nécessaire pour que la concentration maximale du principe actif diminue de moitié",
+          "Le médicament peut être éliminé sous forme inchangée dans les urines"
+        ],
+        "correctIndices": [
+          0,
+          1
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-75",
+        "text": "L’élimination du médicament se fait au niveau du :",
+        "options": [
+          "Foie",
+          "Poumon",
+          "Salive",
+          "Rein"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 69"
+      },
+      {
+        "id": "q-pharm-cin-76",
+        "text": "La demi-vie est :",
+        "options": [
+          "Le temps nécessaire pour l'élimination totale de la moitié du médicament",
+          "Le temps nécessaire pour que la concentration plasmatique du médicament diminue de 50%",
+          "Sans intérêt pour le suivi thérapeutique",
+          "Permet de prévoir l'état d'équilibre"
+        ],
+        "correctIndices": [
+          1,
+          3
+        ],
+        "explanation": "diapos 59 71 72 73"
+      },
+      {
+        "id": "q-pharm-cin-77",
+        "text": "La demi-vie est :",
+        "options": [
+          "Permet de définir le rythme d'administration",
+          "Sert à déterminer le rythme de prise",
+          "Permet d’estimer le temps mis pour atteindre un plateau d’équilibre",
+          "Nous renseigne sur l’élimination du médicament"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 59 71 72 73"
+      },
+      {
+        "id": "q-pharm-cin-78",
+        "text": "La demi-vie est :",
+        "options": [
+          "Nous renseigne sur le délai d’obtention de l’état d’équilibre",
+          "Permet de fixer le rythme d’administration des médicaments",
+          "Aide à connaître le temps de présence du médicament dans l’organisme"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "diapos 59 71 72 73"
+      },
+      {
+        "id": "q-pharm-cin-79",
+        "text": "La demi-vie est :",
+        "options": [
+          "Un paramètre caractéristique d'un médicament",
+          "Est une constante des médicaments",
+          "Un paramètre indépendant de la voie d'administration",
+          "Est généralement indépendante de la voie d’administration et de la dose"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ],
+        "explanation": "diapos 59 71 72 73"
+      },
+      {
+        "id": "q-pharm-cin-80",
+        "text": "La demi-vie est :",
+        "options": [
+          "Sert à déterminer l’activité d’une association médicamenteuse",
+          "Permet d’estimer le taux de métabolites",
+          "Nous renseigne sur la distribution",
+          "Nous renseigne sur la dose administrée",
+          "Est dépendant de la dose"
+        ],
+        "correctIndices": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "diapos 59 71 72 73"
+      },
+      {
+        "id": "q-pharm-cin-81",
+        "text": "Les facteurs influençant la clairance rénale sont :",
+        "options": [
+          "Le débit urinaire",
+          "La concentration plasmatique des médicaments",
+          "Le pH urinaire",
+          "La liaison aux protéines plasmatiques des médicaments",
+          "Le PKa du médicament"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "explanation": "diapos 67"
+      },
+      {
+        "id": "q-pharm-cin-82",
+        "text": "La présence du principe actif dans les urines est due à :",
+        "options": [
+          "La réabsorption tubulaire",
+          "La sécrétion tubulaire",
+          "La filtration glomérulaire",
+          "Tous ces processus"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-83",
+        "text": "L’échappement du principe actif dans les urines est dû à :",
+        "options": [
+          "La réabsorption tubulaire",
+          "La sécrétion tubulaire",
+          "La filtration glomérulaire",
+          "Tous ces processus"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-84",
+        "text": "Un état d’équilibre (steady state) :",
+        "options": [
+          "Est atteint après 7 demi-vies",
+          "Est atteint après 4 ou 5 demi-vies",
+          "Doit être inclus dans la fenêtre thérapeutique",
+          "La quantité ingérée du médicament doit être égale à la quantité absorbée"
+        ],
+        "correctIndices": [
+          1,
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-85",
+        "text": "La demi-vie d’un médicament pris per os est 10 heures, combien de temps faut-il pour qu’il soit éliminé du secteur plasmatique ?",
+        "options": [
+          "Entre 10 et 20 heures",
+          "Entre 40 et 50 heures",
+          "Entre 2 et 3 jours",
+          "Entre 1 et 2 jours"
+        ],
+        "correctIndices": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-86",
+        "text": "La demi-vie d'un médicament pris per os est 30 heures, combien de temps faut-il pour qu'il soit éliminé du secteur plasmatique ?",
+        "options": [
+          "Entre 10-12 jours",
+          "Entre 8-9 jours",
+          "Entre 14-16 jours",
+          "Entre 4-5 jours"
         ],
         "correctIndices": [
           1
-        ]
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-87",
+        "text": "L'état d'équilibre d'un médicament est situé entre 48-60 heures, quelle est la demi-vie de ce médicament pris per os :",
+        "options": [
+          "Quatre heures",
+          "Huit heures",
+          "Douze heures",
+          "Seize heures"
+        ],
+        "correctIndices": [
+          2
+        ],
+        "explanation": ""
+      },
+      {
+        "id": "q-pharm-cin-88",
+        "text": "Les conséquences de l'induction médicamenteuse :",
+        "options": [
+          "Diminution de l'effet thérapeutique du médicament induit",
+          "Augmentation de l'effet thérapeutique du médicament induit",
+          "Exagération de l'effet thérapeutique si métabolites actifs",
+          "Hépatotoxicité si métabolites toxiques"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ],
+        "explanation": ""
       }
     ]
   }

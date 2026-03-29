@@ -4,6 +4,7 @@ import bcIntroLessons from './data/mod-s3-biochimie-clinique.json';
 import pharmacoLessons from './data/mod-s4-pharmaco-toxico.json';
 import anatPathLessons from './data/mod-s4-anat-path.json';
 import malInfLessons from './data/mod-s4-mal-inf-parasito.json';
+import semio2Lessons from './data/mod-s4-semio-2.json';
 import notifications from './data/notifications.json';
 
 export const CONTACT_EMAIL = 'linahousni18@gmail.com';
@@ -161,7 +162,7 @@ export const INITIAL_DATA: DataStore = {
               id: 'mod-s4-semio-2',
               name: 'Sémiologie 2',
               description: 'Sémiologie clinique et paraclinique approfondie.',
-              lessons: []
+              lessons: semio2Lessons as Lesson[]
             },
             {
               id: 'mod-s4-anat-path',

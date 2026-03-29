@@ -1,0 +1,191 @@
+[
+  {
+    "id": "lesson-traumatologie",
+    "name": "Traumatologie",
+    "pdfs": [],
+    "questions": [
+      {
+        "id": "q-trauma-1",
+        "text": "Cochez les réponses justes :",
+        "options": [
+          "Ostéite : Infection initiale de l'os cortical",
+          "Ostéite : infection de l'os et de la moelle osseuse",
+          "Ostéomyélite : Infection primitive de la synoviale",
+          "Dans l'ostéomyélite : la Douleur exquise à la palpation de la métaphyse avec une articulation libre",
+          "Dans l'ostéomyélite : la Douleur exquise à la palpation de la métaphyse qui s'aggrave à la mobilisation de l'articulation."
+        ],
+        "correctIndices": [0, 3],
+        "explanation": "L’ostéomyélite est une douleur de type inflammatoire donc E est fausse, de plus la mobilisation est impossible, il s’agit d’une impotence fonctionnelle totale. L’arthrite est une infection primitive de la synoviale."
+      },
+      {
+        "id": "q-trauma-2",
+        "text": "Pour l'arthrite septique :",
+        "options": [
+          "L'atteinte est surtout mono articulaire.",
+          "Douleur articulaire inflammatoire brutale intense permanente d'aggravation progressive",
+          "La mobilisation de l'articulation reste possible.",
+          "Le liquide de ponction est clair pauvre en cellules.",
+          "Le liquide de ponction est trouble riche en leucocytes."
+        ],
+        "correctIndices": [0, 1, 4],
+        "explanation": "diapos 12"
+      },
+      {
+        "id": "q-trauma-3",
+        "text": "Cochez les définitions justes :",
+        "options": [
+          "Une fracture : solution de continuité osseuse brutale qui résulte de l'action d'un agent vulnérant externe sur un segment osseux.",
+          "Luxation : perte de contact partiel entre deux surfaces articulaires.",
+          "Pseudarthrose : une consolidation en mauvaise position.",
+          "Cal vicieux : absence de consolidation après 6 mois d'évolution.",
+          "Arthrite septique : infection de la métaphyse osseuse d'origine hématogène."
+        ],
+        "correctIndices": [0],
+        "explanation": ""
+      },
+      {
+        "id": "q-trauma-4",
+        "text": "Quelles sont les définitions justes :",
+        "options": [
+          "La luxation : perte de contact partiel et permanent entre deux surfaces articulaires",
+          "Pseudarthrose = consolidation en mauvaise position",
+          "Pseudarthrose : absence de consolidation",
+          "Cal vicieux : absence de consolidation après 6 mois d'évolution",
+          "Raideur articulaire : perte totale de la mobilité"
+        ],
+        "correctIndices": [2],
+        "explanation": "Cours de fracture : diapos 31, 3, 29"
+      },
+      {
+        "id": "q-trauma-5",
+        "text": "Dans le cadre des luxations :",
+        "options": [
+          "Les repères anatomiques de surface restent conservés",
+          "Pour décrire le sens de luxation on considère le déplacement du segment proximal par rapport au segment distal.",
+          "La luxation du genou peut se compliquer d’une lésion de l’artère fémorale.",
+          "La luxation de la hanche résulte d’un traumatisme de haute énergie.",
+          "La luxation postérieure haute de la hanche est la plus fréquente"
+        ],
+        "correctIndices": [3, 4],
+        "explanation": "Pour la réponse B, ce critère est pour décrire une fracture. La luxation du genou se complique d’une lésion de l’artère poplitée. La luxation postérieure est la plus fréquente et la luxation iliaque (haute) est la plus fréquente pour ce type. La hanche est une articulation plus stabilisée par rapport aux autres (exemple de l’épaule) donc elle nécessite une haute énergie pour être luxée."
+      },
+      {
+        "id": "q-trauma-6",
+        "text": "Les types de fracture :",
+        "options": [
+          "Une fracture avec 3ème fragment est une fracture complexe stable.",
+          "Une fracture oblique est une fracture simple instable.",
+          "Une fracture transversale est une fracture simple stable.",
+          "Toutes les fractures complexes sont des fractures instables.",
+          "Toutes les fractures instables sont des fractures complexes."
+        ],
+        "correctIndices": [1, 2, 3],
+        "explanation": "diapos 13, 12"
+      },
+      {
+        "id": "q-trauma-7",
+        "text": "Les types de fracture :",
+        "options": [
+          "La pseudarthrose avec 3ème fragment est une fracture complexe stable",
+          "Une fracture oblique est une fracture simple instable.",
+          "Une fracture transversale est une fracture simple stable",
+          "Toutes les fractures complexes sont des fractures instables.",
+          "Toutes les fractures instables sont des fractures complexes."
+        ],
+        "correctIndices": [1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "id": "q-trauma-8",
+        "text": "Les types de fractures :",
+        "options": [
+          "La fracture oblique est une fracture simple.",
+          "La fracture oblique est une fracture stable",
+          "La fracture comminutive est une fracture instable",
+          "La fracture avec 3ème fragment est une fracture simple",
+          "La fracture avec 3ème fragment est une fracture instable"
+        ],
+        "correctIndices": [0, 2, 4],
+        "explanation": ""
+      },
+      {
+        "id": "q-trauma-9",
+        "text": "Les complications des fractures :",
+        "options": [
+          "La pseudarthrose est une complication secondaire favorisée par l'ouverture cutanée.",
+          "Le cal vicieux est une complication tardive due à une mauvaise réduction de la fracture.",
+          "Les complications de décubitus surviennent généralement deux mois après la fracture.",
+          "Les lésions vasculo-nerveuses doivent être recherchées lors de l'examen clinique initial.",
+          "La lésion vasculaire se manifeste soit par une hémorragie ou un tableau d'ischémie."
+        ],
+        "correctIndices": [1, 3, 4],
+        "explanation": "diapos 28, la complication de décubitus désigne l’ensemble des pathologies qui surviennent chez un patient à la suite d’un alitement prolongé (position allongée)"
+      },
+      {
+        "id": "q-trauma-10",
+        "text": "En ce qui concerne les complications de fractures :",
+        "options": [
+          "Les complications de décubitus apparaissent 3 mois après le traumatisme",
+          "Le déplacement de la fracture apparaît après la consolidation",
+          "Les lésions vasculo-nerveuses sont à rechercher au moment de l’examen clinique initial",
+          "On parle de pseudarthrose d’une fracture diaphysaire après 3 mois d’évolution",
+          "Le syndrome de loge est une complication tardive qui risque d’entraîner une amputation du membre"
+        ],
+        "correctIndices": [2],
+        "explanation": ""
+      },
+      {
+        "id": "q-trauma-11",
+        "text": "Dans le cadre des fractures pathologiques :",
+        "options": [
+          "Le traumatisme est toujours de faible énergie",
+          "Résultent souvent d’un traumatisme de faible énergie",
+          "Surviennent sur un os sain",
+          "Le processus pathologique est toujours connu",
+          "Un traumatisme de haute énergie élimine la possibilité de fracture pathologique"
+        ],
+        "correctIndices": [1],
+        "explanation": ""
+      },
+      {
+        "id": "q-trauma-12",
+        "text": "Dans le cadre des fractures pathologiques :",
+        "options": [
+          "La recherche du processus pathologique est une étape primordiale de la prise en charge",
+          "Ces fractures suivent les mêmes règles de fixation que les fractures non pathologiques",
+          "Sont la conséquence d’un processus pathologique qui touche l’os au moment du traumatisme",
+          "Sont l’apanage du sujet âgé",
+          "On les rencontre uniquement dans le cadre de tumeur osseuse maligne."
+        ],
+        "correctIndices": [0],
+        "explanation": "diapos 7"
+      },
+      {
+        "id": "q-trauma-13",
+        "text": "Dans le cadre d’une fracture pathologique :",
+        "options": [
+          "Le site de la fracture est généralement sain.",
+          "Elle survient toujours suite à un traumatisme de haute énergie.",
+          "La lésion osseuse initiale est toujours connue.",
+          "La fracture peut être inaugurale.",
+          "Un traumatisme de faible énergie oriente vers le diagnostic d’une fracture pathologique."
+        ],
+        "correctIndices": [3, 4],
+        "explanation": "diapos 7"
+      },
+      {
+        "id": "q-trauma-14",
+        "text": "Mr X a été victime d'un accident de la voie publique, piéton heurté par une voiture avec point d'impact au niveau de la jambe occasionnant une fracture ouverte stade 2 de Couchoix et Duparc de la diaphyse du tibia et du péroné (fibula) :",
+        "options": [
+          "Pour le tibia : il s'agit d'une fracture instable étagée (bifocale)",
+          "Pour le tibia : il s'agit d'une fracture stable avec 3ème fragment",
+          "Dans le stade 2 de Couchoix et Duparc la suture cutanée n'est pas possible",
+          "Dans le stade 2 de Couchoix et Duparc il y a un risque de nécrose secondaire.",
+          "L'ouverture cutanée est expliquée par la situation anatomique du tibia et par le mécanisme direct"
+        ],
+        "correctIndices": [3, 4],
+        "explanation": ""
+      }
+    ]
+  }
+]
