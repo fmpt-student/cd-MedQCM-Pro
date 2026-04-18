@@ -15,7 +15,17 @@ export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onCont
       {/* Sidebar - Desktop */}
       <aside className="hidden md:flex flex-col w-64 bg-white border-r border-slate-200 h-full shadow-sm">
         <div className="p-6 border-b border-slate-100 flex items-center gap-2 cursor-pointer" onClick={onNavigateHome}>
-          <div className="bg-primary-600 p-2 rounded-lg">
+          <img 
+            src="/1776519683774.png" 
+            alt="MedQCM Pro Logo" 
+            className="w-10 h-10 object-contain"
+            onError={(e) => {
+              // Fallback if image is missing
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.parentElement?.querySelector('.fallback-icon')?.classList.remove('hidden');
+            }}
+          />
+          <div className="bg-primary-600 p-2 rounded-lg hidden fallback-icon">
              <GraduationCap className="text-white w-6 h-6" />
           </div>
           <h1 className="text-xl font-bold text-slate-800 tracking-tight">MedQCM<span className="text-primary-600">Pro</span></h1>
@@ -71,8 +81,19 @@ export const Layout: React.FC<LayoutProps> = ({ children, onNavigateHome, onCont
       <main className="flex-1 flex flex-col h-full overflow-hidden">
         {/* Mobile Header */}
         <header className="md:hidden bg-white h-16 border-b border-slate-200 flex items-center justify-between px-4">
-           <div className="flex items-center gap-2 font-bold text-slate-800">
-              <GraduationCap className="text-primary-600 w-6 h-6" />
+           <div className="flex items-center gap-2 font-bold text-slate-800" onClick={onNavigateHome}>
+              <img 
+                src="/1776519683774.png" 
+                alt="Logo" 
+                className="w-8 h-8 object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement?.querySelector('.fallback-icon')?.classList.remove('hidden');
+                }}
+              />
+              <div className="hidden fallback-icon">
+                <GraduationCap className="text-primary-600 w-6 h-6" />
+              </div>
               MedQCM
            </div>
            <div className="flex gap-1">
